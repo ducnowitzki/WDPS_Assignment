@@ -6,11 +6,12 @@ Four modules
 
 ### Customer Service
 - Entry point
-- Deals with user input and returns final result
-- Receives: input 
+- Receives: input (.txt file)
 - Sends: sends to Delphi
 - Reads Delphi output
 - Starts Delphi again (How?)
+- Accumulates responses from Delphi, Answer Extractor, Entity Linker and sends to Fact Checker
+- Gets final response from Fact Checker and creates a .txt file with the response
 
 ### Delphi
 - LLM provided by the course
@@ -18,12 +19,16 @@ Four modules
 - Output: LLM response
 - **Problem**: LLM exits after first query
 
-### Entity Linker
+### Answer Extractor
 - Receives: LLM response
+- Sends: Extracted answer to Customer Service
+
+### Entity Linker
+- Receives: Input and LLM response
 - Sends: Entity Links to WIkipedia to Customer Service
 
 ### Fact Checker
-- Receives: Input, Response, Entity Links
+- Receives: Input, Response, Entity Links, Extracted answer
 - Sends: Fact checked response to Customer Service
 
 

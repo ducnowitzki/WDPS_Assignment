@@ -11,7 +11,7 @@ def getNamedEntity(text):
     doc = nlp(text)
 
     # Extract named entities
-    named_entities = [ent.text for ent in doc.ents]
+    named_entities = [(ent.text, ent.label_) for ent in doc.ents]
 
     return named_entities
 
@@ -40,15 +40,16 @@ def getWikipedia(entity):
 
     # Extract candidate selections and their Wikipedia pages from the results
     candidates = [
-        {'entity': result['entity']['value'], 'label': result['label']['value'], 'page': result['page']['value']}
+        {'entity': result['entity']['value'], 
+         'label': result['label']['value'], 
+         'page': result['page']['value'],}
         for result in data['results']['bindings']
     ]
 
     return candidates
 
     
-# Testing named entities
-
+# # Testing named entities
 # text = ("surely it is but many do not know this fact that Italy was not always called as Italy."
 # "Before Italy came into being in 1861, it had several names including Italian Kingdom,"
 # "Roman Empire and the Republic of Italy among others. If we start the chronicle back in time,"
@@ -57,6 +58,11 @@ def getWikipedia(entity):
 # named_entities = getNamedEntity(text)
 # print(named_entities)
 
+
 # Testing linking
 entity = 'Italy'
-print(getWikipedia(entity))
+candidates = getWikipedia(entity)
+for candidate in candidates:
+    print(f"Wikipedia Page: {candidate['page']}")
+    # print(f"specific_type: {candidate['specific_type']}")
+    print("-" * 30)

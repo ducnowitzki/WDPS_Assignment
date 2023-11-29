@@ -1,4 +1,4 @@
-# pull from this image karmaresearch/wdps2
+# DEPRECATED
 FROM karmaresearch/wdps2
 
 ENV VIRTUAL_ENV=/venv
@@ -8,9 +8,6 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 # COPY . .
 
-# # run "source venv/bin/activate"
-# RUN echo $(ls -1 /tmp/dir)
-# #RUN ["source", "venv/bin/activate"]
 
 # # RUN pipenv install --system --deploy --i
 

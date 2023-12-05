@@ -7,6 +7,7 @@ import requests
 import requests
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+from pprint import pprint
 
 
 def getNamedEntity(text):
@@ -21,6 +22,9 @@ def getNamedEntity(text):
 
     return named_entities
 
+def namedEntityCleaner(entities):
+    print("")
+
 def getWikipedia(entity):
     '''
     Function to get candidates
@@ -29,31 +33,31 @@ def getWikipedia(entity):
     sparql_endpoint = "http://dbpedia.org/sparql"
 
     # SPARQL query to retrieve candidate selections for the named entity
+    # ?entity = <http://dbpedia.org/resource/{named_entity}>
+    # CONTAINS(STR(?entity), "{entity}")
     sparql_query = f"""
         PREFIX dbo: <http://dbpedia.org/ontology/>
+        PREFIX dbpedia: <http://dbpedia.org/resource/>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-        
-        SELECT ?entity ?page ?abstract
-        WHERE {{
-            ?entity foaf:isPrimaryTopicOf ?page.
-            FILTER (
-               CONTAINS(STR(?entity), "{entity}")
-            )
-        }}
+
+        SELECT ?object ?label ?page ?type
+        WHERE {{ 
+            dbr:'{entity}' rdfs:label ?object.
+            dbr:'{entity}' foaf:isPrimaryTopicOf ?page.
+            }}
         LIMIT 10
-    """
+        """
 
     # Send SPARQL query to DBpedia
     response = requests.get(sparql_endpoint, params={'query': sparql_query, 'format': 'json'})
-    data = response.json()
+    candidates = response.json()
 
     # Extract candidate selections and their Wikipedia pages from the results
-    candidates = [
-        {'entity': result['entity']['value'], 
-         'page': result['page']['value']}
-        for result in data['results']['bindings']
-    ]
+    # candidates = [
+    #     {'object': result['object']['value']}
+    #     for result in data['results']['bindings']
+    # ]
 
     return candidates
 
@@ -108,18 +112,18 @@ text = ("surely it is but many do not know this fact that Italy was not always c
 "then Rome was the first name to which Romans were giving credit.,"
 "Later this city became known as Caput Mundi” or the capital of the world...")
 named_entities = getNamedEntity(text)
-print(named_entities[0][0], named_entities[0][1])
 
 # Testing linking
-for i in range(1):#range(len(named_entities)):
+for i in range(1):#len(named_entities)):
     entity = named_entities[i][0]
     label = named_entities[i][1]
 
     print(entity)
     
     candidates = getWikipedia(entity)
-    dbpedia_links = [candidates[j]["entity"] for j in range(len(candidates))]
-    print(dbpedia_links)
+    pprint(candidates)
+    # dbpedia_links = [candidates[j]["entity"] for j in range(len(candidates))]
+    # print(dbpedia_links)
     # result = rank_dbpedia_pages(entity, dbpedia_links)
 
     # # Print the ranked pages

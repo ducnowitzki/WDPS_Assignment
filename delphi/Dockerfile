@@ -1,15 +1,27 @@
-# DEPRECATED
+# Use a Python base imag
 FROM karmaresearch/wdps2
 
-ENV VIRTUAL_ENV=/venv
-ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
-# WORKDIR /
+RUN echo "Reached here1"
 
-# COPY . .
+# Create and set the working directory in the container
+WORKDIR /app
 
+# Copy Pipfiles into the container
+COPY Pipfile Pipfile.lock /app/
 
-# # RUN pipenv install --system --deploy --i
+# Install dependencies using pipenv
+RUN pip install pipenv && pipenv install --deploy --ignore-pipfile
 
-CMD ["python", "-u", "example_using_llm.py"]
+# Copy the rest of the application files into the container
+COPY . /app/
 
+RUN echo "Reached here"
+# Expose any necessary ports (if your app uses a specific port)
+# EXPOSE <port_number>
+
+# Define the command to run the application
+CMD ["python", "llm.py"]

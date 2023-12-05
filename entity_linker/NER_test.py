@@ -4,6 +4,10 @@
 # Imports
 import spacy
 import requests
+import requests
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
 
 def getNamedEntity(text):
     '''
@@ -30,16 +34,14 @@ def getWikipedia(entity):
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX foaf: <http://xmlns.com/foaf/0.1/>
         
-        SELECT ?entity ?label ?page ?type
+        SELECT ?entity ?page ?abstract
         WHERE {{
-            ?entity rdfs:label ?label.
             ?entity foaf:isPrimaryTopicOf ?page.
-            ?entity rdf:type ?type.
             FILTER (
-                CONTAINS(LCASE(?label), LCASE("{entity}"))
+               CONTAINS(STR(?entity), "{entity}")
             )
         }}
-        LIMIT 1000
+        LIMIT 10
     """
 
     # Send SPARQL query to DBpedia
@@ -49,13 +51,48 @@ def getWikipedia(entity):
     # Extract candidate selections and their Wikipedia pages from the results
     candidates = [
         {'entity': result['entity']['value'], 
-         'label': result['label']['value'], 
-         'page': result['page']['value'],
-         'type': result['type']['value']}
+         'page': result['page']['value']}
         for result in data['results']['bindings']
     ]
 
     return candidates
+
+# def get_dbpedia_page_content(entity_uri):
+#     # Function to get the content of a DBpedia page
+#     # You may need to adjust this based on the actual structure of the DBpedia endpoint
+#     dbpedia_endpoint = "http://dbpedia.org/data/" + entity_uri.split('/')[-1] + ".json"
+#     response = requests.get(dbpedia_endpoint)
+    
+#     if response.status_code == 200:
+#         data = response.json()
+#         if data and entity_uri in data:
+#             # Assume the content is in the 'abstract' field for simplicity
+#             return data[entity_uri]['http://dbpedia.org/ontology/abstract'][0]['value']
+    
+#     return ""
+
+# def rank_dbpedia_pages(named_entity, candidate_pages):
+#     # Function to rank DBpedia pages using context-dependent features
+    
+#     # Step 1: Get the context (e.g., abstract) for the named entity
+#     context = get_dbpedia_page_content(named_entity)
+    
+#     if not context:
+#         print(f"Error: Unable to retrieve context for {named_entity}")
+#         return
+    
+#     # Step 2: Extract features from the context and candidate pages
+#     vectorizer = TfidfVectorizer()
+#     features = vectorizer.fit_transform([context] + [get_dbpedia_page_content(page) for page in candidate_pages])
+    
+#     # Step 3: Calculate cosine similarity between the context and each candidate page
+#     similarities = cosine_similarity(features[0], features[1:]).flatten()
+    
+#     # Step 4: Rank candidate pages based on similarity
+#     ranked_pages = [(page, similarity) for page, similarity in zip(candidate_pages, similarities)]
+#     ranked_pages.sort(key=lambda x: x[1], reverse=True)
+    
+#     return ranked_pages
 
     
 
@@ -74,11 +111,22 @@ named_entities = getNamedEntity(text)
 print(named_entities[0][0], named_entities[0][1])
 
 # Testing linking
-entity = named_entities[0][0]
-label = named_entities[0][1]
-candidates = getWikipedia(entity)
-for candidate in candidates:
-    print(f"Wikipedia Page: {candidate['page']}")
-    print(f"type: {candidate['type']}")
-    print(f"Entity: {candidate['entity']}")
-    print("-" * 30)
+for i in range(1):#range(len(named_entities)):
+    entity = named_entities[i][0]
+    label = named_entities[i][1]
+
+    print(entity)
+    
+    candidates = getWikipedia(entity)
+    dbpedia_links = [candidates[j]["entity"] for j in range(len(candidates))]
+    print(dbpedia_links)
+    # result = rank_dbpedia_pages(entity, dbpedia_links)
+
+    # # Print the ranked pages
+    # for rank, (page, similarity) in enumerate(result, start=1):
+    #     print(f"Rank {rank}: {page} (Similarity: {similarity})")
+    # for candidate in candidates:
+    #     print(f"Wikipedia Page: {candidate['page']}")
+    #     # print(f"type: {candidate['type']}")
+    #     # print(f"Entity: {candidate['entity']}")
+    #     print("-" * 30)

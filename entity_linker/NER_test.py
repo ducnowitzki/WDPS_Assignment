@@ -43,8 +43,8 @@ def getWikipedia(entity):
 
         SELECT ?object ?label ?page ?type
         WHERE {{ 
-            dbr:'{entity}' rdfs:label ?object.
-            dbr:'{entity}' foaf:isPrimaryTopicOf ?page.
+            dbr:{entity} rdfs:label ?object.
+            dbr:{entity} foaf:isPrimaryTopicOf ?page.
             }}
         LIMIT 10
         """

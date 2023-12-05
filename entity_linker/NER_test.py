@@ -22,13 +22,19 @@ def getNamedEntity(text):
 
     return named_entities
 
-def namedEntityCleaner(entities):
-    print("")
+def namedEntityCleaner(entity):
+    entity = entity.replace(" ", "_") 
+    entity = entity.replace(",", "") 
+    entity = entity.replace(".", "") 
+
+    return entity
 
 def getWikipedia(entity):
     '''
     Function to get candidates
     '''
+
+    entity = namedEntityCleaner(entity)
     # DBpedia SPARQL endpoint
     sparql_endpoint = "http://dbpedia.org/sparql"
 
@@ -44,6 +50,7 @@ def getWikipedia(entity):
         SELECT ?object ?label ?page ?type
         WHERE {{ 
             dbr:{entity} rdfs:label ?object.
+            FILTER(lang(?object) ='en')
             dbr:{entity} foaf:isPrimaryTopicOf ?page.
             }}
         LIMIT 10
@@ -59,46 +66,7 @@ def getWikipedia(entity):
     #     for result in data['results']['bindings']
     # ]
 
-    return candidates
-
-# def get_dbpedia_page_content(entity_uri):
-#     # Function to get the content of a DBpedia page
-#     # You may need to adjust this based on the actual structure of the DBpedia endpoint
-#     dbpedia_endpoint = "http://dbpedia.org/data/" + entity_uri.split('/')[-1] + ".json"
-#     response = requests.get(dbpedia_endpoint)
-    
-#     if response.status_code == 200:
-#         data = response.json()
-#         if data and entity_uri in data:
-#             # Assume the content is in the 'abstract' field for simplicity
-#             return data[entity_uri]['http://dbpedia.org/ontology/abstract'][0]['value']
-    
-#     return ""
-
-# def rank_dbpedia_pages(named_entity, candidate_pages):
-#     # Function to rank DBpedia pages using context-dependent features
-    
-#     # Step 1: Get the context (e.g., abstract) for the named entity
-#     context = get_dbpedia_page_content(named_entity)
-    
-#     if not context:
-#         print(f"Error: Unable to retrieve context for {named_entity}")
-#         return
-    
-#     # Step 2: Extract features from the context and candidate pages
-#     vectorizer = TfidfVectorizer()
-#     features = vectorizer.fit_transform([context] + [get_dbpedia_page_content(page) for page in candidate_pages])
-    
-#     # Step 3: Calculate cosine similarity between the context and each candidate page
-#     similarities = cosine_similarity(features[0], features[1:]).flatten()
-    
-#     # Step 4: Rank candidate pages based on similarity
-#     ranked_pages = [(page, similarity) for page, similarity in zip(candidate_pages, similarities)]
-#     ranked_pages.sort(key=lambda x: x[1], reverse=True)
-    
-#     return ranked_pages
-
-    
+    return candidates   
 
 """
 _____________________
@@ -112,9 +80,8 @@ text = ("surely it is but many do not know this fact that Italy was not always c
 "then Rome was the first name to which Romans were giving credit.,"
 "Later this city became known as Caput Mundi” or the capital of the world...")
 named_entities = getNamedEntity(text)
-
 # Testing linking
-for i in range(1):#len(named_entities)):
+for i in range(len(named_entities)):
     entity = named_entities[i][0]
     label = named_entities[i][1]
 

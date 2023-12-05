@@ -5,8 +5,10 @@
 import spacy
 import requests
 
-# Function to get named entities from text
 def getNamedEntity(text):
+    '''
+    Fucnction to get all named enities
+    '''
     nlp = spacy.load("en_core_web_sm")
     doc = nlp(text)
 
@@ -16,6 +18,9 @@ def getNamedEntity(text):
     return named_entities
 
 def getWikipedia(entity):
+    '''
+    Function to get candidates
+    '''
     # DBpedia SPARQL endpoint
     sparql_endpoint = "http://dbpedia.org/sparql"
 
@@ -25,13 +30,16 @@ def getWikipedia(entity):
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX foaf: <http://xmlns.com/foaf/0.1/>
         
-        SELECT DISTINCT ?entity ?label ?page
+        SELECT ?entity ?label ?page ?type
         WHERE {{
             ?entity rdfs:label ?label.
             ?entity foaf:isPrimaryTopicOf ?page.
-            FILTER (CONTAINS(LCASE(?label), LCASE("{entity}")))
+            ?entity rdf:type ?type.
+            FILTER (
+                CONTAINS(LCASE(?label), LCASE("{entity}"))
+            )
         }}
-        LIMIT 10
+        LIMIT 1000
     """
 
     # Send SPARQL query to DBpedia
@@ -42,27 +50,35 @@ def getWikipedia(entity):
     candidates = [
         {'entity': result['entity']['value'], 
          'label': result['label']['value'], 
-         'page': result['page']['value'],}
+         'page': result['page']['value'],
+         'type': result['type']['value']}
         for result in data['results']['bindings']
     ]
 
     return candidates
 
     
-# # Testing named entities
-# text = ("surely it is but many do not know this fact that Italy was not always called as Italy."
-# "Before Italy came into being in 1861, it had several names including Italian Kingdom,"
-# "Roman Empire and the Republic of Italy among others. If we start the chronicle back in time,"
-# "then Rome was the first name to which Romans were giving credit.,"
-# "Later this city became known as Caput Mundi” or the capital of the world...")
-# named_entities = getNamedEntity(text)
-# print(named_entities)
 
+"""
+_____________________
+TESTING FUNCTUINS
+_____________________
+"""
+# Testing named entities
+text = ("surely it is but many do not know this fact that Italy was not always called as Italy."
+"Before Italy came into being in 1861, it had several names including Italian Kingdom,"
+"Roman Empire and the Republic of Italy among others. If we start the chronicle back in time,"
+"then Rome was the first name to which Romans were giving credit.,"
+"Later this city became known as Caput Mundi” or the capital of the world...")
+named_entities = getNamedEntity(text)
+print(named_entities[0][0], named_entities[0][1])
 
 # Testing linking
-entity = 'Italy'
+entity = named_entities[0][0]
+label = named_entities[0][1]
 candidates = getWikipedia(entity)
 for candidate in candidates:
     print(f"Wikipedia Page: {candidate['page']}")
-    # print(f"specific_type: {candidate['specific_type']}")
+    print(f"type: {candidate['type']}")
+    print(f"Entity: {candidate['entity']}")
     print("-" * 30)

@@ -43,4 +43,4 @@ for index, row in llm_response.iterrows():
 llm_response['output'] = outputs
 
 # Save dataframe to csv
-llm_response.to_csv('sample_questions_output.csv')
+llm_response.to_csv('output/sample_questions_output.csv')

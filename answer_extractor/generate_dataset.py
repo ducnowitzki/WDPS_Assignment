@@ -30,20 +30,21 @@ questions = pd.read_csv('questions.csv')
 print(questions.head())
 outputs = []
 for index, row in questions.iterrows():
+    if index != 0:
+        break
     output = llm._call(row['Input'])
 
     # Clean up the output
     # TODO: more profificent way
     output = output.strip().replace('\n', '').replace('\r', '').replace('\t', '').replace('▁', ' ')
 
-    print(output)
     outputs.append(output)
 
-if len(outputs) != len(questions.shape[0]):
+if len(outputs) != questions.shape[0]:
     # save outputs as csv with one column named answer
     df = pd.DataFrame(outputs)
     df.columns = ['Answer']
-    df.to_csv('answers.csv')
+    df.to_csv('output/answers.csv')
 else: 
     questions['Answer'] = outputs
-    questions.to_csv('questions_and_answers.csv')
+    questions.to_csv('output/questions_and_answers.csv')

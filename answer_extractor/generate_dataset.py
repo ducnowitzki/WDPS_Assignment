@@ -30,8 +30,6 @@ questions = pd.read_csv('questions.csv')
 print(questions.head())
 outputs = []
 for index, row in questions.iterrows():
-    if index != 0:
-        break
     output = llm._call(row['Input'])
 
     # Clean up the output

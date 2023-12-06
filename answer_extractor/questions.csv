@@ -1,0 +1,2002 @@
+Index,Input,Type
+1,"Is Canberra the largest city in Australia?",Yes/No
+2,"Is the Eiffel Tower located in New York?",Yes/No
+3,"Is the sun larger than the moon?",Yes/No
+4,"Is water composed of hydrogen and oxygen?",Yes/No
+5,"Is Mount Everest the tallest mountain on Earth?",Yes/No
+6,"Is Tokyo the capital of South Korea?",Yes/No
+7,"Is English the official language of Brazil?",Yes/No
+8,"Is Albert Einstein credited with the theory of relativity?",Yes/No
+9,"Is the Nile River the longest river in the world?",Yes/No
+10,"Is a tomato classified as a fruit?",Yes/No
+11,"Is Microsoft founded by Bill Gates?",Yes/No
+12,"Is the Great Wall of China visible from space?",Yes/No
+13,"Is Jupiter the largest planet in our solar system?",Yes/No
+14,"Is the Earth flat?",Yes/No
+15,"Is the Statue of Liberty located in Paris?",Yes/No
+16,"Is Shakespeare the author of 'Romeo and Juliet'?",Yes/No
+17,"Is the Pacific Ocean the largest ocean on Earth?",Yes/No
+18,"Is the Mona Lisa painted by Vincent van Gogh?",Yes/No
+19,"Is the human body made up of mostly water?",Yes/No
+20,"Is Berlin the capital of France?",Yes/No
+21,"Is London the capital of the United States?",Yes/No
+22,"Is the Amazon River the longest river in the world?",Yes/No
+23,"Is Neil Armstrong the first person to walk on the moon?",Yes/No
+24,"Is Mount Kilimanjaro located in Antarctica?",Yes/No
+25,"Is the speed of light faster than the speed of sound?",Yes/No
+26,"Is 2+2 equal to 5?",Yes/No
+27,"Is Pluto considered a planet?",Yes/No
+28,"Is a square also a rectangle?",Yes/No
+29,"Is the Sahara Desert the largest desert in the world?",Yes/No
+30,"Is DNA made up of proteins?",Yes/No
+31,"Is Barack Obama the current president of the United States?",Yes/No
+32,"Is the moon larger than the Earth?",Yes/No
+33,"Is a cucumber a fruit?",Yes/No
+34,"Is the capital of Canada Toronto?",Yes/No
+35,"Is Antarctica the coldest place on Earth?",Yes/No
+36,"Is the Atlantic Ocean larger than the Indian Ocean?",Yes/No
+37,"Is Spider-Man a Marvel Comics character?",Yes/No
+38,"Is Julius Caesar a character from Greek mythology?",Yes/No
+39,"Is the iPhone manufactured by Samsung?",Yes/No
+40,"Is a shark a mammal?",Yes/No
+41,"Is the Amazon rainforest in Africa?",Yes/No
+42,"Is the currency in Japan the euro?",Yes/No
+43,"Is the tallest building in the world the Empire State Building?",Yes/No
+44,"Is gold a type of gas?",Yes/No
+45,"Is a piano a percussion instrument?",Yes/No
+46,"Is the currency in China the yuan?",Yes/No
+47,"Is the Titanic a fictional ship?",Yes/No
+48,"Is a koala a type of bear?",Yes/No
+49,"Is Mount Vesuvius an active volcano?",Yes/No
+50,"Is the moon made of cheese?",Yes/No
+51,"Was Albert Einstein born in Germany?",Yes/No
+52,"Is the sky usually red in color?",Yes/No
+53,"Is Tokyo the capital of France?",Yes/No
+54,"Is a strawberry a type of vegetable?",Yes/No
+55,"Is the speed of light slower than the speed of sound?",Yes/No
+56,"Is 3+3 equal to 7?",Yes/No
+57,"Is Antarctica a country?",Yes/No
+58,"Is the Pacific Ocean the smallest ocean?",Yes/No
+59,"Is the Mona Lisa painted by Pablo Picasso?",Yes/No
+60,"Is oxygen a metal?",Yes/No
+61,"Is Mount Everest located in Europe?",Yes/No
+62,"Is the Statue of Liberty in China?",Yes/No
+63,"Is a turtle classified as a bird?",Yes/No
+64,"Is the currency in India the dollar?",Yes/No
+65,"Is the longest river in the world the Mississippi River?",Yes/No
+66,"Is the Earth bigger than the sun?",Yes/No
+67,"Is a lemon a type of citrus fruit?",Yes/No
+68,"Is Mount Kilimanjaro located in South America?",Yes/No
+69,"Is New York City the capital of the United States?",Yes/No
+70,"Is the Atlantic Ocean the largest ocean on Earth?",Yes/No
+71,"Is the moon a star?",Yes/No
+72,"Is pi equal to exactly 3?",Yes/No
+73,"Is Albert Einstein known for the theory of relativity?",Yes/No
+74,"Is the Great Barrier Reef in Africa?",Yes/No
+75,"Is DNA made up of nucleotides?",Yes/No
+76,"Is the Sahara Desert in South America?",Yes/No
+77,"Is Jupiter the smallest planet in our solar system?",Yes/No
+78,"Is a shark a mammal?",Yes/No
+79,"Is Shakespeare the author of 'Macbeth'?",Yes/No
+80,"Is the currency in the UK the euro?",Yes/No
+81,"Is the Amazon rainforest the smallest rainforest in the world?",Yes/No
+82,"Is gold a type of gas?",Yes/No
+83,"Is a potato a root vegetable?",Yes/No
+84,"Is Mount Vesuvius an active volcano?",Yes/No
+85,"Is the currency in Japan the yen?",Yes/No
+86,"Is a koala a type of bear?",Yes/No
+87,"Is the capital of Brazil Buenos Aires?",Yes/No
+88,"Is the Titanic a real ship?",Yes/No
+89,"Is a violin a percussion instrument?",Yes/No
+90,"Is a crocodile a mammal?",Yes/No
+91,"Is Mount Rushmore located in Texas?",Yes/No
+92,"Is the speed of light infinite?",Yes/No
+93,"Is the tallest mountain on Earth K2?",Yes/No
+94,"Is a tiger a type of domesticated cat?",Yes/No
+95,"Is the Mona Lisa located in the Louvre Museum?",Yes/No
+96,"Is the currency in Canada the dollar?",Yes/No
+97,"Is the longest river in Asia the Ganges River?",Yes/No
+98,"Is a chair a type of vehicle?",Yes/No
+99,"Is the Eiffel Tower made of wood?",Yes/No
+100,"Is the currency in Australia the euro?",Yes/No
+101,"Is the Nile River the longest river in Africa?",Yes/No
+102,"Is the largest ocean in the world the Indian Ocean?",Yes/No
+103,"Is a caterpillar a type of insect?",Yes/No
+104,"Is Neil Armstrong the first person to walk on Mars?",Yes/No
+105,"Is the speed of sound faster than the speed of light?",Yes/No
+106,"Is the Empire State Building located in Chicago?",Yes/No
+107,"Is the currency in China the yuan?",Yes/No
+108,"Is a lion a type of herbivore?",Yes/No
+109,"Is the Red Sea blue in color?",Yes/No
+110,"Is a laptop a type of fruit?",Yes/No
+111,"Is the longest river in the Americas the Amazon River?",Yes/No
+112,"Is a zebra black in color?",Yes/No
+113,"Is the currency in Russia the pound?",Yes/No
+114,"Is the sun a planet?",Yes/No
+115,"Is a dog a type of reptile?",Yes/No
+116,"Is the Pacific Ocean larger than the Atlantic Ocean?",Yes/No
+117,"Is a violin a string instrument?",Yes/No
+118,"Is the shortest day of the year in December?",Yes/No
+119,"Is a pineapple a type of berry?",Yes/No
+120,"Is the currency in South Korea the won?",Yes/No
+121,"Is the fastest land animal a cheetah?",Yes/No
+122,"Is the currency in Mexico the euro?",Yes/No
+123,"Is a whale a type of fish?",Yes/No
+124,"Is the speed of light measured in meters?",Yes/No
+125,"Is the Sahara Desert the largest desert in the world?",Yes/No
+126,"Is a telescope used to measure temperature?",Yes/No
+127,"Is a microscope used to see small objects?",Yes/No
+128,"Is a penguin able to fly?",Yes/No
+129,"Is the currency in Saudi Arabia the riyal?",Yes/No
+130,"Is the Nile River the longest river in Europe?",Yes/No
+131,"Is a tree a type of mammal?",Yes/No
+132,"Is a chair a type of food?",Yes/No
+133,"Is the Earth the only planet in the solar system?",Yes/No
+134,"Is a rose a type of vegetable?",Yes/No
+135,"Is a spider a type of insect?",Yes/No
+136,"Is the largest desert in the world the Sahara Desert?",Yes/No
+137,"Is the moon a natural satellite of the Earth?",Yes/No
+138,"Is a pineapple a type of fruit?",Yes/No
+139,"Is the fastest bird a peregrine falcon?",Yes/No
+140,"Is a square also a rectangle?",Yes/No
+141,"Is a microscope used to see distant objects?",Yes/No
+142,"Is a kangaroo a type of bird?",Yes/No
+143,"Is a diamond made of glass?",Yes/No
+144,"Is a telescope used to observe the stars?",Yes/No
+145,"Is a camel a type of mammal?",Yes/No
+146,"Is the sun a planet?",Yes/No
+147,"Is the currency in Egypt the euro?",Yes/No
+148,"Is a turtle a type of amphibian?",Yes/No
+149,"Is a whale a type of fish?",Yes/No
+150,"Is a strawberry a type of citrus fruit?",Yes/No
+151,"Is the longest river in the world the Amazon River?",Yes/No
+152,"Is the currency in Japan the yen?",Yes/No
+153,"Is a koala a type of bear?",Yes/No
+154,"Is the capital of Brazil Buenos Aires?",Yes/No
+155,"Is the Titanic a real ship?",Yes/No
+156,"Is a violin a percussion instrument?",Yes/No
+157,"Is a crocodile a mammal?",Yes/No
+158,"Is Mount Rushmore located in Texas?",Yes/No
+159,"Is the speed of light infinite?",Yes/No
+160,"Is the tallest mountain on Earth K2?",Yes/No
+161,"Is a tiger a type of domesticated cat?",Yes/No
+162,"Is the Mona Lisa located in the Louvre Museum?",Yes/No
+163,"Is the currency in Canada the dollar?",Yes/No
+164,"Is the longest river in Asia the Ganges River?",Yes/No
+165,"Is a chair a type of vehicle?",Yes/No
+166,"Is the Eiffel Tower made of wood?",Yes/No
+167,"Is the currency in Australia the euro?",Yes/No
+168,"Is the Nile River the longest river in Africa?",Yes/No
+169,"Is the largest ocean in the world the Indian Ocean?",Yes/No
+170,"Is a caterpillar a type of insect?",Yes/No
+171,"Is Neil Armstrong the first person to walk on Mars?",Yes/No
+172,"Is the speed of sound faster than the speed of light?",Yes/No
+173,"Is the Empire State Building located in Chicago?",Yes/No
+174,"Is the currency in China the yuan?",Yes/No
+175,"Is a lion a type of herbivore?",Yes/No
+176,"Is the Red Sea blue in color?",Yes/No
+177,"Is a laptop a type of fruit?",Yes/No
+178,"Is the longest river in the Americas the Amazon River?",Yes/No
+179,"Is a zebra black in color?",Yes/No
+180,"Is the currency in Russia the pound?",Yes/No
+181,"Is the sun a planet?",Yes/No
+182,"Is a dog a type of reptile?",Yes/No
+183,"Is the Pacific Ocean larger than the Atlantic Ocean?",Yes/No
+184,"Is a violin a string instrument?",Yes/No
+185,"Is the shortest day of the year in December?",Yes/No
+186,"Is a pineapple a type of berry?",Yes/No
+187,"Is the currency in South Korea the won?",Yes/No
+188,"Is the fastest land animal a cheetah?",Yes/No
+189,"Is the currency in Mexico the euro?",Yes/No
+190,"Is a whale a type of fish?",Yes/No
+191,"Is the speed of light measured in meters?",Yes/No
+192,"Is the Sahara Desert the largest desert in the world?",Yes/No
+193,"Is a telescope used to measure temperature?",Yes/No
+194,"Is a microscope used to see small objects?",Yes/No
+195,"Is a penguin able to fly?",Yes/No
+196,"Is the currency in Saudi Arabia the riyal?",Yes/No
+197,"Is the Nile River the longest river in Europe?",Yes/No
+198,"Is a tree a type of mammal?",Yes/No
+199,"Is a chair a type of food?",Yes/No
+200,"Is the Earth the only planet in the solar system?",Yes/No
+201,"Is a rose a type of vegetable?",Yes/No
+202,"Is a spider a type of insect?",Yes/No
+203,"Is the largest desert in the world the Sahara Desert?",Yes/No
+204,"Is the moon a natural satellite of the Earth?",Yes/No
+205,"Is a pineapple a type of fruit?",Yes/No
+206,"Is the fastest bird a peregrine falcon?",Yes/No
+207,"Is a square also a rectangle?",Yes/No
+208,"Is a microscope used to see distant objects?",Yes/No
+209,"Is a kangaroo a type of bird?",Yes/No
+210,"Is a diamond made of glass?",Yes/No
+211,"Is a telescope used to observe the stars?",Yes/No
+212,"Is a camel a type of mammal?",Yes/No
+213,"Is the sun a planet?",Yes/No
+214,"Is the currency in Egypt the euro?",Yes/No
+215,"Is a turtle a type of amphibian?",Yes/No
+216,"Is a whale a type of fish?",Yes/No
+217,"Is a strawberry a type of citrus fruit?",Yes/No
+218,"Is the longest river in the world the Amazon River?",Yes/No
+219,"Is the currency in Japan the yen?",Yes/No
+220,"Is a koala a type of bear?",Yes/No
+221,"Is the capital of Brazil Buenos Aires?",Yes/No
+222,"Is the Titanic a real ship?",Yes/No
+223,"Is a violin a percussion instrument?",Yes/No
+224,"Is a crocodile a mammal?",Yes/No
+225,"Is Mount Rushmore located in Texas?",Yes/No
+226,"Is the speed of light infinite?",Yes/No
+227,"Is the tallest mountain on Earth K2?",Yes/No
+228,"Is a tiger a type of domesticated cat?",Yes/No
+229,"Is the Mona Lisa located in the Louvre Museum?",Yes/No
+230,"Is the currency in Canada the dollar?",Yes/No
+231,"Is the longest river in Asia the Ganges River?",Yes/No
+232,"Is a chair a type of vehicle?",Yes/No
+233,"Is the Eiffel Tower made of wood?",Yes/No
+234,"Is the currency in Australia the euro?",Yes/No
+235,"Is the Nile River the longest river in Africa?",Yes/No
+236,"Is the largest ocean in the world the Indian Ocean?",Yes/No
+237,"Is a caterpillar a type of insect?",Yes/No
+238,"Is Neil Armstrong the first person to walk on Mars?",Yes/No
+239,"Is the speed of sound faster than the speed of light?",Yes/No
+240,"Is the Empire State Building located in Chicago?",Yes/No
+241,"Is the currency in China the yuan?",Yes/No
+242,"Is a lion a type of herbivore?",Yes/No
+243,"Is the Red Sea blue in color?",Yes/No
+244,"Is a laptop a type of fruit?",Yes/No
+245,"Is the longest river in the Americas the Amazon River?",Yes/No
+246,"Is a zebra black in color?",Yes/No
+247,"Is the currency in Russia the pound?",Yes/No
+248,"Is the sun a planet?",Yes/No
+249,"Is a dog a type of reptile?",Yes/No
+250,"Is the Pacific Ocean larger than the Atlantic Ocean?",Yes/No
+251,"Is a violin a string instrument?",Yes/No
+252,"Is the shortest day of the year in December?",Yes/No
+253,"Is a pineapple a type of berry?",Yes/No
+254,"Is the currency in South Korea the won?",Yes/No
+255,"Is the fastest land animal a cheetah?",Yes/No
+256,"Is the currency in Mexico the euro?",Yes/No
+257,"Is a whale a type of fish?",Yes/No
+258,"Is the speed of light measured in meters?",Yes/No
+259,"Is the Sahara Desert the largest desert in the world?",Yes/No
+260,"Is a telescope used to measure temperature?",Yes/No
+261,"Is a microscope used to see small objects?",Yes/No
+262,"Is a penguin able to fly?",Yes/No
+263,"Is the currency in Saudi Arabia the riyal?",Yes/No
+264,"Is the Nile River the longest river in Europe?",Yes/No
+265,"Is a tree a type of mammal?",Yes/No
+266,"Is a chair a type of food?",Yes/No
+267,"Is the Earth the only planet in the solar system?",Yes/No
+268,"Is a rose a type of vegetable?",Yes/No
+269,"Is a spider a type of insect?",Yes/No
+270,"Is the largest desert in the world the Sahara Desert?",Yes/No
+271,"Is the moon a natural satellite of the Earth?",Yes/No
+272,"Is a pineapple a type of fruit?",Yes/No
+273,"Is the fastest bird a peregrine falcon?",Yes/No
+274,"Is a square also a rectangle?",Yes/No
+275,"Is a microscope used to see distant objects?",Yes/No
+276,"Is a kangaroo a type of bird?",Yes/No
+277,"Is a diamond made of glass?",Yes/No
+278,"Is a telescope used to observe the stars?",Yes/No
+279,"Is a camel a type of mammal?",Yes/No
+280,"Is the sun a planet?",Yes/No
+281,"Is the currency in Egypt the euro?",Yes/No
+282,"Is a turtle a type of amphibian?",Yes/No
+283,"Is a whale a type of fish?",Yes/No
+284,"Is a strawberry a type of citrus fruit?",Yes/No
+285,"Is the longest river in the world the Amazon River?",Yes/No
+286,"Is the currency in Japan the yen?",Yes/No
+287,"Is a koala a type of bear?",Yes/No
+288,"Is the capital of Brazil Buenos Aires?",Yes/No
+289,"Is the Titanic a real ship?",Yes/No
+290,"Is a violin a percussion instrument?",Yes/No
+291,"Is a crocodile a mammal?",Yes/No
+292,"Is Mount Rushmore located in Texas?",Yes/No
+293,"Is the speed of light infinite?",Yes/No
+294,"Is the tallest mountain on Earth K2?",Yes/No
+295,"Is a tiger a type of domesticated cat?",Yes/No
+296,"Is the Mona Lisa located in the Louvre Museum?",Yes/No
+297,"Is the currency in Canada the dollar?",Yes/No
+298,"Is the longest river in Asia the Ganges River?",Yes/No
+299,"Is a chair a type of vehicle?",Yes/No
+300,"Is the Eiffel Tower made of wood?",Yes/No
+301,"Is the currency in Australia the euro?",Yes/No
+302,"Is the Nile River the longest river in Africa?",Yes/No
+303,"Is the largest ocean in the world the Indian Ocean?",Yes/No
+304,"Is a caterpillar a type of insect?",Yes/No
+305,"Is Neil Armstrong the first person to walk on Mars?",Yes/No
+306,"Is the speed of sound faster than the speed of light?",Yes/No
+307,"Is the Empire State Building located in Chicago?",Yes/No
+308,"Is the currency in China the yuan?",Yes/No
+309,"Is a lion a type of herbivore?",Yes/No
+310,"Is the Red Sea blue in color?",Yes/No
+311,"Is a laptop a type of fruit?",Yes/No
+312,"Is the longest river in the Americas the Amazon River?",Yes/No
+313,"Is a zebra black in color?",Yes/No
+314,"Is the currency in Russia the pound?",Yes/No
+315,"Is the sun a planet?",Yes/No
+316,"Is a dog a type of reptile?",Yes/No
+317,"Is the Pacific Ocean larger than the Atlantic Ocean?",Yes/No
+318,"Is a violin a string instrument?",Yes/No
+319,"Is the shortest day of the year in December?",Yes/No
+320,"Is a pineapple a type of berry?",Yes/No
+321,"Is the currency in South Korea the won?",Yes/No
+322,"Is the fastest land animal a cheetah?",Yes/No
+323,"Is the currency in Mexico the euro?",Yes/No
+324,"Is a whale a type of fish?",Yes/No
+325,"Is the speed of light measured in meters?",Yes/No
+326,"Is the Sahara Desert the largest desert in the world?",Yes/No
+327,"Is a telescope used to measure temperature?",Yes/No
+328,"Is a microscope used to see small objects?",Yes/No
+329,"Is a penguin able to fly?",Yes/No
+330,"Is the currency in Saudi Arabia the riyal?",Yes/No
+331,"Is the Nile River the longest river in Europe?",Yes/No
+332,"Is a tree a type of mammal?",Yes/No
+333,"Is a chair a type of food?",Yes/No
+334,"Is the Earth the only planet in the solar system?",Yes/No
+335,"Is a rose a type of vegetable?",Yes/No
+336,"Is a spider a type of insect?",Yes/No
+337,"Is the largest desert in the world the Sahara Desert?",Yes/No
+338,"Is the moon a natural satellite of the Earth?",Yes/No
+339,"Is a pineapple a type of fruit?",Yes/No
+340,"Is the fastest bird a peregrine falcon?",Yes/No
+341,"Is a square also a rectangle?",Yes/No
+342,"Is a microscope used to see distant objects?",Yes/No
+343,"Is a kangaroo a type of bird?",Yes/No
+344,"Is a diamond made of glass?",Yes/No
+345,"Is a telescope used to observe the stars?",Yes/No
+346,"Is a camel a type of mammal?",Yes/No
+347,"Is the sun a planet?",Yes/No
+348,"Is the currency in Egypt the euro?",Yes/No
+349,"Is a turtle a type of amphibian?",Yes/No
+350,"Is a whale a type of fish?",Yes/No
+351,"Is a strawberry a type of citrus fruit?",Yes/No
+352,"Is the longest river in the world the Amazon River?",Yes/No
+353,"Is the currency in Japan the yen?",Yes/No
+354,"Is a koala a type of bear?",Yes/No
+355,"Is the capital of Brazil Buenos Aires?",Yes/No
+356,"Is the Titanic a real ship?",Yes/No
+357,"Is a violin a percussion instrument?",Yes/No
+358,"Is a crocodile a mammal?",Yes/No
+359,"Is Mount Rushmore located in Texas?",Yes/No
+360,"Is the speed of light infinite?",Yes/No
+361,"Is the tallest mountain on Earth K2?",Yes/No
+362,"Is a tiger a type of domesticated cat?",Yes/No
+363,"Is the Mona Lisa located in the Louvre Museum?",Yes/No
+364,"Is the currency in Canada the dollar?",Yes/No
+365,"Is the longest river in Asia the Ganges River?",Yes/No
+366,"Is a chair a type of vehicle?",Yes/No
+367,"Is the Eiffel Tower made of wood?",Yes/No
+368,"Is the currency in Australia the euro?",Yes/No
+369,"Is the Nile River the longest river in Africa?",Yes/No
+370,"Is the largest ocean in the world the Indian Ocean?",Yes/No
+371,"Is a caterpillar a type of insect?",Yes/No
+372,"Is Neil Armstrong the first person to walk on Mars?",Yes/No
+373,"Is the speed of sound faster than the speed of light?",Yes/No
+374,"Is the Empire State Building located in Chicago?",Yes/No
+375,"Is the currency in China the yuan?",Yes/No
+376,"Is a lion a type of herbivore?",Yes/No
+377,"Is the Red Sea blue in color?",Yes/No
+378,"Is a laptop a type of fruit?",Yes/No
+379,"Is the longest river in the Americas the Amazon River?",Yes/No
+380,"Is a zebra black in color?",Yes/No
+381,"Is the currency in Russia the pound?",Yes/No
+382,"Is the sun a planet?",Yes/No
+383,"Is a dog a type of reptile?",Yes/No
+384,"Is the Pacific Ocean larger than the Atlantic Ocean?",Yes/No
+385,"Is a violin a string instrument?",Yes/No
+386,"Is the shortest day of the year in December?",Yes/No
+387,"Is a pineapple a type of berry?",Yes/No
+388,"Is the currency in South Korea the won?",Yes/No
+389,"Is the fastest land animal a cheetah?",Yes/No
+390,"Is the currency in Mexico the euro?",Yes/No
+391,"Is a whale a type of fish?",Yes/No
+392,"Is the speed of light measured in meters?",Yes/No
+393,"Is the Sahara Desert the largest desert in the world?",Yes/No
+394,"Is a telescope used to measure temperature?",Yes/No
+395,"Is a microscope used to see small objects?",Yes/No
+396,"Is a penguin able to fly?",Yes/No
+397,"Is the currency in Saudi Arabia the riyal?",Yes/No
+398,"Is the Nile River the longest river in Europe?",Yes/No
+399,"Is a tree a type of mammal?",Yes/No
+400,"Is a chair a type of food?",Yes/No
+401,"Is the Earth the only planet in the solar system?",Yes/No
+402,"Is a rose a type of vegetable?",Yes/No
+403,"Is a spider a type of insect?",Yes/No
+404,"Is the largest desert in the world the Sahara Desert?",Yes/No
+405,"Is the moon a natural satellite of the Earth?",Yes/No
+406,"Is a pineapple a type of fruit?",Yes/No
+407,"Is the fastest bird a peregrine falcon?",Yes/No
+408,"Is a square also a rectangle?",Yes/No
+409,"Is a microscope used to see distant objects?",Yes/No
+410,"Is a kangaroo a type of bird?",Yes/No
+411,"Is a diamond made of glass?",Yes/No
+412,"Is a telescope used to observe the stars?",Yes/No
+413,"Is a camel a type of mammal?",Yes/No
+414,"Is the sun a planet?",Yes/No
+415,"Is the currency in Egypt the euro?",Yes/No
+416,"Is a turtle a type of amphibian?",Yes/No
+417,"Is a whale a type of fish?",Yes/No
+418,"Is a strawberry a type of citrus fruit?",Yes/No
+419,"Is the longest river in the world the Amazon River?",Yes/No
+420,"Is the currency in Japan the yen?",Yes/No
+421,"Is a koala a type of bear?",Yes/No
+422,"Is the capital of Brazil Buenos Aires?",Yes/No
+423,"Is the Titanic a real ship?",Yes/No
+424,"Is a violin a percussion instrument?",Yes/No
+425,"Is a crocodile a mammal?",Yes/No
+426,"Is Mount Rushmore located in Texas?",Yes/No
+427,"Is the speed of light infinite?",Yes/No
+428,"Is the tallest mountain on Earth K2?",Yes/No
+429,"Is a tiger a type of domesticated cat?",Yes/No
+430,"Is the Mona Lisa located in the Louvre Museum?",Yes/No
+431,"Is the currency in Canada the dollar?",Yes/No
+432,"Is the longest river in Asia the Ganges River?",Yes/No
+433,"Is a chair a type of vehicle?",Yes/No
+434,"Is the Eiffel Tower made of wood?",Yes/No
+435,"Is the currency in Australia the euro?",Yes/No
+436,"Is the Nile River the longest river in Africa?",Yes/No
+437,"Is the largest ocean in the world the Indian Ocean?",Yes/No
+438,"Is a caterpillar a type of insect?",Yes/No
+439,"Is Neil Armstrong the first person to walk on Mars?",Yes/No
+440,"Is the speed of sound faster than the speed of light?",Yes/No
+441,"Is the Empire State Building located in Chicago?",Yes/No
+442,"Is the currency in China the yuan?",Yes/No
+443,"Is a lion a type of herbivore?",Yes/No
+444,"Is the Red Sea blue in color?",Yes/No
+445,"Is a laptop a type of fruit?",Yes/No
+446,"Is the longest river in the Americas the Amazon River?",Yes/No
+447,"Is a zebra black in color?",Yes/No
+448,"Is the currency in Russia the pound?",Yes/No
+449,"Is the sun a planet?",Yes/No
+450,"Is a dog a type of reptile?",Yes/No
+451,"Is the Pacific Ocean larger than the Atlantic Ocean?",Yes/No
+452,"Is a violin a string instrument?",Yes/No
+453,"Is the shortest day of the year in December?",Yes/No
+454,"Is a pineapple a type of berry?",Yes/No
+455,"Is the currency in South Korea the won?",Yes/No
+456,"Is the fastest land animal a cheetah?",Yes/No
+457,"Is the currency in Mexico the euro?",Yes/No
+458,"Is a whale a type of fish?",Yes/No
+459,"Is the speed of light measured in meters?",Yes/No
+460,"Is the Sahara Desert the largest desert in the world?",Yes/No
+461,"Is a telescope used to measure temperature?",Yes/No
+462,"Is a microscope used to see small objects?",Yes/No
+463,"Is a penguin able to fly?",Yes/No
+464,"Is the currency in Saudi Arabia the riyal?",Yes/No
+465,"Is the Nile River the longest river in Europe?",Yes/No
+466,"Is a tree a type of mammal?",Yes/No
+467,"Is a chair a type of food?",Yes/No
+468,"Is the Earth the only planet in the solar system?",Yes/No
+469,"Is a rose a type of vegetable?",Yes/No
+470,"Is a spider a type of insect?",Yes/No
+471,"Is the largest desert in the world the Sahara Desert?",Yes/No
+472,"Is the moon a natural satellite of the Earth?",Yes/No
+473,"Is a pineapple a type of fruit?",Yes/No
+474,"Is the fastest bird a peregrine falcon?",Yes/No
+475,"Is a square also a rectangle?",Yes/No
+476,"Is a microscope used to see distant objects?",Yes/No
+477,"Is a kangaroo a type of bird?",Yes/No
+478,"Is a diamond made of glass?",Yes/No
+479,"Is a telescope used to observe the stars?",Yes/No
+480,"Is a camel a type of mammal?",Yes/No
+481,"Is the sun a planet?",Yes/No
+482,"Is the currency in Egypt the euro?",Yes/No
+483,"Is a turtle a type of amphibian?",Yes/No
+484,"Is a whale a type of fish?",Yes/No
+485,"Is a strawberry a type of citrus fruit?",Yes/No
+486,"Is the longest river in the world the Amazon River?",Yes/No
+487,"Is the currency in Japan the yen?",Yes/No
+488,"Is a koala a type of bear?",Yes/No
+489,"Is the capital of Brazil Buenos Aires?",Yes/No
+490,"Is the Titanic a real ship?",Yes/No
+491,"Is a violin a percussion instrument?",Yes/No
+492,"Is a crocodile a mammal?",Yes/No
+493,"Is Mount Rushmore located in Texas?",Yes/No
+494,"Is the speed of light infinite?",Yes/No
+495,"Is the tallest mountain on Earth K2?",Yes/No
+496,"Is a tiger a type of domesticated cat?",Yes/No
+497,"Is the Mona Lisa located in the Louvre Museum?",Yes/No
+498,"Is the currency in Canada the dollar?",Yes/No
+499,"Is the longest river in Asia the Ganges River?",Yes/No
+500,"Is a chair a type of vehicle?",Yes/No
+501,"Is the Eiffel Tower made of wood?",Yes/No
+502,"Is the currency in Australia the euro?",Yes/No
+503,"Is the Nile River the longest river in Africa?",Yes/No
+504,"Is the largest ocean in the world the Indian Ocean?",Yes/No
+505,"Is a caterpillar a type of insect?",Yes/No
+506,"Is Neil Armstrong the first person to walk on Mars?",Yes/No
+507,"Is the speed of sound faster than the speed of light?",Yes/No
+508,"Is the Empire State Building located in Chicago?",Yes/No
+509,"Is the currency in China the yuan?",Yes/No
+510,"Is a lion a type of herbivore?",Yes/No
+511,"Is the Red Sea blue in color?",Yes/No
+512,"Is a laptop a type of fruit?",Yes/No
+513,"Is the longest river in the Americas the Amazon River?",Yes/No
+514,"Is a zebra black in color?",Yes/No
+515,"Is the currency in Russia the pound?",Yes/No
+516,"Is the sun a planet?",Yes/No
+517,"Is a dog a type of reptile?",Yes/No
+518,"Is the Pacific Ocean larger than the Atlantic Ocean?",Yes/No
+519,"Is a violin a string instrument?",Yes/No
+520,"Is the shortest day of the year in December?",Yes/No
+521,"Is a pineapple a type of berry?",Yes/No
+522,"Is the currency in South Korea the won?",Yes/No
+523,"Is the fastest land animal a cheetah?",Yes/No
+524,"Is the currency in Mexico the euro?",Yes/No
+525,"Is a whale a type of fish?",Yes/No
+526,"Is the speed of light measured in meters?",Yes/No
+527,"Is the Sahara Desert the largest desert in the world?",Yes/No
+528,"Is a telescope used to measure temperature?",Yes/No
+529,"Is a microscope used to see small objects?",Yes/No
+530,"Is a penguin able to fly?",Yes/No
+531,"Is the currency in Saudi Arabia the riyal?",Yes/No
+532,"Is the Nile River the longest river in Europe?",Yes/No
+533,"Is a tree a type of mammal?",Yes/No
+534,"Is a chair a type of food?",Yes/No
+535,"Is the Earth the only planet in the solar system?",Yes/No
+536,"Is a rose a type of vegetable?",Yes/No
+537,"Is a spider a type of insect?",Yes/No
+538,"Is the largest desert in the world the Sahara Desert?",Yes/No
+539,"Is the moon a natural satellite of the Earth?",Yes/No
+540,"Is a pineapple a type of fruit?",Yes/No
+541,"Is the fastest bird a peregrine falcon?",Yes/No
+542,"Is a square also a rectangle?",Yes/No
+543,"Is a microscope used to see distant objects?",Yes/No
+544,"Is a kangaroo a type of bird?",Yes/No
+545,"Is a diamond made of glass?",Yes/No
+546,"Is a telescope used to observe the stars?",Yes/No
+547,"Is a camel a type of mammal?",Yes/No
+548,"Is the sun a planet?",Yes/No
+549,"Is the currency in Egypt the euro?",Yes/No
+550,"Is a turtle a type of amphibian?",Yes/No
+551,"Is a whale a type of fish?",Yes/No
+552,"Is a strawberry a type of citrus fruit?",Yes/No
+553,"Is the longest river in the world the Amazon River?",Yes/No
+554,"Is the currency in Japan the yen?",Yes/No
+555,"Is a koala a type of bear?",Yes/No
+556,"Is the capital of Brazil Buenos Aires?",Yes/No
+557,"Is the Titanic a real ship?",Yes/No
+558,"Is a violin a percussion instrument?",Yes/No
+559,"Is a crocodile a mammal?",Yes/No
+560,"Is Mount Rushmore located in Texas?",Yes/No
+561,"Is the speed of light infinite?",Yes/No
+562,"Is the tallest mountain on Earth K2?",Yes/No
+563,"Is a tiger a type of domesticated cat?",Yes/No
+564,"Is the Mona Lisa located in the Louvre Museum?",Yes/No
+565,"Is the currency in Canada the dollar?",Yes/No
+566,"Is the longest river in Asia the Ganges River?",Yes/No
+567,"Is a chair a type of vehicle?",Yes/No
+568,"Is the Eiffel Tower made of wood?",Yes/No
+569,"Is the currency in Australia the euro?",Yes/No
+570,"Is the Nile River the longest river in Africa?",Yes/No
+571,"Is the largest ocean in the world the Indian Ocean?",Yes/No
+572,"Is a caterpillar a type of insect?",Yes/No
+573,"Is Neil Armstrong the first person to walk on Mars?",Yes/No
+574,"Is the speed of sound faster than the speed of light?",Yes/No
+575,"Is the Empire State Building located in Chicago?",Yes/No
+576,"Is the currency in China the yuan?",Yes/No
+577,"Is a lion a type of herbivore?",Yes/No
+578,"Is the Red Sea blue in color?",Yes/No
+579,"Is a laptop a type of fruit?",Yes/No
+580,"Is the longest river in the Americas the Amazon River?",Yes/No
+581,"Is a zebra black in color?",Yes/No
+582,"Is the currency in Russia the pound?",Yes/No
+583,"Is the sun a planet?",Yes/No
+584,"Is a dog a type of reptile?",Yes/No
+585,"Is the Pacific Ocean larger than the Atlantic Ocean?",Yes/No
+586,"Is a violin a string instrument?",Yes/No
+587,"Is the shortest day of the year in December?",Yes/No
+588,"Is a pineapple a type of berry?",Yes/No
+589,"Is the currency in South Korea the won?",Yes/No
+590,"Is the fastest land animal a cheetah?",Yes/No
+591,"Is the currency in Mexico the euro?",Yes/No
+592,"Is a whale a type of fish?",Yes/No
+593,"Is the speed of light measured in meters?",Yes/No
+594,"Is the Sahara Desert the largest desert in the world?",Yes/No
+595,"Is a telescope used to measure temperature?",Yes/No
+596,"Is a microscope used to see small objects?",Yes/No
+597,"Is a penguin able to fly?",Yes/No
+598,"Is the currency in Saudi Arabia the riyal?",Yes/No
+599,"Is the Nile River the longest river in Europe?",Yes/No
+600,"Is a tree a type of mammal?",Yes/No
+601,"Is a chair a type of food?",Yes/No
+602,"Is the Earth the only planet in the solar system?",Yes/No
+603,"Is a rose a type of vegetable?",Yes/No
+604,"Is a spider a type of insect?",Yes/No
+605,"Is the largest desert in the world the Sahara Desert?",Yes/No
+606,"Is the moon a natural satellite of the Earth?",Yes/No
+607,"Is a pineapple a type of fruit?",Yes/No
+608,"Is the fastest bird a peregrine falcon?",Yes/No
+609,"Is a square also a rectangle?",Yes/No
+610,"Is a microscope used to see distant objects?",Yes/No
+611,"Is a kangaroo a type of bird?",Yes/No
+612,"Is a diamond made of glass?",Yes/No
+613,"Is a telescope used to observe the stars?",Yes/No
+614,"Is a camel a type of mammal?",Yes/No
+615,"Is the sun a planet?",Yes/No
+616,"Is the currency in Egypt the euro?",Yes/No
+617,"Is a turtle a type of amphibian?",Yes/No
+618,"Is a whale a type of fish?",Yes/No
+619,"Is a strawberry a type of citrus fruit?",Yes/No
+620,"Is the longest river in the world the Amazon River?",Yes/No
+621,"Is the currency in Japan the yen?",Yes/No
+622,"Is a koala a type of bear?",Yes/No
+623,"Is the capital of Brazil Buenos Aires?",Yes/No
+624,"Is the Titanic a real ship?",Yes/No
+625,"Is a violin a percussion instrument?",Yes/No
+626,"Is a crocodile a mammal?",Yes/No
+627,"Is Mount Rushmore located in Texas?",Yes/No
+628,"Is the speed of light infinite?",Yes/No
+629,"Is the tallest mountain on Earth K2?",Yes/No
+630,"Is a tiger a type of domesticated cat?",Yes/No
+631,"Is the Mona Lisa located in the Louvre Museum?",Yes/No
+632,"Is the currency in Canada the dollar?",Yes/No
+633,"Is the longest river in Asia the Ganges River?",Yes/No
+634,"Is a chair a type of vehicle?",Yes/No
+635,"Is the Eiffel Tower made of wood?",Yes/No
+636,"Is the currency in Australia the euro?",Yes/No
+637,"Is the Nile River the longest river in Africa?",Yes/No
+638,"Is the largest ocean in the world the Indian Ocean?",Yes/No
+639,"Is a caterpillar a type of insect?",Yes/No
+640,"Is Neil Armstrong the first person to walk on Mars?",Yes/No
+641,"Is the speed of sound faster than the speed of light?",Yes/No
+642,"Is the Empire State Building located in Chicago?",Yes/No
+643,"Is the currency in China the yuan?",Yes/No
+644,"Is a lion a type of herbivore?",Yes/No
+645,"Is the Red Sea blue in color?",Yes/No
+646,"Is a laptop a type of fruit?",Yes/No
+647,"Is the longest river in the Americas the Amazon River?",Yes/No
+648,"Is a zebra black in color?",Yes/No
+649,"Is the currency in Russia the pound?",Yes/No
+650,"Is the sun a planet?",Yes/No
+651,"Is a dog a type of reptile?",Yes/No
+652,"Is the Pacific Ocean larger than the Atlantic Ocean?",Yes/No
+653,"Is a violin a string instrument?",Yes/No
+654,"Is the shortest day of the year in December?",Yes/No
+655,"Is a pineapple a type of berry?",Yes/No
+656,"Is the currency in South Korea the won?",Yes/No
+657,"Is the fastest land animal a cheetah?",Yes/No
+658,"Is the currency in Mexico the euro?",Yes/No
+659,"Is a whale a type of fish?",Yes/No
+660,"Is the speed of light measured in meters?",Yes/No
+661,"Is the Sahara Desert the largest desert in the world?",Yes/No
+662,"Is a telescope used to measure temperature?",Yes/No
+663,"Is a microscope used to see small objects?",Yes/No
+664,"Is a penguin able to fly?",Yes/No
+665,"Is the currency in Saudi Arabia the riyal?",Yes/No
+666,"Is the Nile River the longest river in Europe?",Yes/No
+667,"Is a tree a type of mammal?",Yes/No
+668,"Is a chair a type of food?",Yes/No
+669,"Is the Earth the only planet in the solar system?",Yes/No
+670,"Is a rose a type of vegetable?",Yes/No
+671,"Is a spider a type of insect?",Yes/No
+672,"Is the largest desert in the world the Sahara Desert?",Yes/No
+673,"Is the moon a natural satellite of the Earth?",Yes/No
+674,"Is a pineapple a type of fruit?",Yes/No
+675,"Is the fastest bird a peregrine falcon?",Yes/No
+676,"Is a square also a rectangle?",Yes/No
+677,"Is a microscope used to see distant objects?",Yes/No
+678,"Is a kangaroo a type of bird?",Yes/No
+679,"Is a diamond made of glass?",Yes/No
+680,"Is a telescope used to observe the stars?",Yes/No
+681,"Is a camel a type of mammal?",Yes/No
+682,"Is the sun a planet?",Yes/No
+683,"Is the currency in Egypt the euro?",Yes/No
+684,"Is a turtle a type of amphibian?",Yes/No
+685,"Is a whale a type of fish?",Yes/No
+686,"Is a strawberry a type of citrus fruit?",Yes/No
+687,"Is the longest river in the world the Amazon River?",Yes/No
+688,"Is the currency in Japan the yen?",Yes/No
+689,"Is a koala a type of bear?",Yes/No
+690,"Is the capital of Brazil Buenos Aires?",Yes/No
+691,"Is the Titanic a real ship?",Yes/No
+692,"Is a violin a percussion instrument?",Yes/No
+693,"Is a crocodile a mammal?",Yes/No
+694,"Is Mount Rushmore located in Texas?",Yes/No
+695,"Is the speed of light infinite?",Yes/No
+696,"Is the tallest mountain on Earth K2?",Yes/No
+697,"Is a tiger a type of domesticated cat?",Yes/No
+698,"Is the Mona Lisa located in the Louvre Museum?",Yes/No
+699,"Is the currency in Canada the dollar?",Yes/No
+700,"Is the longest river in Asia the Ganges River?",Yes/No
+701,"Is a chair a type of vehicle?",Yes/No
+702,"Is the Eiffel Tower made of wood?",Yes/No
+703,"Is the currency in Australia the euro?",Yes/No
+704,"Is the Nile River the longest river in Africa?",Yes/No
+705,"Is the largest ocean in the world the Indian Ocean?",Yes/No
+706,"Is a caterpillar a type of insect?",Yes/No
+707,"Is Neil Armstrong the first person to walk on Mars?",Yes/No
+708,"Is the speed of sound faster than the speed of light?",Yes/No
+709,"Is the Empire State Building located in Chicago?",Yes/No
+710,"Is the currency in China the yuan?",Yes/No
+711,"Is a lion a type of herbivore?",Yes/No
+712,"Is the Red Sea blue in color?",Yes/No
+713,"Is a laptop a type of fruit?",Yes/No
+714,"Is the longest river in the Americas the Amazon River?",Yes/No
+715,"Is a zebra black in color?",Yes/No
+716,"Is the currency in Russia the pound?",Yes/No
+717,"Is the sun a planet?",Yes/No
+718,"Is a dog a type of reptile?",Yes/No
+719,"Is the Pacific Ocean larger than the Atlantic Ocean?",Yes/No
+720,"Is a violin a string instrument?",Yes/No
+721,"Is the shortest day of the year in December?",Yes/No
+722,"Is a pineapple a type of berry?",Yes/No
+723,"Is the currency in South Korea the won?",Yes/No
+724,"Is the fastest land animal a cheetah?",Yes/No
+725,"Is the currency in Mexico the euro?",Yes/No
+726,"Is a whale a type of fish?",Yes/No
+727,"Is the speed of light measured in meters?",Yes/No
+728,"Is the Sahara Desert the largest desert in the world?",Yes/No
+729,"Is a telescope used to measure temperature?",Yes/No
+730,"Is a microscope used to see small objects?",Yes/No
+731,"Is a penguin able to fly?",Yes/No
+732,"Is the currency in Saudi Arabia the riyal?",Yes/No
+733,"Is the Nile River the longest river in Europe?",Yes/No
+734,"Is a tree a type of mammal?",Yes/No
+735,"Is a chair a type of food?",Yes/No
+736,"Is the Earth the only planet in the solar system?",Yes/No
+737,"Is a rose a type of vegetable?",Yes/No
+738,"Is a spider a type of insect?",Yes/No
+739,"Is the largest desert in the world the Sahara Desert?",Yes/No
+740,"Is the moon a natural satellite of the Earth?",Yes/No
+741,"Is a pineapple a type of fruit?",Yes/No
+742,"Is the fastest bird a peregrine falcon?",Yes/No
+743,"Is a square also a rectangle?",Yes/No
+744,"Is a microscope used to see distant objects?",Yes/No
+745,"Is a kangaroo a type of bird?",Yes/No
+746,"Is a diamond made of glass?",Yes/No
+747,"Is a telescope used to observe the stars?",Yes/No
+748,"Is a camel a type of mammal?",Yes/No
+749,"Is the sun a planet?",Yes/No
+750,"Is the currency in Egypt the euro?",Yes/No
+751,"Is a turtle a type of amphibian?",Yes/No
+752,"Is a whale a type of fish?",Yes/No
+753,"Is a strawberry a type of citrus fruit?",Yes/No
+754,"Is the longest river in the world the Amazon River?",Yes/No
+755,"Is the currency in Japan the yen?",Yes/No
+756,"Is a koala a type of bear?",Yes/No
+757,"Is the capital of Brazil Buenos Aires?",Yes/No
+758,"Is the Titanic a real ship?",Yes/No
+759,"Is a violin a percussion instrument?",Yes/No
+760,"Is a crocodile a mammal?",Yes/No
+761,"Is Mount Rushmore located in Texas?",Yes/No
+762,"Is the speed of light infinite?",Yes/No
+763,"Is the tallest mountain on Earth K2?",Yes/No
+764,"Is a tiger a type of domesticated cat?",Yes/No
+765,"Is the Mona Lisa located in the Louvre Museum?",Yes/No
+766,"Is the currency in Canada the dollar?",Yes/No
+767,"Is the longest river in Asia the Ganges River?",Yes/No
+768,"Is a chair a type of vehicle?",Yes/No
+769,"Is the Eiffel Tower made of wood?",Yes/No
+770,"Is the currency in Australia the euro?",Yes/No
+771,"Is the Nile River the longest river in Africa?",Yes/No
+772,"Is the largest ocean in the world the Indian Ocean?",Yes/No
+773,"Is a caterpillar a type of insect?",Yes/No
+774,"Is Neil Armstrong the first person to walk on Mars?",Yes/No
+775,"Is the speed of sound faster than the speed of light?",Yes/No
+776,"Is the Empire State Building located in Chicago?",Yes/No
+777,"Is the currency in China the yuan?",Yes/No
+778,"Is a lion a type of herbivore?",Yes/No
+779,"Is the Red Sea blue in color?",Yes/No
+780,"Is a laptop a type of fruit?",Yes/No
+781,"Is the longest river in the Americas the Amazon River?",Yes/No
+782,"Is a zebra black in color?",Yes/No
+783,"Is the currency in Russia the pound?",Yes/No
+784,"Is the sun a planet?",Yes/No
+785,"Is a dog a type of reptile?",Yes/No
+786,"Is the Pacific Ocean larger than the Atlantic Ocean?",Yes/No
+787,"Is a violin a string instrument?",Yes/No
+788,"Is the shortest day of the year in December?",Yes/No
+789,"Is a pineapple a type of berry?",Yes/No
+790,"Is the currency in South Korea the won?",Yes/No
+791,"Is the fastest land animal a cheetah?",Yes/No
+792,"Is the currency in Mexico the euro?",Yes/No
+793,"Is a whale a type of fish?",Yes/No
+794,"Is the speed of light measured in meters?",Yes/No
+795,"Is the Sahara Desert the largest desert in the world?",Yes/No
+796,"Is a telescope used to measure temperature?",Yes/No
+797,"Is a microscope used to see small objects?",Yes/No
+798,"Is a penguin able to fly?",Yes/No
+799,"Is the currency in Saudi Arabia the riyal?",Yes/No
+800,"Is the Nile River the longest river in Europe?",Yes/No
+Index,Input,Type
+801,"Is the Great Wall of China located in Europe?",Yes/No
+802,"Is a rhinoceros a type of bird?",Yes/No
+803,"Is the currency in India the rupee?",Yes/No
+804,"Is the Statue of Liberty located in Paris?",Yes/No
+805,"Is a giraffe a type of reptile?",Yes/No
+806,"Is the currency in the United Kingdom the pound?",Yes/No
+807,"Is Antarctica a country?",Yes/No
+808,"Is a crocodile a type of mammal?",Yes/No
+809,"Is the capital of Japan Tokyo?",Yes/No
+810,"Is a bear a type of fish?",Yes/No
+811,"Is the currency in Brazil the peso?",Yes/No
+812,"Is the Amazon Rainforest located in Africa?",Yes/No
+813,"Is a butterfly a type of bird?",Yes/No
+814,"Is the tallest mountain on Earth Mount Everest?",Yes/No
+815,"Is a dolphin a type of fish?",Yes/No
+816,"Is the currency in Canada the dollar?",Yes/No
+817,"Is the Sahara Desert in South America?",Yes/No
+818,"Is a tortoise a type of insect?",Yes/No
+819,"Is the currency in South Africa the rand?",Yes/No
+820,"Is the Taj Mahal located in China?",Yes/No
+821,"Is a penguin a type of reptile?",Yes/No
+822,"Is the currency in Australia the euro?",Yes/No
+823,"Is the Nile River the longest river in Asia?",Yes/No
+824,"Is a kangaroo a type of bear?",Yes/No
+825,"Is the capital of France Berlin?",Yes/No
+826,"Is a parrot a type of fish?",Yes/No
+827,"Is the currency in Russia the ruble?",Yes/No
+828,"Is the Pacific Ocean the largest ocean on Earth?",Yes/No
+829,"Is a lion a type of herbivore?",Yes/No
+830,"Is the currency in China the yuan?",Yes/No
+831,"Is the Statue of Liberty located in New York?",Yes/No
+832,"Is a whale a type of reptile?",Yes/No
+833,"Is the currency in Japan the yen?",Yes/No
+834,"Is the Sahara Desert the largest desert on Earth?",Yes/No
+835,"Is a rhinoceros a type of bird?",Yes/No
+836,"Is the currency in India the rupee?",Yes/No
+837,"Is the Statue of Liberty located in Paris?",Yes/No
+838,"Is a giraffe a type of reptile?",Yes/No
+839,"Is the currency in the United Kingdom the pound?",Yes/No
+840,"Is Antarctica a country?",Yes/No
+841,"Is a crocodile a type of mammal?",Yes/No
+842,"Is the capital of Japan Tokyo?",Yes/No
+843,"Is a bear a type of fish?",Yes/No
+844,"Is the currency in Brazil the peso?",Yes/No
+845,"Is the Amazon Rainforest located in Africa?",Yes/No
+846,"Is a butterfly a type of bird?",Yes/No
+847,"Is the tallest mountain on Earth Mount Everest?",Yes/No
+848,"Is a dolphin a type of fish?",Yes/No
+849,"Is the currency in Canada the dollar?",Yes/No
+850,"Is the Sahara Desert in South America?",Yes/No
+851,"Is a tortoise a type of insect?",Yes/No
+852,"Is the currency in South Africa the rand?",Yes/No
+853,"Is the Taj Mahal located in China?",Yes/No
+854,"Is a penguin a type of reptile?",Yes/No
+855,"Is the currency in Australia the euro?",Yes/No
+856,"Is the Nile River the longest river in Asia?",Yes/No
+857,"Is a kangaroo a type of bear?",Yes/No
+858,"Is the capital of France Berlin?",Yes/No
+859,"Is a parrot a type of fish?",Yes/No
+860,"Is the currency in Russia the ruble?",Yes/No
+861,"Is the Pacific Ocean the largest ocean on Earth?",Yes/No
+862,"Is a lion a type of herbivore?",Yes/No
+863,"Is the currency in China the yuan?",Yes/No
+864,"Is the Statue of Liberty located in New York?",Yes/No
+865,"Is a whale a type of reptile?",Yes/No
+866,"Is the currency in Japan the yen?",Yes/No
+867,"Is the Sahara Desert the largest desert on Earth?",Yes/No
+868,"Is a rhinoceros a type of bird?",Yes/No
+869,"Is the currency in India the rupee?",Yes/No
+870,"Is the Statue of Liberty located in Paris?",Yes/No
+871,"Is a giraffe a type of reptile?",Yes/No
+872,"Is the currency in the United Kingdom the pound?",Yes/No
+873,"Is Antarctica a country?",Yes/No
+874,"Is a crocodile a type of mammal?",Yes/No
+875,"Is the capital of Japan Tokyo?",Yes/No
+876,"Is a bear a type of fish?",Yes/No
+877,"Is the currency in Brazil the peso?",Yes/No
+878,"Is the Amazon Rainforest located in Africa?",Yes/No
+879,"Is a butterfly a type of bird?",Yes/No
+880,"Is the tallest mountain on Earth Mount Everest?",Yes/No
+881,"Is a dolphin a type of fish?",Yes/No
+882,"Is the currency in Canada the dollar?",Yes/No
+883,"Is the Sahara Desert in South America?",Yes/No
+884,"Is a tortoise a type of insect?",Yes/No
+885,"Is the currency in South Africa the rand?",Yes/No
+886,"Is the Taj Mahal located in China?",Yes/No
+887,"Is a penguin a type of reptile?",Yes/No
+888,"Is the currency in Australia the euro?",Yes/No
+889,"Is the Nile River the longest river in Asia?",Yes/No
+890,"Is a kangaroo a type of bear?",Yes/No
+891,"Is the capital of France Berlin?",Yes/No
+892,"Is a parrot a type of fish?",Yes/No
+893,"Is the currency in Russia the ruble?",Yes/No
+894,"Is the Pacific Ocean the largest ocean on Earth?",Yes/No
+895,"Is a lion a type of herbivore?",Yes/No
+896,"Is the currency in China the yuan?",Yes/No
+897,"Is the Statue of Liberty located in New York?",Yes/No
+898,"Is a whale a type of reptile?",Yes/No
+899,"Is the currency in Japan the yen?",Yes/No
+900,"Is the Sahara Desert the largest desert on Earth?",Yes/No
+901,"Is a rhinoceros a type of bird?",Yes/No
+902,"Is the currency in India the rupee?",Yes/No
+903,"Is the Statue of Liberty located in Paris?",Yes/No
+904,"Is a giraffe a type of reptile?",Yes/No
+905,"Is the currency in the United Kingdom the pound?",Yes/No
+906,"Is Antarctica a country?",Yes/No
+907,"Is a crocodile a type of mammal?",Yes/No
+908,"Is the capital of Japan Tokyo?",Yes/No
+909,"Is a bear a type of fish?",Yes/No
+910,"Is the currency in Brazil the peso?",Yes/No
+911,"Is the Amazon Rainforest located in Africa?",Yes/No
+912,"Is a butterfly a type of bird?",Yes/No
+913,"Is the tallest mountain on Earth Mount Everest?",Yes/No
+914,"Is a dolphin a type of fish?",Yes/No
+915,"Is the currency in Canada the dollar?",Yes/No
+916,"Is the Sahara Desert in South America?",Yes/No
+917,"Is a tortoise a type of insect?",Yes/No
+918,"Is the currency in South Africa the rand?",Yes/No
+919,"Is the Taj Mahal located in China?",Yes/No
+920,"Is a penguin a type of reptile?",Yes/No
+921,"Is the currency in Australia the euro?",Yes/No
+922,"Is the Nile River the longest river in Asia?",Yes/No
+923,"Is a kangaroo a type of bear?",Yes/No
+924,"Is the capital of France Berlin?",Yes/No
+925,"Is a parrot a type of fish?",Yes/No
+926,"Is the currency in Russia the ruble?",Yes/No
+927,"Is the Pacific Ocean the largest ocean on Earth?",Yes/No
+928,"Is a lion a type of herbivore?",Yes/No
+929,"Is the currency in China the yuan?",Yes/No
+930,"Is the Statue of Liberty located in New York?",Yes/No
+931,"Is a whale a type of reptile?",Yes/No
+932,"Is the currency in Japan the yen?",Yes/No
+933,"Is the Sahara Desert the largest desert on Earth?",Yes/No
+934,"Is a rhinoceros a type of bird?",Yes/No
+935,"Is the currency in India the rupee?",Yes/No
+936,"Is the Statue of Liberty located in Paris?",Yes/No
+937,"Is a giraffe a type of reptile?",Yes/No
+938,"Is the currency in the United Kingdom the pound?",Yes/No
+939,"Is Antarctica a country?",Yes/No
+940,"Is a crocodile a type of mammal?",Yes/No
+941,"Is the capital of Japan Tokyo?",Yes/No
+942,"Is a bear a type of fish?",Yes/No
+943,"Is the currency in Brazil the peso?",Yes/No
+944,"Is the Amazon Rainforest located in Africa?",Yes/No
+945,"Is a butterfly a type of bird?",Yes/No
+946,"Is the tallest mountain on Earth Mount Everest?",Yes/No
+947,"Is a dolphin a type of fish?",Yes/No
+948,"Is the currency in Canada the dollar?",Yes/No
+949,"Is the Sahara Desert in South America?",Yes/No
+950,"Is a tortoise a type of insect?",Yes/No
+951,"Is the currency in South Africa the rand?",Yes/No
+952,"Is the Taj Mahal located in China?",Yes/No
+953,"Is a penguin a type of reptile?",Yes/No
+954,"Is the currency in Australia the euro?",Yes/No
+955,"Is the Nile River the longest river in Asia?",Yes/No
+956,"Is a kangaroo a type of bear?",Yes/No
+957,"Is the capital of France Berlin?",Yes/No
+958,"Is a parrot a type of fish?",Yes/No
+959,"Is the currency in Russia the ruble?",Yes/No
+960,"Is the Pacific Ocean the largest ocean on Earth?",Yes/No
+961,"Is a lion a type of herbivore?",Yes/No
+962,"Is the currency in China the yuan?",Yes/No
+963,"Is the Statue of Liberty located in New York?",Yes/No
+964,"Is a whale a type of reptile?",Yes/No
+965,"Is the currency in Japan the yen?",Yes/No
+966,"Is the Sahara Desert the largest desert on Earth?",Yes/No
+967,"Is a rhinoceros a type of bird?",Yes/No
+968,"Is the currency in India the rupee?",Yes/No
+969,"Is the Statue of Liberty located in Paris?",Yes/No
+970,"Is a giraffe a type of reptile?",Yes/No
+971,"Is the currency in the United Kingdom the pound?",Yes/No
+972,"Is Antarctica a country?",Yes/No
+973,"Is a crocodile a type of mammal?",Yes/No
+974,"Is the capital of Japan Tokyo?",Yes/No
+975,"Is a bear a type of fish?",Yes/No
+976,"Is the currency in Brazil the peso?",Yes/No
+977,"Is the Amazon Rainforest located in Africa?",Yes/No
+978,"Is a butterfly a type of bird?",Yes/No
+979,"Is the tallest mountain on Earth Mount Everest?",Yes/No
+980,"Is the moon larger than Earth?",Yes/No
+981,"Is water a type of gas?",Yes/No
+982,"Is the Amazon River the longest river in the world?",Yes/No
+983,"Is New York the capital of the United States?",Yes/No
+984,"Is the Great Wall of China located in Europe?",Yes/No
+985,"Is the sun a planet?",Yes/No
+986,"Is gold a type of metal?",Yes/No
+987,"Is the Pacific Ocean the smallest ocean on Earth?",Yes/No
+988,"Is the currency in France the dollar?",Yes/No
+989,"Is a banana a type of vegetable?",Yes/No
+990,"Is the Sahara Desert the largest desert in the world?",Yes/No
+991,"Is a lion a type of herbivore?",Yes/No
+992,"Is Jupiter the closest planet to the sun?",Yes/No
+993,"Is Mount Everest the tallest mountain on Earth?",Yes/No
+994,"Is the currency in Japan the yen?",Yes/No
+995,"Is a square also a triangle?",Yes/No
+996,"Is oxygen a type of gas?",Yes/No
+997,"Is the currency in Russia the pound?",Yes/No
+998,"Is the speed of light faster than the speed of sound?",Yes/No
+999,"Is a dog a type of reptile?",Yes/No
+1000,"Is the Earth the only planet in the solar system?",Yes/No
+1001,"What is the capital of France?",Entity
+1002,"Who painted the Mona Lisa?",Entity
+1003,"Which planet is known as the Red Planet?",Entity
+1004,"Who wrote 'Romeo and Juliet'?",Entity
+1005,"What is the largest mammal in the world?",Entity
+1006,"Who founded Microsoft?",Entity
+1007,"What is the tallest mountain on Earth?",Entity
+1008,"Who discovered penicillin?",Entity
+1009,"What is the currency of Japan?",Entity
+1010,"Who composed the 'Symphony No. 9'?",Entity
+1011,"What is the largest continent?",Entity
+1012,"Who is the author of '1984'?",Entity
+1013,"What is the largest desert in the world?",Entity
+1014,"Who invented the telephone?",Entity
+1015,"What is the smallest country in the world?",Entity
+1016,"Who painted 'Starry Night'?",Entity
+1017,"What is the most widely spoken language?",Entity
+1018,"Who was the first woman in space?",Entity
+1019,"What is the largest ocean on Earth?",Entity
+1020,"Who wrote 'To Kill a Mockingbird'?",Entity
+1021,"What is the national animal of Australia?",Entity
+1022,"Who founded Amazon?",Entity
+1023,"What is the longest river in the world?",Entity
+1024,"Who is credited with the theory of relativity?",Entity
+1025,"What is the currency of the United Kingdom?",Entity
+1026,"Who painted the ceiling of the Sistine Chapel?",Entity
+1027,"What is the largest species of big cat?",Entity
+1028,"Who invented the lightbulb?",Entity
+1029,"What is the largest planet in our solar system?",Entity
+1030,"Who is the main author of the Declaration of Independence?",Entity
+1031,"What is the highest waterfall in the world?",Entity
+1032,"Who is known as the 'Father of Modern Physics'?",Entity
+1033,"What is the largest bird in the world?",Entity
+1034,"Who discovered America?",Entity
+1035,"What is the largest living reptile?",Entity
+1036,"Who wrote the play 'Hamlet'?",Entity
+1037,"What is the currency of China?",Entity
+1038,"Who is the founder of SpaceX?",Entity
+1039,"What is the longest bone in the human body?",Entity
+1040,"Who composed 'The Marriage of Figaro'?",Entity
+1041,"What is the smallest ocean on Earth?",Entity
+1042,"Who is known for the theory of natural selection?",Entity
+1043,"What is the largest island in the world?",Entity
+1044,"Who is the lead singer of the band Queen?",Entity
+1045,"What is the largest flower in the world?",Entity
+1046,"Who painted 'The Last Supper'?",Entity
+1047,"What is the currency of Russia?",Entity
+1048,"Who is known as the 'Father of Medicine'?",Entity
+1049,"What is the tallest animal on Earth?",Entity
+1050,"Who wrote 'The Catcher in the Rye'?",Entity
+1051,"What is the national flower of Japan?",Entity
+1052,"Who is the founder of Apple Inc.?",Entity
+1053,"What is the largest moon of Jupiter?",Entity
+1054,"Who is known for the discovery of gravity?",Entity
+1055,"What is the currency of Brazil?",Entity
+1056,"Who wrote the novel 'Pride and Prejudice'?",Entity
+1057,"What is the largest species of bear?",Entity
+1058,"Who painted the 'Birth of Venus'?",Entity
+1059,"What is the national animal of Canada?",Entity
+1060,"Who invented the printing press?",Entity
+1061,"What is the largest mammal in the ocean?",Entity
+1062,"Who composed the 'Moonlight Sonata'?",Entity
+1063,"What is the currency of India?",Entity
+1064,"Who is the first female Prime Minister of the UK?",Entity
+1065,"What is the largest canyon in the world?",Entity
+1066,"Who is known for the discovery of penicillin?",Entity
+1067,"What is the national bird of the United States?",Entity
+1068,"Who founded Facebook?",Entity
+1069,"What is the largest living primate?",Entity
+1070,"Who wrote 'The Great Gatsby'?",Entity
+1071,"What is the national flower of France?",Entity
+1072,"Who founded Microsoft?",Entity
+1073,"What is the largest lake in the world?",Entity
+1074,"Who is known as the 'Father of Modern Chemistry'?",Entity
+1075,"What is the currency of Australia?",Entity
+1076,"Who composed 'The Four Seasons'?",Entity
+1077,"What is the largest island country?",Entity
+1078,"Who is the lead guitarist of the band Led Zeppelin?",Entity
+1079,"What is the national animal of Australia?",Entity
+1080,"Who wrote 'The Lord of the Rings'?",Entity
+1081,"What is the national flower of Germany?",Entity
+1082,"Who is the founder of Twitter?",Entity
+1083,"What is the longest river in Australia?",Entity
+1084,"Who is known as the 'Father of Electricity'?",Entity
+1085,"What is the currency of Canada?",Entity
+1086,"Who composed the 'Brandenburg Concertos'?",Entity
+1087,"What is the largest island in the Mediterranean Sea?",Entity
+1088,"Who is the main author of 'The Federalist Papers'?",Entity
+1089,"What is the currency of Switzerland?",Entity
+1090,"Who painted 'The Creation of Adam'?",Entity
+1091,"What is the national animal of China?",Entity
+1092,"Who wrote 'War and Peace'?",Entity
+1093,"What is the tallest tree species on Earth?",Entity
+1094,"Who is known as the 'Father of the Atomic Bomb'?",Entity
+1095,"What is the currency of South Africa?",Entity
+1096,"Who composed 'Rhapsody in Blue'?",Entity
+1097,"What is the largest river in South America?",Entity
+1098,"Who is credited with the theory of general relativity?",Entity
+1099,"What is the currency of South Korea?",Entity
+1100,"Who painted the 'Mona Lisa'?",Entity
+1101,"What is the national flower of Japan?",Entity
+1102,"Who is the founder of Apple Inc.?",Entity
+1103,"What is the largest moon of Jupiter?",Entity
+1104,"Who is known for the discovery of gravity?",Entity
+1105,"What is the currency of Brazil?",Entity
+1106,"Who wrote the novel 'Pride and Prejudice'?",Entity
+1107,"What is the largest species of bear?",Entity
+1108,"Who painted the 'Birth of Venus'?",Entity
+1109,"What is the national animal of Canada?",Entity
+1110,"Who invented the printing press?",Entity
+1111,"What is the largest mammal in the ocean?",Entity
+1112,"Who composed the 'Moonlight Sonata'?",Entity
+1113,"What is the currency of India?",Entity
+1114,"Who is the first female Prime Minister of the UK?",Entity
+1115,"What is the largest canyon in the world?",Entity
+1116,"Who is known for the discovery of penicillin?",Entity
+1117,"What is the national bird of the United States?",Entity
+1118,"Who founded Facebook?",Entity
+1119,"What is the largest living primate?",Entity
+1120,"Who wrote 'The Great Gatsby'?",Entity
+1121,"What is the national flower of France?",Entity
+1122,"Who founded Microsoft?",Entity
+1123,"What is the largest lake in the world?",Entity
+1124,"Who is known as the 'Father of Modern Chemistry'?",Entity
+1125,"What is the currency of Australia?",Entity
+1126,"Who composed 'The Four Seasons'?",Entity
+1127,"What is the largest island country?",Entity
+1128,"Who is the lead guitarist of the band Led Zeppelin?",Entity
+1129,"What is the national animal of Australia?",Entity
+1130,"Who wrote 'The Lord of the Rings'?",Entity
+1131,"What is the national flower of Germany?",Entity
+1132,"Who is the founder of Twitter?",Entity
+1133,"What is the longest river in Australia?",Entity
+1134,"Who is known as the 'Father of Electricity'?",Entity
+1135,"What is the currency of Canada?",Entity
+1136,"Who composed the 'Brandenburg Concertos'?",Entity
+1137,"What is the largest island in the Mediterranean Sea?",Entity
+1138,"Who is the main author of 'The Federalist Papers'?",Entity
+1139,"What is the currency of Switzerland?",Entity
+1140,"Who painted 'The Creation of Adam'?",Entity
+1141,"What is the national animal of China?",Entity
+1142,"Who wrote 'War and Peace'?",Entity
+1143,"What is the tallest tree species on Earth?",Entity
+1144,"Who is known as the 'Father of the Atomic Bomb'?",Entity
+1145,"What is the currency of South Africa?",Entity
+1146,"Who composed 'Rhapsody in Blue'?",Entity
+1147,"What is the largest river in South America?",Entity
+1148,"Who is credited with the theory of general relativity?",Entity
+1149,"What is the currency of South Korea?",Entity
+1150,"Who painted the 'Mona Lisa'?",Entity
+1151,"What is the national flower of Japan?",Entity
+1152,"Who is the founder of Apple Inc.?",Entity
+1153,"What is the largest moon of Jupiter?",Entity
+1154,"Who is known for the discovery of gravity?",Entity
+1155,"What is the currency of Brazil?",Entity
+1156,"Who wrote the novel 'Pride and Prejudice'?",Entity
+1157,"What is the largest species of bear?",Entity
+1158,"Who painted the 'Birth of Venus'?",Entity
+1159,"What is the national animal of Canada?",Entity
+1160,"Who invented the printing press?",Entity
+1161,"What is the largest mammal in the ocean?",Entity
+1162,"Who composed the 'Moonlight Sonata'?",Entity
+1163,"What is the currency of India?",Entity
+1164,"Who is the first female Prime Minister of the UK?",Entity
+1165,"What is the largest canyon in the world?",Entity
+1166,"Who is known for the discovery of penicillin?",Entity
+1167,"What is the national bird of the United States?",Entity
+1168,"Who founded Facebook?",Entity
+1169,"What is the largest living primate?",Entity
+1170,"Who wrote 'The Great Gatsby'?",Entity
+1171,"What is the national flower of France?",Entity
+1172,"Who founded Microsoft?",Entity
+1173,"What is the largest lake in the world?",Entity
+1174,"Who is known as the 'Father of Modern Chemistry'?",Entity
+1175,"What is the currency of Australia?",Entity
+1176,"Who composed 'The Four Seasons'?",Entity
+1177,"What is the largest island country?",Entity
+1178,"Who is the lead guitarist of the band Led Zeppelin?",Entity
+1179,"What is the national animal of Australia?",Entity
+1180,"Who wrote 'The Lord of the Rings'?",Entity
+1181,"What is the national flower of Germany?",Entity
+1182,"Who is the founder of Twitter?",Entity
+1183,"What is the longest river in Australia?",Entity
+1184,"Who is known as the 'Father of Electricity'?",Entity
+1185,"What is the currency of Canada?",Entity
+1186,"Who composed the 'Brandenburg Concertos'?",Entity
+1187,"What is the largest island in the Mediterranean Sea?",Entity
+1188,"Who is the main author of 'The Federalist Papers'?",Entity
+1189,"What is the currency of Switzerland?",Entity
+1190,"Who painted 'The Creation of Adam'?",Entity
+1191,"What is the national animal of China?",Entity
+1192,"Who wrote 'War and Peace'?",Entity
+1193,"What is the tallest tree species on Earth?",Entity
+1194,"Who is known as the 'Father of the Atomic Bomb'?",Entity
+1195,"What is the currency of South Africa?",Entity
+1196,"Who composed 'Rhapsody in Blue'?",Entity
+1197,"What is the largest river in South America?",Entity
+1198,"Who is credited with the theory of general relativity?",Entity
+1199,"What is the currency of South Korea?",Entity
+1200,"Who painted the 'Mona Lisa'?",Entity
+1201,"Who wrote 'The Hunchback of Notre Dame'?",Entity
+1202,"What is the national flower of China?",Entity
+1203,"Who founded SpaceX?",Entity
+1204,"What is the largest moon of Saturn?",Entity
+1205,"Who painted 'Guernica'?",Entity
+1206,"What is the currency of Saudi Arabia?",Entity
+1207,"Who composed the 'William Tell Overture'?",Entity
+1208,"What is the national animal of Russia?",Entity
+1209,"Who is the author of 'Moby Dick'?",Entity
+1210,"What is the largest waterfall in Africa?",Entity
+1211,"Who founded Alibaba Group?",Entity
+1212,"What is the currency of New Zealand?",Entity
+1213,"Who composed the 'Peer Gynt' suites?",Entity
+1214,"What is the national bird of Brazil?",Entity
+1215,"Who invented the World Wide Web?",Entity
+1216,"What is the largest bay in the world?",Entity
+1217,"Who wrote 'The Adventures of Huckleberry Finn'?",Entity
+1218,"What is the currency of South Africa?",Entity
+1219,"Who is the director of 'Inception'?",Entity
+1220,"What is the largest bird in the world by wingspan?",Entity
+1221,"Who painted 'The Persistence of Memory'?",Entity
+1222,"What is the national animal of India?",Entity
+1223,"Who discovered the circulation of blood?",Entity
+1224,"What is the currency of Switzerland?",Entity
+1225,"Who composed 'The Marriage of Figaro'?",Entity
+1226,"What is the national flower of Italy?",Entity
+1227,"Who is the founder of Virgin Group?",Entity
+1228,"What is the largest peninsula in the world?",Entity
+1229,"Who wrote 'The Sun Also Rises'?",Entity
+1230,"What is the currency of Denmark?",Entity
+1231,"Who founded Tesla, Inc.?",Entity
+1232,"What is the longest river in Europe?",Entity
+1233,"Who composed 'Symphony No. 5'?",Entity
+1234,"What is the national bird of Australia?",Entity
+1235,"Who is the author of 'The Catcher in the Rye'?",Entity
+1236,"What is the currency of Argentina?",Entity
+1237,"Who founded Oracle Corporation?",Entity
+1238,"What is the largest natural satellite of Neptune?",Entity
+1239,"Who painted 'The Starry Night'?",Entity
+1240,"What is the national animal of Japan?",Entity
+1241,"Who wrote 'The Jungle Book'?",Entity
+1242,"What is the currency of Thailand?",Entity
+1243,"Who founded The Walt Disney Company?",Entity
+1244,"What is the largest gulf in the world?",Entity
+1245,"Who composed 'Symphony No. 9'?",Entity
+1246,"What is the national flower of Spain?",Entity
+1247,"Who is the director of 'The Shawshank Redemption'?",Entity
+1248,"What is the largest saltwater lake in the world?",Entity
+1249,"Who wrote 'The Odyssey'?",Entity
+1250,"What is the currency of Mexico?",Entity
+1251,"Who founded Alibaba Group?",Entity
+1252,"What is the largest desert in North America?",Entity
+1253,"Who composed 'The Magic Flute'?",Entity
+1254,"What is the national animal of Germany?",Entity
+1255,"Who is the director of 'Forrest Gump'?",Entity
+1256,"What is the longest cave system in the world?",Entity
+1257,"Who wrote 'The Art of War'?",Entity
+1258,"What is the currency of Norway?",Entity
+1259,"Who founded Hewlett-Packard?",Entity
+1260,"What is the largest archipelago in the world?",Entity
+1261,"Who composed 'Piano Sonata No. 14'?",Entity
+1262,"What is the national flower of Canada?",Entity
+1263,"Who is the director of 'The Dark Knight'?",Entity
+1264,"What is the largest man-made lake in the world?",Entity
+1265,"Who wrote 'The Old Man and the Sea'?",Entity
+1266,"What is the currency of Sweden?",Entity
+1267,"Who founded SpaceX?",Entity
+1268,"What is the largest mountain range in South America?",Entity
+1269,"Who composed 'The Planets' suite?",Entity
+1270,"What is the national animal of France?",Entity
+1271,"Who is the director of 'Inception'?",Entity
+1272,"What is the longest mountain range in the world?",Entity
+1273,"Who wrote 'Anna Karenina'?",Entity
+1274,"What is the currency of Turkey?",Entity
+1275,"Who founded Alibaba Group?",Entity
+1276,"What is the largest river in Australia?",Entity
+1277,"Who composed 'Swan Lake'?",Entity
+1278,"What is the national flower of China?",Entity
+1279,"Who is the director of 'The Lion King'?",Entity
+1280,"What is the longest river in South America?",Entity
+1281,"Who wrote 'The Adventures of Tom Sawyer'?",Entity
+1282,"What is the currency of Saudi Arabia?",Entity
+1283,"Who founded Amazon?",Entity
+1284,"What is the largest bay in the world?",Entity
+1285,"Who composed 'The William Tell Overture'?",Entity
+1286,"What is the national animal of Russia?",Entity
+1287,"Who is the author of 'Moby Dick'?",Entity
+1288,"What is the largest waterfall in Africa?",Entity
+1289,"Who founded Alibaba Group?",Entity
+1290,"What is the currency of New Zealand?",Entity
+1291,"Who composed the 'Peer Gynt' suites?",Entity
+1292,"What is the national bird of Brazil?",Entity
+1293,"Who invented the World Wide Web?",Entity
+1294,"What is the largest lake in the world?",Entity
+1295,"Who wrote 'The Adventures of Huckleberry Finn'?",Entity
+1296,"What is the currency of South Africa?",Entity
+1297,"Who is the director of 'Inception'?",Entity
+1298,"What is the largest bird in the world by wingspan?",Entity
+1299,"Who painted 'Guernica'?",Entity
+1300,"What is the currency of Saudi Arabia?",Entity
+1301,"Who composed the 'William Tell Overture'?",Entity
+1302,"What is the national animal of Russia?",Entity
+1303,"Who is the author of 'Moby Dick'?",Entity
+1304,"What is the largest waterfall in Africa?",Entity
+1305,"Who founded Alibaba Group?",Entity
+1306,"What is the currency of New Zealand?",Entity
+1307,"Who composed the 'Peer Gynt' suites?",Entity
+1308,"What is the national bird of Brazil?",Entity
+1309,"Who invented the World Wide Web?",Entity
+1310,"What is the largest lake in the world?",Entity
+1311,"Who wrote 'The Adventures of Huckleberry Finn'?",Entity
+1312,"What is the currency of South Africa?",Entity
+1313,"Who is the director of 'Inception'?",Entity
+1314,"What is the largest bird in the world by wingspan?",Entity
+1315,"Who painted 'Guernica'?",Entity
+1316,"What is the currency of Saudi Arabia?",Entity
+1317,"Who composed the 'William Tell Overture'?",Entity
+1318,"What is the national animal of Russia?",Entity
+1319,"Who is the author of 'Moby Dick'?",Entity
+1320,"What is the largest waterfall in Africa?",Entity
+1321,"Who founded Alibaba Group?",Entity
+1322,"What is the currency of New Zealand?",Entity
+1323,"Who composed the 'Peer Gynt' suites?",Entity
+1324,"What is the national bird of Brazil?",Entity
+1325,"Who invented the World Wide Web?",Entity
+1326,"What is the largest lake in the world?",Entity
+1327,"Who wrote 'The Adventures of Huckleberry Finn'?",Entity
+1328,"What is the currency of South Africa?",Entity
+1329,"Who is the director of 'Inception'?",Entity
+1330,"What is the largest bird in the world by wingspan?",Entity
+1331,"Who painted 'Guernica'?",Entity
+1332,"What is the currency of Saudi Arabia?",Entity
+1333,"Who composed the 'William Tell Overture'?",Entity
+1334,"What is the national animal of Russia?",Entity
+1335,"Who is the author of 'Moby Dick'?",Entity
+1336,"What is the largest waterfall in Africa?",Entity
+1337,"Who founded Alibaba Group?",Entity
+1338,"What is the currency of New Zealand?",Entity
+1339,"Who composed the 'Peer Gynt' suites?",Entity
+1340,"What is the national bird of Brazil?",Entity
+1341,"Who invented the World Wide Web?",Entity
+1342,"What is the largest lake in the world?",Entity
+1343,"Who wrote 'The Adventures of Huckleberry Finn'?",Entity
+1344,"What is the currency of South Africa?",Entity
+1345,"Who is the director of 'Inception'?",Entity
+1346,"What is the largest bird in the world by wingspan?",Entity
+1347,"Who painted 'Guernica'?",Entity
+1348,"What is the currency of Saudi Arabia?",Entity
+1349,"Who composed the 'William Tell Overture'?",Entity
+1350,"What is the national animal of Russia?",Entity
+1351,"Who is the author of 'Moby Dick'?",Entity
+1352,"What is the largest waterfall in Africa?",Entity
+1353,"Who founded Alibaba Group?",Entity
+1354,"What is the currency of New Zealand?",Entity
+1355,"Who composed the 'Peer Gynt' suites?",Entity
+1356,"What is the national bird of Brazil?",Entity
+1357,"Who invented the World Wide Web?",Entity
+1358,"What is the largest lake in the world?",Entity
+1359,"Who wrote 'The Adventures of Huckleberry Finn'?",Entity
+1360,"What is the currency of South Africa?",Entity
+1361,"Who is the director of 'Inception'?",Entity
+1362,"What is the largest bird in the world by wingspan?",Entity
+1363,"Who painted 'Guernica'?",Entity
+1364,"What is the currency of Saudi Arabia?",Entity
+1365,"Who composed the 'William Tell Overture'?",Entity
+1366,"What is the national animal of Russia?",Entity
+1367,"Who is the author of 'Moby Dick'?",Entity
+1368,"What is the largest waterfall in Africa?",Entity
+1369,"Who founded Alibaba Group?",Entity
+1370,"What is the currency of New Zealand?",Entity
+1371,"Who composed the 'Peer Gynt' suites?",Entity
+1372,"What is the national bird of Brazil?",Entity
+1373,"Who invented the World Wide Web?",Entity
+1374,"What is the largest lake in the world?",Entity
+1375,"Who wrote 'The Adventures of Huckleberry Finn'?",Entity
+1376,"What is the currency of South Africa?",Entity
+1377,"Who is the director of 'Inception'?",Entity
+1378,"What is the largest bird in the world by wingspan?",Entity
+1379,"Who painted 'Guernica'?",Entity
+1380,"What is the currency of Saudi Arabia?",Entity
+1381,"Who composed the 'William Tell Overture'?",Entity
+1382,"What is the national animal of Russia?",Entity
+1383,"Who is the author of 'Moby Dick'?",Entity
+1384,"What is the largest waterfall in Africa?",Entity
+1385,"Who founded Alibaba Group?",Entity
+1386,"What is the currency of New Zealand?",Entity
+1387,"Who composed the 'Peer Gynt' suites?",Entity
+1388,"What is the national bird of Brazil?",Entity
+1389,"Who invented the World Wide Web?",Entity
+1390,"What is the largest lake in the world?",Entity
+1391,"Who wrote 'The Adventures of Huckleberry Finn'?",Entity
+1392,"What is the currency of South Africa?",Entity
+1393,"Who is the director of 'Inception'?",Entity
+1394,"What is the largest bird in the world by wingspan?",Entity
+1395,"Who painted 'Guernica'?",Entity
+1396,"What is the currency of Saudi Arabia?",Entity
+1397,"Who composed the 'William Tell Overture'?",Entity
+1398,"What is the national animal of Russia?",Entity
+1399,"Who is the author of 'Moby Dick'?",Entity
+1400,"What is the largest waterfall in Africa?",Entity
+1401,"Who discovered the structure of DNA?",Entity
+1402,"What is the national flower of the Netherlands?",Entity
+1403,"Who founded the theory of general relativity?",Entity
+1404,"What is the largest moon of Uranus?",Entity
+1405,"Who painted 'The Birth of Venus'?",Entity
+1406,"What is the currency of Egypt?",Entity
+1407,"Who composed the 'Four Seasons'?",Entity
+1408,"What is the national animal of Spain?",Entity
+1409,"Who is the author of 'The Picture of Dorian Gray'?",Entity
+1410,"What is the largest bay in the world?",Entity
+1411,"Who founded Sony Corporation?",Entity
+1412,"What is the currency of Singapore?",Entity
+1413,"Who composed 'The Rite of Spring'?",Entity
+1414,"What is the national bird of India?",Entity
+1415,"Who invented the periodic table?",Entity
+1416,"What is the longest river in France?",Entity
+1417,"Who wrote 'The Art of War'?",Entity
+1418,"What is the currency of Poland?",Entity
+1419,"Who founded the Virgin Group?",Entity
+1420,"What is the largest island in the Mediterranean?",Entity
+1421,"Who composed the 'Messiah'?",Entity
+1422,"What is the national flower of Canada?",Entity
+1423,"Who is the director of 'The Godfather'?",Entity
+1424,"What is the longest mountain range in Africa?",Entity
+1425,"Who authored 'The Grapes of Wrath'?",Entity
+1426,"What is the currency of Malaysia?",Entity
+1427,"Who founded Wikipedia?",Entity
+1428,"What is the largest lake in Europe?",Entity
+1429,"Who composed 'The Nutcracker'?",Entity
+1430,"What is the national bird of Australia?",Entity
+1431,"Who is the director of 'The Matrix'?",Entity
+1432,"What is the tallest mountain in South America?",Entity
+1433,"Who wrote 'The Scarlet Letter'?",Entity
+1434,"What is the currency of Thailand?",Entity
+1435,"Who founded Tesla Motors?",Entity
+1436,"What is the longest river in Italy?",Entity
+1437,"Who composed 'Carmen'?",Entity
+1438,"What is the national flower of Brazil?",Entity
+1439,"Who is the director of 'Schindler's List'?",Entity
+1440,"What is the largest volcano on Earth?",Entity
+1441,"Who authored 'Alice's Adventures in Wonderland'?",Entity
+1442,"What is the currency of Hungary?",Entity
+1443,"Who founded the SpaceX program?",Entity
+1444,"What is the tallest mountain in Africa?",Entity
+1445,"Who composed 'The Brandenburg Concertos'?",Entity
+1446,"What is the national bird of France?",Entity
+1447,"Who is the director of 'Pulp Fiction'?",Entity
+1448,"What is the deepest oceanic trench?",Entity
+1449,"Who wrote 'One Hundred Years of Solitude'?",Entity
+1450,"What is the currency of Sweden?",Entity
+1451,"Who founded Pixar Animation Studios?",Entity
+1452,"What is the longest river in Spain?",Entity
+1453,"Who composed 'Swan Lake'?",Entity
+1454,"What is the national flower of Japan?",Entity
+1455,"Who is the director of 'Interstellar'?",Entity
+1456,"What is the largest waterfall in the world?",Entity
+1457,"Who authored 'Brave New World'?",Entity
+1458,"What is the currency of South Africa?",Entity
+1459,"Who founded the Red Cross?",Entity
+1460,"What is the deepest lake in the world?",Entity
+1461,"Who composed 'The Firebird'?",Entity
+1462,"What is the national bird of China?",Entity
+1463,"Who is the director of 'The Shawshank Redemption'?",Entity
+1464,"What is the highest mountain in Europe?",Entity
+1465,"Who wrote 'The Stranger'?",Entity
+1466,"What is the currency of Norway?",Entity
+1467,"Who founded the Virgin Galactic?",Entity
+1468,"What is the longest river in Africa?",Entity
+1469,"Who composed 'The Magic Flute'?",Entity
+1470,"What is the national flower of England?",Entity
+1471,"Who is the director of 'The Dark Knight'?",Entity
+1472,"What is the highest mountain in North America?",Entity
+1473,"Who authored 'The Canterbury Tales'?",Entity
+1474,"What is the currency of Japan?",Entity
+1475,"Who founded the YouTube platform?",Entity
+1476,"What is the longest river in Asia?",Entity
+1477,"Who composed 'The Planets'?",Entity
+1478,"What is the national bird of the United States?",Entity
+1479,"Who is the director of 'Forrest Gump'?",Entity
+1480,"What is the highest mountain in South America?",Entity
+1481,"Who wrote 'The Grapes of Wrath'?",Entity
+1482,"What is the currency of Russia?",Entity
+1483,"Who founded the Virgin Mobile?",Entity
+1484,"What is the longest river in Canada?",Entity
+1485,"Who composed 'Carmen'?",Entity
+1486,"What is the national flower of India?",Entity
+1487,"Who is the director of 'Inception'?",Entity
+1488,"What is the highest mountain in Africa?",Entity
+1489,"Who authored 'To Kill a Mockingbird'?",Entity
+1490,"What is the currency of China?",Entity
+1491,"Who founded the Microsoft Corporation?",Entity
+1492,"What is the longest river in Australia?",Entity
+1493,"Who composed 'The Marriage of Figaro'?",Entity
+1494,"What is the national bird of Australia?",Entity
+1495,"Who is the director of 'The Lion King'?",Entity
+1496,"What is the highest mountain in Asia?",Entity
+1497,"Who wrote 'The Old Man and the Sea'?",Entity
+1498,"What is the currency of Canada?",Entity
+1499,"Who founded the SpaceX program?",Entity
+1500,"What is the longest river in South America?",Entity
+1501,"The capital city of France is ...",Entity
+1502,"The theory of relativity was proposed by ...",Entity
+1503,"The currency used in the United Kingdom is the ...",Entity
+1504,"The largest desert in the world is the Sahara ...",Entity
+1505,"The Mona Lisa was painted by ...",Entity
+1506,"The author of 'The Great Gatsby' is ...",Entity
+1507,"The deepest point in the ocean is the ...",Entity
+1508,"The first president of the United States was ...",Entity
+1509,"The currency used in Japan is the ...",Entity
+1510,"The tallest mountain in the world is ...",Entity
+1511,"The composer of the 'Moonlight Sonata' is ...",Entity
+1512,"The national animal of Australia is the ...",Entity
+1513,"The Nobel Prize was founded by ...",Entity
+1514,"The famous equation E=mc^2 was proposed by ...",Entity
+1515,"The currency used in India is the ...",Entity
+1516,"The founder of Microsoft is ...",Entity
+1517,"The first man to walk on the moon was ...",Entity
+1518,"The painting 'The Starry Night' was created by ...",Entity
+1519,"The longest river in South America is the ...",Entity
+1520,"The theory of evolution was proposed by ...",Entity
+1521,"The currency used in Brazil is the ...",Entity
+1522,"The author of 'To Kill a Mockingbird' is ...",Entity
+1523,"The largest island in the world is ...",Entity
+1524,"The inventor of the light bulb was ...",Entity
+1525,"The currency used in Russia is the ...",Entity
+1526,"The composer of 'The Four Seasons' is ...",Entity
+1527,"The national animal of Canada is the ...",Entity
+1528,"The discovery of gravity is credited to ...",Entity
+1529,"The currency used in Germany is the ...",Entity
+1530,"The author of '1984' is ...",Entity
+1531,"The largest lake in the world is ...",Entity
+1532,"The theory of relativity was formulated by ...",Entity
+1533,"The currency used in France is the ...",Entity
+1534,"The composer of 'The Marriage of Figaro' is ...",Entity
+1535,"The national animal of China is the ...",Entity
+1536,"The invention of the telephone is attributed to ...",Entity
+1537,"The currency used in Australia is the ...",Entity
+1538,"The author of 'The Catcher in the Rye' is ...",Entity
+1539,"The highest mountain in North America is ...",Entity
+1540,"The discovery of penicillin is credited to ...",Entity
+1541,"The currency used in Canada is the ...",Entity
+1542,"The composer of 'The Nutcracker' is ...",Entity
+1543,"The national animal of India is the ...",Entity
+1544,"The discovery of America is associated with ...",Entity
+1545,"The currency used in Italy is the ...",Entity
+1546,"The author of 'Lord of the Rings' is ...",Entity
+1547,"The largest river in Europe is the ...",Entity
+1548,"The theory of relativity was introduced by ...",Entity
+1549,"The currency used in South Africa is the ...",Entity
+1550,"The composer of 'The Magic Flute' is ...",Entity
+1551,"The national animal of Brazil is the ...",Entity
+1552,"The invention of the airplane is attributed to ...",Entity
+1553,"The currency used in Spain is the ...",Entity
+1554,"The author of 'Pride and Prejudice' is ...",Entity
+1555,"The deepest lake in the world is ...",Entity
+1556,"The theory of gravity was proposed by ...",Entity
+1557,"The currency used in Mexico is the ...",Entity
+1558,"The composer of 'Carmen' is ...",Entity
+1559,"The national animal of Russia is the ...",Entity
+1560,"The discovery of electricity is credited to ...",Entity
+1561,"The currency used in Argentina is the ...",Entity
+1562,"The author of 'The Odyssey' is ...",Entity
+1563,"The highest mountain in South America is ...",Entity
+1564,"The theory of evolution was introduced by ...",Entity
+1565,"The currency used in China is the ...",Entity
+1566,"The composer of 'The William Tell Overture' is ...",Entity
+1567,"The national animal of the United States is the ...",Entity
+1568,"The invention of the computer is attributed to ...",Entity
+1569,"The currency used in Sweden is the ...",Entity
+1570,"The longest river in Canada is the ...",Entity
+1571,"The composer of 'Carmen' is ...",Entity
+1572,"The national flower of India is ...",Entity
+1573,"The inventor of the telephone was ...",Entity
+1574,"The currency used in Russia is the ...",Entity
+1575,"The capital city of France is ...",Entity
+1576,"The theory of relativity was proposed by ...",Entity
+1577,"The currency used in the United Kingdom is the ...",Entity
+1578,"The largest desert in the world is the Sahara ...",Entity
+1579,"The Mona Lisa was painted by ...",Entity
+1580,"The author of 'The Great Gatsby' is ...",Entity
+1581,"The deepest point in the ocean is the ...",Entity
+1582,"The first president of the United States was ...",Entity
+1583,"The currency used in Japan is the ...",Entity
+1584,"The tallest mountain in the world is ...",Entity
+1585,"The composer of the 'Moonlight Sonata' is ...",Entity
+1586,"The national animal of Australia is the ...",Entity
+1587,"The Nobel Prize was founded by ...",Entity
+1588,"The famous equation E=mc^2 was proposed by ...",Entity
+1589,"The currency used in India is the ...",Entity
+1590,"The founder of Microsoft is ...",Entity
+1591,"The first man to walk on the moon was ...",Entity
+1592,"The painting 'The Starry Night' was created by ...",Entity
+1593,"The longest river in South America is the ...",Entity
+1594,"The theory of evolution was proposed by ...",Entity
+1595,"The currency used in Brazil is the ...",Entity
+1596,"The author of 'To Kill a Mockingbird' is ...",Entity
+1597,"The largest island in the world is ...",Entity
+1598,"The inventor of the light bulb was ...",Entity
+1599,"The currency used in Russia is the ...",Entity
+1600,"The composer of 'The Four Seasons' is ...",Entity
+1601,"The national animal of Canada is the ...",Entity
+1602,"The discovery of gravity is credited to ...",Entity
+1603,"The currency used in Germany is the ...",Entity
+1604,"The author of '1984' is ...",Entity
+1605,"The largest lake in the world is ...",Entity
+1606,"The theory of relativity was formulated by ...",Entity
+1607,"The currency used in France is the ...",Entity
+1608,"The composer of 'The Marriage of Figaro' is ...",Entity
+1609,"The national animal of China is the ...",Entity
+1610,"The invention of the telephone is attributed to ...",Entity
+1611,"The currency used in Australia is the ...",Entity
+1612,"The author of 'The Catcher in the Rye' is ...",Entity
+1613,"The highest mountain in North America is ...",Entity
+1614,"The discovery of penicillin is credited to ...",Entity
+1615,"The currency used in Canada is the ...",Entity
+1616,"The composer of 'The Nutcracker' is ...",Entity
+1617,"The national animal of India is the ...",Entity
+1618,"The discovery of America is associated with ...",Entity
+1619,"The currency used in Italy is the ...",Entity
+1620,"The author of 'Lord of the Rings' is ...",Entity
+1621,"The largest river in Europe is the ...",Entity
+1622,"The theory of relativity was introduced by ...",Entity
+1623,"The currency used in South Africa is the ...",Entity
+1624,"The composer of 'The Magic Flute' is ...",Entity
+1625,"The national animal of Brazil is the ...",Entity
+1626,"The invention of the airplane is attributed to ...",Entity
+1627,"The currency used in Spain is the ...",Entity
+1628,"The author of 'Pride and Prejudice' is ...",Entity
+1629,"The deepest lake in the world is ...",Entity
+1630,"The theory of gravity was proposed by ...",Entity
+1631,"The currency used in Mexico is the ...",Entity
+1632,"The composer of 'Carmen' is ...",Entity
+1633,"The national animal of Russia is the ...",Entity
+1634,"The discovery of electricity is credited to ...",Entity
+1635,"The currency used in Argentina is the ...",Entity
+1636,"The author of 'The Odyssey' is ...",Entity
+1637,"The highest mountain in South America is ...",Entity
+1638,"The theory of evolution was introduced by ...",Entity
+1639,"The currency used in China is the ...",Entity
+1640,"The composer of 'The William Tell Overture' is ...",Entity
+1641,"The national animal of the United States is the ...",Entity
+1642,"The invention of the computer is attributed to ...",Entity
+1643,"The currency used in Sweden is the ...",Entity
+1644,"The longest river in Canada is the ...",Entity
+1645,"The composer of 'Carmen' is ...",Entity
+1646,"The national flower of India is ...",Entity
+1647,"The inventor of the telephone was ...",Entity
+1648,"The currency used in Russia is the ...",Entity
+1649,"The capital city of France is ...",Entity
+1650,"The theory of relativity was proposed by ...",Entity
+1651,"The currency used in the United Kingdom is the ...",Entity
+1652,"The largest desert in the world is the Sahara ...",Entity
+1653,"The Mona Lisa was painted by ...",Entity
+1654,"The author of 'The Great Gatsby' is ...",Entity
+1655,"The deepest point in the ocean is the ...",Entity
+1656,"The first president of the United States was ...",Entity
+1657,"The currency used in Japan is the ...",Entity
+1658,"The tallest mountain in the world is ...",Entity
+1659,"The composer of the 'Moonlight Sonata' is ...",Entity
+1660,"The national animal of Australia is the ...",Entity
+1661,"The Nobel Prize was founded by ...",Entity
+1662,"The famous equation E=mc^2 was proposed by ...",Entity
+1663,"The currency used in India is the ...",Entity
+1664,"The founder of Microsoft is ...",Entity
+1665,"The first man to walk on the moon was ...",Entity
+1666,"The painting 'The Starry Night' was created by ...",Entity
+1667,"The longest river in South America is the ...",Entity
+1668,"The theory of evolution was proposed by ...",Entity
+1669,"The currency used in Brazil is the ...",Entity
+1670,"The author of 'To Kill a Mockingbird' is ...",Entity
+1671,"The largest island in the world is ...",Entity
+1672,"The inventor of the light bulb was ...",Entity
+1673,"The currency used in Russia is the ...",Entity
+1674,"The composer of 'The Four Seasons' is ...",Entity
+1675,"The national animal of Canada is the ...",Entity
+1676,"The discovery of gravity is credited to ...",Entity
+1677,"The currency used in Germany is the ...",Entity
+1678,"The author of '1984' is ...",Entity
+1679,"The largest lake in the world is ...",Entity
+1680,"The theory of relativity was formulated by ...",Entity
+1681,"The currency used in France is the ...",Entity
+1682,"The composer of 'The Marriage of Figaro' is ...",Entity
+1683,"The national animal of China is the ...",Entity
+1684,"The invention of the telephone is attributed to ...",Entity
+1685,"The currency used in Australia is the ...",Entity
+1686,"The author of 'The Catcher in the Rye' is ...",Entity
+1687,"The highest mountain in North America is ...",Entity
+1688,"The discovery of penicillin is credited to ...",Entity
+1689,"The currency used in Canada is the ...",Entity
+1690,"The composer of 'The Nutcracker' is ...",Entity
+1691,"The national animal of India is the ...",Entity
+1692,"The discovery of America is associated with ...",Entity
+1693,"The currency used in Italy is the ...",Entity
+1694,"The deepest part of the ocean is called the Mariana Trench...",Entity
+1695,"The Nobel Prize winner for literature in 2020 was...",Entity
+1696,"The inventor of the World Wide Web is...",Entity
+1697,"The largest mammal in the world is the...",Entity
+1698,"The author of 'The Chronicles of Narnia' is...",Entity
+1699,"The chemical element with the symbol Fe represents...",Entity
+1700,"The first human in space was...",Entity
+1701,"The currency used in South Korea is the...",Entity
+1702,"The longest river in South America is the...",Entity
+1703,"The painter of the Sistine Chapel ceiling was...",Entity
+1704,"The highest mountain in the world is...",Entity
+1705,"The currency used in Switzerland is the...",Entity
+1706,"The inventor of the light bulb is...",Entity
+1707,"The capital of Brazil is...",Entity
+1708,"The fastest land animal is the...",Entity
+1709,"The author of 'The Old Man and the Sea' is...",Entity
+1710,"The currency used in Thailand is the...",Entity
+1711,"The largest moon of Saturn is...",Entity
+1712,"The composer of 'The Magic Flute' is...",Entity
+1713,"The national animal of Canada is the...",Entity
+1714,"The discovery of penicillin is attributed to...",Entity
+1715,"The currency used in Australia is the...",Entity
+1716,"The tallest building in the world is...",Entity
+1717,"The currency used in Denmark is the...",Entity
+1718,"The inventor of the theory of general relativity is...",Entity
+1719,"The national animal of Scotland is the...",Entity
+1720,"The discovery of the theory of evolution is credited to...",Entity
+1721,"The currency used in Egypt is the...",Entity
+1722,"The longest river in Asia is the...",Entity
+1723,"The creator of the 'Harry Potter' series is...",Entity
+1724,"The currency used in Mexico is the...",Entity
+1725,"The largest island country in the world is...",Entity
+1726,"The currency used in Singapore is the...",Entity
+1727,"The inventor of the telephone is...",Entity
+1728,"The capital of Canada is...",Entity
+1729,"The currency used in Russia is the...",Entity
+1730,"The longest river in Europe is the...",Entity
+1731,"The author of 'Brave New World' is...",Entity
+1732,"The currency used in Turkey is the...",Entity
+1733,"The tallest tree in the world is...",Entity
+1734,"The currency used in Poland is the...",Entity
+1735,"The inventor of the electric battery is...",Entity
+1736,"The capital of Italy is...",Entity
+1737,"The largest species of big cat is the...",Entity
+1738,"The author of 'The Iliad' is...",Entity
+1739,"The currency used in Brazil is the...",Entity
+1740,"The tallest animal in the world is the...",Entity
+1741,"The inventor of the airplane is...",Entity
+1742,"The capital of South Africa is...",Entity
+1743,"The fastest bird in the world is the...",Entity
+1744,"The author of 'Frankenstein' is...",Entity
+1745,"The currency used in Saudi Arabia is the...",Entity
+1746,"The deepest lake in the world is...",Entity
+1747,"The capital of Spain is...",Entity
+1748,"The largest bird in the world is the...",Entity
+1749,"The author of 'Crime and Punishment' is...",Entity
+1750,"The currency used in South Africa is the...",Entity
+1751,"The Nobel Prize in Physics 2021 was awarded to...",Entity
+1752,"The architect behind the Sydney Opera House is...",Entity
+1753,"The chemical symbol H2O represents...",Entity
+1754,"The first female Prime Minister of the United Kingdom was...",Entity
+1755,"The composer of 'The Four Seasons' is...",Entity
+1756,"The currency used in Switzerland is the...",Entity
+1757,"The first person to summit Mount Everest was...",Entity
+1758,"The founder of Amazon is...",Entity
+1759,"The capital city of Germany is...",Entity
+1760,"The first person to receive two Nobel Prizes in different fields was...",Entity
+1761,"The inventor of the World Wide Web is...",Entity
+1762,"The tallest mountain in the Andes is...",Entity
+1763,"The author of 'Pride and Prejudice' is...",Entity
+1764,"The first satellite launched into space was named...",Entity
+1765,"The painter of the 'Mona Lisa' is...",Entity
+1766,"The currency used in Japan is the...",Entity
+1767,"The longest river in China is...",Entity
+1768,"The architect of the Eiffel Tower is...",Entity
+1769,"The capital city of Brazil is...",Entity
+1770,"The first astronaut to orbit Earth was...",Entity
+1771,"The composer of 'Moonlight Sonata' is...",Entity
+1772,"The currency used in India is the...",Entity
+1773,"The longest river in Africa is the...",Entity
+1774,"The inventor of the telephone is...",Entity
+1775,"The capital city of Russia is...",Entity
+1776,"The first person to circumnavigate the globe was...",Entity
+1777,"The painter of the 'Starry Night' is...",Entity
+1778,"The currency used in Australia is the...",Entity
+1779,"The longest river in South America is...",Entity
+1780,"The author of 'The Great Gatsby' is...",Entity
+1781,"The first human to walk on the moon was...",Entity
+1782,"The composer of 'The Magic Flute' is...",Entity
+1783,"The currency used in the United States is the...",Entity
+1784,"The largest mammal in the world is the...",Entity
+1785,"The architect of the Burj Khalifa is...",Entity
+1786,"The capital city of France is...",Entity
+1787,"The first woman in space was...",Entity
+1788,"The painter of the 'Last Supper' is...",Entity
+1789,"The currency used in Canada is the...",Entity
+1790,"The tallest mountain in the world is...",Entity
+1791,"The author of 'The Odyssey' is...",Entity
+1792,"The first man to reach the South Pole was...",Entity
+1793,"The composer of 'The Marriage of Figaro' is...",Entity
+1794,"The currency used in Mexico is the...",Entity
+1795,"The longest river in Europe is the...",Entity
+1796,"The architect of the Taj Mahal is...",Entity
+1797,"The capital city of Italy is...",Entity
+1798,"The first person to fly across the Atlantic Ocean solo was...",Entity
+1799,"The painter of the 'Girl with a Pearl Earring' is...",Entity
+1800,"The currency used in China is the...",Entity
+1801,"The longest river in Australia is...",Entity
+1802,"The author of 'The Old Man and the Sea' is...",Entity
+1803,"The first female to win a Nobel Prize was...",Entity
+1804,"The composer of 'The Nutcracker' is...",Entity
+1805,"The currency used in South Africa is the...",Entity
+1806,"The largest bird in the world is the...",Entity
+1807,"The architect of the Colosseum is...",Entity
+1808,"The capital city of Spain is...",Entity
+1809,"The first person to sail around the world was...",Entity
+1810,"The painter of the 'Birth of Venus' is...",Entity
+1811,"The currency used in Japan is the...",Entity
+1812,"The longest river in North America is...",Entity
+1813,"The author of 'Frankenstein' is...",Entity
+1814,"The first female Prime Minister of India was...",Entity
+1815,"The composer of 'The William Tell Overture' is...",Entity
+1816,"The currency used in Switzerland is the...",Entity
+1817,"The tallest building in the world is...",Entity
+1818,"The architect of the White House is...",Entity
+1819,"The capital city of Germany is...",Entity
+1820,"The first person to set foot on Antarctica was...",Entity
+1821,"The painter of the 'Sistine Chapel Ceiling' is...",Entity
+1822,"The currency used in India is the...",Entity
+1823,"The longest river in South America is...",Entity
+1824,"The author of 'The Little Prince' is...",Entity
+1825,"The first person to reach the North Pole was...",Entity
+1826,"The composer of 'The Firebird Suite' is...",Entity
+1827,"The currency used in the United Kingdom is the...",Entity
+1828,"The largest land mammal in the world is the...",Entity
+1829,"The architect of the Statue of Liberty is...",Entity
+1830,"The capital city of Brazil is...",Entity
+1831,"The first person to swim across the English Channel was...",Entity
+1832,"The painter of the 'Guernica' is...",Entity
+1833,"The currency used in Canada is the...",Entity
+1834,"The longest river in Africa is the...",Entity
+1835,"The author of 'Moby Dick' is...",Entity
+1836,"The first female President of the United States was...",Entity
+1837,"The composer of 'The Barber of Seville' is...",Entity
+1838,"The currency used in Japan is the...",Entity
+1839,"The tallest waterfall in the world is...",Entity
+1840,"The architect of the Great Wall of China is...",Entity
+1841,"The capital city of France is...",Entity
+1842,"The first person to reach the South Pole solo was...",Entity
+1843,"The painter of the 'The Starry Night' is...",Entity
+1844,"The currency used in Australia is the...",Entity
+1845,"The longest river in South America is...",Entity
+1846,"The author of 'The Divine Comedy' is...",Entity
+1847,"The first person to fly solo across the Atlantic was...",Entity
+1848,"The composer of 'The Magic Flute' is...",Entity
+1849,"The currency used in the United States is the...",Entity
+1850,"The tallest mountain in the Andes is...",Entity
+1851,"The architect of the Eiffel Tower is...",Entity
+1852,"The capital city of Brazil is...",Entity
+1853,"The first person to orbit Earth was...",Entity
+1854,"The painter of the 'Mona Lisa' is...",Entity
+1855,"The currency used in Japan is the...",Entity
+1856,"The longest river in China is...",Entity
+1857,"The inventor of the telephone is...",Entity
+1858,"The capital city of Russia is...",Entity
+1859,"The first person to circumnavigate the globe was...",Entity
+1860,"The composer of 'Moonlight Sonata' is...",Entity
+1861,"The currency used in India is the...",Entity
+1862,"The longest river in Africa is the...",Entity
+1863,"The architect behind the Sydney Opera House is...",Entity
+1864,"The chemical symbol H2O represents...",Entity
+1865,"The first female Prime Minister of the United Kingdom was...",Entity
+1866,"The composer of 'The Four Seasons' is...",Entity
+1867,"The currency used in Switzerland is the...",Entity
+1868,"The first person to summit Mount Everest was...",Entity
+1869,"The founder of Amazon is...",Entity
+1870,"The capital city of Germany is...",Entity
+1871,"The first person to receive two Nobel Prizes in different fields was...",Entity
+1872,"The inventor of the World Wide Web is...",Entity
+1873,"The tallest mountain in the Andes is...",Entity
+1874,"The author of 'Pride and Prejudice' is...",Entity
+1875,"The first satellite launched into space was named...",Entity
+1876,"The painter of the 'Mona Lisa' is...",Entity
+1877,"The currency used in Japan is the...",Entity
+1878,"The longest river in China is...",Entity
+1879,"The architect of the Eiffel Tower is...",Entity
+1880,"The capital city of Brazil is...",Entity
+1881,"The first astronaut to orbit Earth was...",Entity
+1882,"The composer of 'Moonlight Sonata' is...",Entity
+1883,"The currency used in India is the...",Entity
+1884,"The longest river in Africa is the...",Entity
+1885,"The inventor of the telephone is...",Entity
+1886,"The capital city of Russia is...",Entity
+1887,"The first person to circumnavigate the globe was...",Entity
+1888,"The painter of the 'Mona Lisa' is...",Entity
+1889,"The currency used in Japan is the...",Entity
+1890,"The longest river in China is...",Entity
+1891,"The architect of the Eiffel Tower is...",Entity
+1892,"The capital city of Brazil is...",Entity
+1893,"The first astronaut to orbit Earth was...",Entity
+1894,"The composer of 'Moonlight Sonata' is...",Entity
+1895,"The currency used in India is the...",Entity
+1896,"The longest river in Africa is the...",Entity
+1897,"The inventor of the telephone is...",Entity
+1898,"The capital city of Russia is...",Entity
+1899,"The first person to circumnavigate the globe was...",Entity
+1900,"The painter of the 'Mona Lisa' is...",Entity
+1901,"The currency used in Japan is the...",Entity
+1902,"The longest river in China is...",Entity
+1903,"The architect of the Eiffel Tower is...",Entity
+1904,"The capital city of Brazil is...",Entity
+1905,"The first astronaut to orbit Earth was...",Entity
+1906,"The composer of 'Moonlight Sonata' is...",Entity
+1907,"The currency used in India is the...",Entity
+1908,"The longest river in Africa is the...",Entity
+1909,"The inventor of the telephone is...",Entity
+1910,"The capital city of Russia is...",Entity
+1911,"The first person to circumnavigate the globe was...",Entity
+1912,"The painter of the 'Mona Lisa' is...",Entity
+1913,"The currency used in Japan is the...",Entity
+1914,"The longest river in China is...",Entity
+1915,"The architect of the Eiffel Tower is...",Entity
+1916,"The capital city of Brazil is...",Entity
+1917,"The first astronaut to orbit Earth was...",Entity
+1918,"The composer of 'Moonlight Sonata' is...",Entity
+1919,"The currency used in India is the...",Entity
+1920,"The longest river in Africa is the...",Entity
+1921,"The inventor of the telephone is...",Entity
+1922,"The capital city of Russia is...",Entity
+1923,"The first person to circumnavigate the globe was...",Entity
+1924,"The painter of the 'Mona Lisa' is...",Entity
+1925,"The currency used in Japan is the...",Entity
+1926,"The longest river in China is...",Entity
+1927,"The architect of the Eiffel Tower is...",Entity
+1928,"The capital city of Brazil is...",Entity
+1929,"The first astronaut to orbit Earth was...",Entity
+1930,"The composer of 'Moonlight Sonata' is...",Entity
+1931,"The currency used in India is the...",Entity
+1932,"The longest river in Africa is the...",Entity
+1933,"The inventor of the telephone is...",Entity
+1934,"The capital city of Russia is...",Entity
+1935,"The first person to circumnavigate the globe was...",Entity
+1936,"The painter of the 'Mona Lisa' is...",Entity
+1937,"The currency used in Japan is the...",Entity
+1938,"The longest river in China is...",Entity
+1939,"The architect of the Eiffel Tower is...",Entity
+1940,"The capital city of Brazil is...",Entity
+1941,"The first astronaut to orbit Earth was...",Entity
+1942,"The composer of 'Moonlight Sonata' is...",Entity
+1943,"The currency used in India is the...",Entity
+1944,"The longest river in Africa is the...",Entity
+1945,"The inventor of the telephone is...",Entity
+1946,"The capital city of Russia is...",Entity
+1947,"The first person to circumnavigate the globe was...",Entity
+1948,"The painter of the 'Mona Lisa' is...",Entity
+1949,"The currency used in Japan is the...",Entity
+1950,"The longest river in China is...",Entity
+1951,"The architect of the Eiffel Tower is...",Entity
+1952,"The capital city of Brazil is...",Entity
+1953,"The first astronaut to orbit Earth was...",Entity
+1954,"The composer of 'Moonlight Sonata' is...",Entity
+1955,"The currency used in India is the...",Entity
+1956,"The longest river in Africa is the...",Entity
+1957,"The inventor of the telephone is...",Entity
+1958,"The capital city of Russia is...",Entity
+1959,"The first person to circumnavigate the globe was...",Entity
+1960,"The painter of the 'Mona Lisa' is...",Entity
+1961,"The currency used in Japan is the...",Entity
+1962,"The longest river in China is...",Entity
+1963,"The architect of the Eiffel Tower is...",Entity
+1964,"The capital city of Brazil is...",Entity
+1965,"The first astronaut to orbit Earth was...",Entity
+1966,"The composer of 'Moonlight Sonata' is...",Entity
+1967,"The currency used in India is the...",Entity
+1968,"The longest river in Africa is the...",Entity
+1969,"The capital of Spain is...",Entity
+1970,"The largest bird in the world is the...",Entity
+1971,"The author of 'Crime and Punishment' is...",Entity
+1972,"The currency used in South Africa is...",Entity
+1973,"The tallest tree in the world is...",Entity
+1974,"The composer of 'The William Tell Overture' is...",Entity
+1975,"The national animal of the United States is the...",Entity
+1976,"The discovery of electricity is credited to...",Entity
+1977,"The currency used in Sweden is...",Entity
+1978,"The inventor of the telephone is...",Entity
+1979,"The highest mountain in Europe is...",Entity
+1980,"The currency used in China is...",Entity
+1981,"The largest river in South America is the...",Entity
+1982,"The painter of the Sistine Chapel ceiling was...",Entity
+1983,"The first person to step on the moon was...",Entity
+1984,"The currency used in Japan is...",Entity
+1985,"The national animal of Australia is the...",Entity
+1986,"The inventor of the light bulb was...",Entity
+1987,"The capital of Brazil is...",Entity
+1988,"The largest mammal in the world is the...",Entity
+1989,"The author of 'The Old Man and the Sea' is...",Entity
+1990,"The currency used in Thailand is...",Entity
+1991,"The highest mountain in the world is...",Entity
+1992,"The currency used in Switzerland is...",Entity
+1993,"The composer of 'The Magic Flute' is...",Entity
+1994,"The national animal of Canada is the...",Entity
+1995,"The discovery of penicillin is attributed to...",Entity
+1996,"The currency used in Australia is...",Entity
+1997,"The tallest building in the world is...",Entity
+1998,"The currency used in Denmark is...",Entity
+1999,"The inventor of the theory of general relativity is...",Entity
+2000,"The national animal of Scotland is the...",Entity

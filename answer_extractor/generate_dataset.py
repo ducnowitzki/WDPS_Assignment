@@ -5,7 +5,7 @@ from langchain.llms.llamacpp import LlamaCpp
 import pandas as pd
 
 
-MODEL_PATH = os.path.abspath('llama-2-7b.Q3_K_M.gguf')
+MODEL_PATH = os.path.abspath('llama-2-7b.Q4_K_M.gguf')
 
 callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
 

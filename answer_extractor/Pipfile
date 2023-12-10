@@ -8,6 +8,7 @@ langchain = "*"
 pandas = "*"
 scikit-learn = "*"
 llama-cpp-python = "*"
+nltk = "*"
 
 [dev-packages]
 

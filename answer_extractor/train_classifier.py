@@ -18,7 +18,7 @@ def train_classifier():
     data["Type"] = data["Type"].map({"Yes/No": 0, "Entity": 1})
 
     drop = ["Unnamed: 0", "Index", "Input", "Answer", "Type"]
-    X_train, X_test, y_train, y_test = train_test_split(data.drop(drop, axis=1), data["Type"], test_size=0.2, random_state=42)
+    X_train, X_test, y_train, y_test = train_test_split(data.drop(drop, axis=1), data["Type"], test_size=0.05, random_state=42)
 
     # train model
     #clf = DecisionTreeClassifier()

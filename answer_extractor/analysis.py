@@ -24,6 +24,9 @@ entity_counter = Counter(entity_features.all_words).most_common(n)
 # no: no, not, n't
 # dunno: actually, answer, (maybe, probably, possibly, perhaps)
 
-# TODO: tokenizer, lemma/stemma, POS tagging
+# POS
+yes_no_features._calculate_pos()
+
+# TODO: tokenizer, lemma/stemma, 
 # TODO: compositiions: "surely not", "obviously not"
 

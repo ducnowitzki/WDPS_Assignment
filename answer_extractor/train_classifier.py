@@ -8,27 +8,54 @@ from xgboost import XGBClassifier
 from preprocessing import Features
 
 def train_classifier():
-    raw_data = pd.read_csv("questions_and_answers.csv")
+    raw_data = pd.read_csv("questions_and_answers_labeled.csv")
     features = Features(raw_data)
     features.calculate_features()
 
     data = features.data
 
-    # encode lables
-    data["Type"] = data["Type"].map({"Yes/No": 0, "Entity": 1})
+    # take only rows where type is Yes/No
+    # and Label is either y or n
+    data = data[(data["Label"].isin(["y", "n"]))]
+    print(data.shape)
 
-    drop = ["Unnamed: 0", "Index", "Input", "Answer", "Type"]
-    X_train, X_test, y_train, y_test = train_test_split(data.drop(drop, axis=1), data["Type"], test_size=0.05, random_state=42)
+    # encode lables
+    # data["Type"] = data["Type"].map({"Yes/No": 0, "Entity": 1})
+    data["Label"] = data["Label"].map({"y": 0, "n": 1})
+
+    # print row where type is nan
+    # print(data[data["Type"].isna()])
+    # print(data.shape)  
+    # remove rows where type is nan
+    data = data.dropna(subset=["Type"])  
+
+    #print column names that contain [,] or <
+    #print(data.columns[data.columns.str.contains("[<>]")])
+    ## remove columns that contain [,] or <
+    # data = data.drop(columns=data.columns[data.columns.str.contains("[")])
+    # data = data.drop(columns=data.columns[data.columns.str.contains("<")])
+    # data = data.drop(columns=data.columns[data.columns.str.contains(">")])
+    # data = data.drop(columns=data.columns[data.columns.str.contains("]")])
+
+
+    drop = ["Index", "Input", "Answer", "Answer_lowercase", "Answer_without_stop_words", "Type", "Label"]
+    X_train, X_test, y_train, y_test = train_test_split(data.drop(drop, axis=1), data["Label"], test_size=0.05, random_state=42)
 
     # train model
-    #clf = DecisionTreeClassifier()
-    clf = XGBClassifier()
+    clf = DecisionTreeClassifier()
+    # clf = XGBClassifier()
     clf.fit(X_train, y_train)
 
     # test model, print accuracy, precision, recall, f1-score
     y_pred = clf.predict(X_test)
-    print(clf.score(X_test, y_test))
-    #print(classification_report(y_test, y_pred))
+
+
+    # print precision, recall, f1-score, AUC score, Average precision score, G mean
+    print(classification_report(y_test, y_pred))
+
+    
+    # print top 20 features
+    print(sorted(zip(clf.feature_importances_, X_train.columns), reverse=True)[:30])
 
 
 # def test_on_1_new_question():

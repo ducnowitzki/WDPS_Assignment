@@ -47,11 +47,12 @@ def getWikipedia(entity):
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX foaf: <http://xmlns.com/foaf/0.1/>
         
-        SELECT ?object ?label ?page ?type
+        SELECT ?object ?label ?page ?type ?abstract
         WHERE {{ 
             dbr:{entity} rdfs:label ?object.
             FILTER(lang(?object) ='en')
             dbr:{entity} foaf:isPrimaryTopicOf ?page.
+            OPTIONAL {{ ?relatedEntity dbo:abstract ?abstract. FILTER(lang(?abstract) ='en') }}
             }}
         LIMIT 10
         """
@@ -71,6 +72,7 @@ def getWikipedia(entity):
             'object': result['object']['value'],
             'wikipedia_page': result['page']['value'],
             'dbpedia_page': f"http://dbpedia.org/resource/{entity}"
+            'abstract': result['abstract'["value"]]
         }
         for result in data['results']['bindings']
     ]
@@ -91,31 +93,31 @@ _____________________
 TESTING FUNCTUINS
 _____________________
 """
-# # Testing named entities
-# text = ("surely it is but many do not know this fact that Italy was not always called as Italy."
-# "Before Italy came into being in 1861, it had several names including Italian Kingdom,"
-# "Roman Empire and the Republic of Italy among others. If we start the chronicle back in time,"
-# "then Rome was the first name to which Romans were giving credit.,"
-# "Later this city became known as Caput Mundi” or the capital of the world...")
-# named_entities = getNamedEntity(text)
-# # Testing linking
-# for i in range(len(named_entities)):
-#     entity = named_entities[i][0]
-#     label = named_entities[i][1]
+# Testing named entities
+text = ("surely it is but many do not know this fact that Italy was not always called as Italy."
+"Before Italy came into being in 1861, it had several names including Italian Kingdom,"
+"Roman Empire and the Republic of Italy among others. If we start the chronicle back in time,"
+"then Rome was the first name to which Romans were giving credit.,"
+"Later this city became known as Caput Mundi” or the capital of the world...")
+named_entities = getNamedEntity(text)
+# Testing linking
+for i in range(len(named_entities)):
+    entity = named_entities[i][0]
+    label = named_entities[i][1]
 
-#     print(entity)
+    print(entity)
     
-#     candidates = getWikipedia(entity)
-#     pprint(candidates)
-#     # dbpedia_links = [candidates[j]["entity"] for j in range(len(candidates))]
-#     # print(dbpedia_links)
-#     # result = rank_dbpedia_pages(entity, dbpedia_links)
+    candidates = getWikipedia(entity)
+    pprint(candidates)
+    # dbpedia_links = [candidates[j]["entity"] for j in range(len(candidates))]
+    # print(dbpedia_links)
+    # result = rank_dbpedia_pages(entity, dbpedia_links)
 
-#     # # Print the ranked pages
-#     # for rank, (page, similarity) in enumerate(result, start=1):
-#     #     print(f"Rank {rank}: {page} (Similarity: {similarity})")
-#     # for candidate in candidates:
-#     #     print(f"Wikipedia Page: {candidate['page']}")
-#     #     # print(f"type: {candidate['type']}")
-#     #     # print(f"Entity: {candidate['entity']}")
-#     #     print("-" * 30)
+    # # Print the ranked pages
+    # for rank, (page, similarity) in enumerate(result, start=1):
+    #     print(f"Rank {rank}: {page} (Similarity: {similarity})")
+    # for candidate in candidates:
+    #     print(f"Wikipedia Page: {candidate['page']}")
+    #     # print(f"type: {candidate['type']}")
+    #     # print(f"Entity: {candidate['entity']}")
+    #     print("-" * 30)

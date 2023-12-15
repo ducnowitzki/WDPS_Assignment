@@ -5,7 +5,7 @@ from langchain.llms.llamacpp import LlamaCpp
 import pandas as pd
 
 
-MODEL_PATH = os.path.abspath('llama-2-7b.Q4_K_M.gguf')
+MODEL_PATH = os.path.abspath("llama-2-7b.Q4_K_M.gguf")
 
 callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
 
@@ -25,24 +25,30 @@ llm = LlamaCpp(
 )
 
 # open questions.csv with pandas
-questions = pd.read_csv('questions.csv')
+questions = pd.read_csv("questions.csv")
 
 print(questions.head())
 outputs = []
 for index, row in questions.iterrows():
-    output = llm._call(row['Input'])
+    output = llm._call(row["Input"])
 
     # Clean up the output
     # TODO: more profificent way
-    output = output.strip().replace('\n', '').replace('\r', '').replace('\t', '').replace('▁', ' ')
+    output = (
+        output.strip()
+        .replace("\n", "")
+        .replace("\r", "")
+        .replace("\t", "")
+        .replace("▁", " ")
+    )
 
     outputs.append(output)
 
 if len(outputs) != questions.shape[0]:
     # save outputs as csv with one column named answer
     df = pd.DataFrame(outputs)
-    df.columns = ['Answer']
-    df.to_csv('output/answers.csv')
-else: 
-    questions['Answer'] = outputs
-    questions.to_csv('output/questions_and_answers.csv')
+    df.columns = ["Answer"]
+    df.to_csv("output/answers.csv")
+else:
+    questions["Answer"] = outputs
+    questions.to_csv("output/questions_and_answers.csv")

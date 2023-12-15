@@ -4,6 +4,7 @@ from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain.llms.llamacpp import LlamaCpp
 import pandas as pd
 
+
 class LLM:
     def __init__(self, model_path):
         callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])

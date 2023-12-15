@@ -1,12 +1,13 @@
 import numpy as np
 
+
 class BoW:
     def __init__(self):
         # Here is where we keep all words. A set for faster lookup
         self.all_words = set()
         # Two dictionaries to map word to index and back. This helps 'encoding' and 'decoding' a BoW
-        self.word_to_idx= {}
-        self.idx_to_word= {}
+        self.word_to_idx = {}
+        self.idx_to_word = {}
         # The total number of words is just kept to aid starting the numpy array size, but can be inferred from all_words set.
         self.total_words = 0
 
@@ -51,7 +52,9 @@ class BoW:
                 # Substitute each row by the sentence BoW.
                 transformed[row] = self._transform_single(sentence.split())
         else:
-            raise TypeError("You must pass either a string or list of strings for transformation.")
+            raise TypeError(
+                "You must pass either a string or list of strings for transformation."
+            )
         return transformed
 
     def fit_transform(self, data):

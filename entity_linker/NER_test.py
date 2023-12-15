@@ -11,9 +11,9 @@ from pprint import pprint
 
 
 def getNamedEntity(text):
-    '''
+    """
     Fucnction to get all named enities
-    '''
+    """
     nlp = spacy.load("en_core_web_sm")
     doc = nlp(text)
 
@@ -22,17 +22,19 @@ def getNamedEntity(text):
     named_entities_labels = [ent.label_ for ent in doc.ents]
     return named_entities, named_entities_labels
 
+
 def namedEntityCleaner(entity):
-    entity = entity.replace(" ", "_") 
-    entity = entity.replace(",", "") 
-    entity = entity.replace(".", "") 
+    entity = entity.replace(" ", "_")
+    entity = entity.replace(",", "")
+    entity = entity.replace(".", "")
 
     return entity
 
+
 def getWikipedia(entity):
-    '''
+    """
     Function to get candidates
-    '''
+    """
 
     entity = namedEntityCleaner(entity)
     # DBpedia SPARQL endpoint
@@ -59,7 +61,9 @@ def getWikipedia(entity):
         """
 
     # Send SPARQL query to DBpedia
-    response = requests.get(sparql_endpoint, params={'query': sparql_query, 'format': 'json'})
+    response = requests.get(
+        sparql_endpoint, params={"query": sparql_query, "format": "json"}
+    )
     try:
         # Try to load JSON data if available
         data = response.json()
@@ -67,15 +71,15 @@ def getWikipedia(entity):
         # Handle the case where the response is not valid JSON
         print(f"Error: Unable to decode JSON response for {entity}")
         return None
-    
+
     candidates = [
         {
-            'object': result['object']['value'],
-            'wikipedia_page': result['page']['value'],
-            'dbpedia_page': f"http://dbpedia.org/resource/{entity}",
-            'abstract': result['abstract']["value"]
+            "object": result["object"]["value"],
+            "wikipedia_page": result["page"]["value"],
+            "dbpedia_page": f"http://dbpedia.org/resource/{entity}",
+            "abstract": result["abstract"]["value"],
         }
-        for result in data['results']['bindings']
+        for result in data["results"]["bindings"]
     ]
 
     # Extract candidate selections and their Wikipedia pages from the results
@@ -87,7 +91,7 @@ def getWikipedia(entity):
         return None
     else:
         return candidates
-         
+
 
 """
 _____________________
@@ -107,7 +111,7 @@ _____________________
 #     label = named_entities[i][1]
 
 #     print(entity)
-    
+
 #     candidates = getWikipedia(entity)
 #     pprint(candidates)
 #     print(candidates[0]['abstract'])

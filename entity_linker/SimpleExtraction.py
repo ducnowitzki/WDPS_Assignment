@@ -3,17 +3,19 @@ import spacy
 # Load the spaCy English NER model
 nlp = spacy.load("en_core_web_sm")
 
+
 # Extracting yes/no or entities using keyword matching
 def extract_information(text):
     doc = nlp(text)
     for token in doc:
-        if token.text.lower() in ["yes", "indeed", "certainly" ]:
+        if token.text.lower() in ["yes", "indeed", "certainly"]:
             return "yes"
         if token.text.lower() in ["no", "not"]:
             return "no"
         if token.ent_type_:
             return token.text
     return None
+
 
 # Extracting information from each answer
 file_path = "answers.txt"

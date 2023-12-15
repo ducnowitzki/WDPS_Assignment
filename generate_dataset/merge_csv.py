@@ -14,7 +14,7 @@ merged = pd.concat([keye, romnick])
 # replace "n " with "n" in "Label"
 merged["Label"] = merged["Label"].str.replace("n ", "n")
 
-#print columns
+# print columns
 
 # remove columns: Unnamed: 0, Column 1
 merged = merged.drop(columns=["Unnamed: 0", "Column1"])

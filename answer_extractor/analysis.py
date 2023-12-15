@@ -1,13 +1,20 @@
 import pandas as pd
 from collections import Counter
-from preprocessing import Features, get_all_words, lower_case, on_start_up, remove_special_character_words, stop_word_removal
+from preprocessing import (
+    Features,
+    get_all_words,
+    lower_case,
+    on_start_up,
+    remove_special_character_words,
+    stop_word_removal,
+)
 
 
 on_start_up()
 
 data = pd.read_csv("questions_and_answers_labeled.csv")
 
-yes_no_features = Features(data[data['Type'] == 'Yes/No'])
+yes_no_features = Features(data[data["Type"] == "Yes/No"])
 # entity_features = Features(data[data['Type'] == 'Entity'])
 
 
@@ -27,6 +34,5 @@ n = 100
 # POS
 yes_no_features._calculate_bigram()
 
-# TODO: tokenizer, lemma/stemma, 
+# TODO: tokenizer, lemma/stemma,
 # TODO: compositiions: "surely not", "obviously not"
-

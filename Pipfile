@@ -4,7 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-xgboost = "*"
+pandas = "*"
+llama-cpp-python = "*"
+langchain = "*"
+scikit-learn = "*"
+nltk = "*"
 
 [dev-packages]
 

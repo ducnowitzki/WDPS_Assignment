@@ -5,15 +5,15 @@ from preprocessing import Features, get_all_words, lower_case, on_start_up, remo
 
 on_start_up()
 
-data = pd.read_csv("questions_and_answers.csv")
+data = pd.read_csv("questions_and_answers_labeled.csv")
 
 yes_no_features = Features(data[data['Type'] == 'Yes/No'])
-entity_features = Features(data[data['Type'] == 'Entity'])
+# entity_features = Features(data[data['Type'] == 'Entity'])
 
 
 n = 100
-yes_no_counter = Counter(yes_no_features.all_words).most_common(n)
-entity_counter = Counter(entity_features.all_words).most_common(n)
+# yes_no_counter = Counter(yes_no_features.all_words).most_common(n)
+# entity_counter = Counter(entity_features.all_words).most_common(n)
 
 # print("Yes/No answers that don't appear in Entity answers:")
 # for word, count in yes_no_counter:
@@ -25,7 +25,7 @@ entity_counter = Counter(entity_features.all_words).most_common(n)
 # dunno: actually, answer, (maybe, probably, possibly, perhaps)
 
 # POS
-yes_no_features._calculate_pos()
+yes_no_features._calculate_bigram()
 
 # TODO: tokenizer, lemma/stemma, 
 # TODO: compositiions: "surely not", "obviously not"

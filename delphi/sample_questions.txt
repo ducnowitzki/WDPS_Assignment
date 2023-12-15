@@ -1,4 +1,0 @@
-question-001    Is Managua the capital of Nicaragua?
-question-002    The capital of Italy is ...
-question-003    Is Rome the capital of Italy?
-question-004    What country has the largest population in Germany?

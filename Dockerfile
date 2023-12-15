@@ -1,4 +1,4 @@
-# Use a Python base imag
+# Use a Python base image, e.g. alpine-python3
 FROM karmaresearch/wdps2
 
 # Set environment variables
@@ -25,4 +25,4 @@ COPY . /app/
 
 
 # Define the command to run the application
-CMD ["python", "llm.py"]
+CMD ["python", "generate_dataset.py"]

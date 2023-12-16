@@ -57,7 +57,9 @@ class AnswerExtractor:
             return LABEL_DECODING[label[0]]
         else:
             # TODO: romnick
-            return most_related_entity(question_entities, response_entities)
+            return most_related_entity(
+                question_entities, response_entities
+            ).wikipedia_page
 
 
 if __name__ == "__main__":

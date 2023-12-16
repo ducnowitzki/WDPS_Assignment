@@ -19,28 +19,27 @@ def most_related_entity(
     related_entity = None
 
     for a_entity in answer_entities:
-        print("ANSWER", a_entity.object)
         a_entity_page = a_entity.wikipedia_page
 
         if a_entity_page is not None:
             cumulative_similarity = 0.0
 
             for q_entity in question_entities:
-                print("QUESTION", q_entity.object)
                 q_entity_page = q_entity.wikipedia_page
 
                 if q_entity_page is not None and a_entity != q_entity:
                     # Why only first element?
-                    q_abstract_ent = get_named_entities(q_entity.abstract)[0]
-                    a_abstact_ent = get_named_entities(a_entity.abstract)[0]
+                    q_abstract_ent = get_named_entities(q_entity.abstract)
+                    a_abstact_ent = get_named_entities(a_entity.abstract)
+
+                    q_abstract_ent = [ent[0] for ent in q_abstract_ent]
+                    a_abstact_ent = [ent[0] for ent in a_abstact_ent]
 
                     q_entity_ngrams = set(ngrams(q_abstract_ent, 1))
                     a_entity_ngrams = set(ngrams(a_abstact_ent, 1))
 
                     similarity = jaccard_similarity(q_entity_ngrams, a_entity_ngrams)
                     cumulative_similarity += similarity
-            print(a_entity)
-            print(cumulative_similarity)
             if cumulative_similarity > max_similarity:
                 max_similarity = cumulative_similarity
                 related_entity = a_entity

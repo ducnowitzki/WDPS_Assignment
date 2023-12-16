@@ -152,7 +152,7 @@ class Features:
             pos_features_vectorized = vectorizer.fit_transform(pos_features)
 
             # pickle vectorizer
-            pickle.dump(vectorizer, open("pos_vectorizer.pkl", "wb"))
+            pickle.dump(vectorizer, open("yesno_pos_vectorizer.pkl", "wb"))
 
         else:
             vectorizer = self.pos_vectorizer
@@ -176,7 +176,7 @@ class Features:
             )
 
             # pickle vectorizer
-            pickle.dump(vectorizer, open("bigram_vectorizer.pkl", "wb"))
+            pickle.dump(vectorizer, open("yesno_bigram_vectorizer.pkl", "wb"))
 
         else:
             vectorizer = self.bigram_vectorizer

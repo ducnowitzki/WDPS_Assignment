@@ -18,6 +18,7 @@ from time import time
 
 from delphi.llm import LLM
 from entity.entity_linker import get_wikipedia_entities
+from question_classifier.question_classifier import QuestionClassifier
 
 
 QUESTION_FILE_PATH = "sample_input.txt"
@@ -70,17 +71,28 @@ def main():
     llm = LLM(MODEL_PATH)
 
     # Question classifier
+    question_model = pickle.load(
+        open("question_classifier/question_classifier.pkl", "rb")
+    )
+    question_pos_vectorizer = pickle.load(
+        open("question_classifier/question_pos_vectorizer.pkl", "rb")
+    )
+    question_classifier = QuestionClassifier(
+        model=question_model, pos_vectorizer=question_pos_vectorizer
+    )
 
     # Answer extractor
     yesno__model = pickle.load(open("answer_extractor/yesno_classifier.pkl", "rb"))
-    pos_vectorizer = pickle.load(open("answer_extractor/pos_vectorizer.pkl", "rb"))
-    bigram_vectorizer = pickle.load(
-        open("answer_extractor/bigram_vectorizer.pkl", "rb")
+    yesno_pos_vectorizer = pickle.load(
+        open("answer_extractor/yesno_pos_vectorizer.pkl", "rb")
+    )
+    yesno_bigram_vectorizer = pickle.load(
+        open("answer_extractor/yesno_bigram_vectorizer.pkl", "rb")
     )
     answer_extractor = AnswerExtractor(
         model=yesno__model,
-        pos_vectorizer=pos_vectorizer,
-        bigram_vectorizer=bigram_vectorizer,
+        pos_vectorizer=yesno_pos_vectorizer,
+        bigram_vectorizer=yesno_bigram_vectorizer,
     )
 
     output_file_name = "group2_fact_checked_reponses_" + str(int(time())) + ".txt"
@@ -95,14 +107,15 @@ def main():
         response = "surely it is not, because you can see its top from Nepal. so it must be shorter than EverestIt is possible to walk down from the top of Mt. Everest, although it is probably a very unpleasant experience if you don't have lots of practice. A good pair of hiking boots and some training goes a long way.Do they use bicycles in Nepal? I need to know where to go on my trip next summer!Where do you get the money for your trips? Do you like to go around the world alone? Are you looking forward to meeting people from other countries? What are your thoughts about it?How do we protect our planet earth, if there is no place in this earth that hasn't been affected by pollution or destruction? If not, how can we save our beautiful world and all its wonderful wild life and animals? The mountain is not in China."
 
         # Question classifier
-        # TODO:
+        question_type = question_classifier.classify_question(question)
+        print(question, question_type)
 
         # Entity linker
         question_wiki_entities = get_wikipedia_entities(question)
         response_wiki_entities = get_wikipedia_entities(response)
 
         extracted_answer = answer_extractor.extract_answer(
-            yesno=False,
+            yesno=True if question_type == "Yes/No" else False,
             response=response,
             question_entities=question_wiki_entities,
             response_entities=response_wiki_entities,

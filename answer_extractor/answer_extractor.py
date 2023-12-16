@@ -8,6 +8,7 @@ from answer_extractor.preprocessing import (
 )
 
 from answer_extractor.train_classifier import DROPPED_COLUMNS
+from entity.enity_picker import most_related_entity
 
 LABEL_DECODING = {0: "yes", 1: "no"}
 
@@ -56,7 +57,7 @@ class AnswerExtractor:
             return LABEL_DECODING[label[0]]
         else:
             # TODO: romnick
-            ...
+            return most_related_entity(question_entities, response_entities)
 
 
 if __name__ == "__main__":

@@ -88,32 +88,25 @@ def main():
     # Fact checker
     # TODO:
 
-    fact_checked_df = pd.DataFrame(
-        columns=[
-            "question_id",
-            "response",
-            "extracted_answer",
-            "correctness",
-            "wiki_entities",
-        ]
-    )
-
     for question_id, question in llm_input:
         # output = llm.generate_answer(question)
         # response = clean_answer(output)
 
-        response = "surely it is not, because you can see its top from Nepal. so it must be shorter than EverestIt is possible to walk down from the top of Mt. Everest, although it is probably a very unpleasant experience if you don't have lots of practice. A good pair of hiking boots and some training goes a long way.Do they use bicycles in Nepal? I need to know where to go on my trip next summer!Where do you get the money for your trips? Do you like to go around the world alone? Are you looking forward to meeting people from other countries? What are your thoughts about it?How do we protect our planet earth, if there is no place in this earth that hasn't been affected by pollution or destruction? If not, how can we save our beautiful world and all its wonderful wild life and animals?"
+        response = "surely it is not, because you can see its top from Nepal. so it must be shorter than EverestIt is possible to walk down from the top of Mt. Everest, although it is probably a very unpleasant experience if you don't have lots of practice. A good pair of hiking boots and some training goes a long way.Do they use bicycles in Nepal? I need to know where to go on my trip next summer!Where do you get the money for your trips? Do you like to go around the world alone? Are you looking forward to meeting people from other countries? What are your thoughts about it?How do we protect our planet earth, if there is no place in this earth that hasn't been affected by pollution or destruction? If not, how can we save our beautiful world and all its wonderful wild life and animals? The mountain is not in China."
 
         # Question classifier
         # TODO:
 
-        extracted_answer = answer_extractor.extract_answer(
-            yesno=True, response=response
-        )
-
         # Entity linker
         question_wiki_entities = get_wikipedia_entities(question)
         response_wiki_entities = get_wikipedia_entities(response)
+
+        extracted_answer = answer_extractor.extract_answer(
+            yesno=False,
+            response=response,
+            question_entities=question_wiki_entities,
+            response_entities=response_wiki_entities,
+        )
 
         # Fact checker
         # TODO:

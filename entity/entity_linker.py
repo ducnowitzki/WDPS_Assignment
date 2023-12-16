@@ -51,15 +51,13 @@ def get_named_entities(text):
     for entity in doc.ents:
         key = entity.text + entity.label_
         named_entities[key] = (clean_named_entity(entity.text), entity.label_)
-    return named_entities.values()
+    return list(named_entities.values())
 
 
 def get_wikipedia(entity):
     """
     Function to get candidates
     """
-
-    print(entity)
 
     # DBpedia SPARQL endpoint
     sparql_endpoint = "http://dbpedia.org/sparql"
@@ -129,7 +127,6 @@ def get_wikipedia_entities(text):
 
     wiki_entities = []
     for ent, label in named_entities:
-        print(ent)
         candidates = get_wikipedia(ent)
         if len(candidates) > 0:
             wiki_entities.append(

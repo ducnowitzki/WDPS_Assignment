@@ -1,6 +1,6 @@
 from SPARQLWrapper import SPARQLWrapper, JSON
 from nltk import ngrams
-from entity.entity_linker import get_wikipedia, get_named_entities
+from entity.entity_linker import WikipediaEntity, get_wikipedia, get_named_entities
 import string
 
 
@@ -11,23 +11,28 @@ def jaccard_similarity(set1, set2):
     return intersection / union if union != 0 else 0.0
 
 
-def most_related_entity(question_entities, answer_entities):
+def most_related_entity(
+    question_entities: list[WikipediaEntity], answer_entities: list[WikipediaEntity]
+) -> WikipediaEntity:
     # Function to find the most related entity in the answer to entities in the question
     max_similarity = 0.0
     related_entity = None
 
     for a_entity in answer_entities:
-        a_entity_page = get_wikipedia(a_entity)
+        print("ANSWER", a_entity.object)
+        a_entity_page = a_entity.wikipedia_page
 
         if a_entity_page is not None:
             cumulative_similarity = 0.0
 
             for q_entity in question_entities:
-                q_entity_page = get_wikipedia(q_entity)
+                print("QUESTION", q_entity.object)
+                q_entity_page = q_entity.wikipedia_page
 
                 if q_entity_page is not None and a_entity != q_entity:
-                    q_abstract_ent = get_named_entities(q_entity_page[0]["abstract"])[0]
-                    a_abstact_ent = get_named_entities(a_entity_page[0]["abstract"])[0]
+                    # Why only first element?
+                    q_abstract_ent = get_named_entities(q_entity.abstract)[0]
+                    a_abstact_ent = get_named_entities(a_entity.abstract)[0]
 
                     q_entity_ngrams = set(ngrams(q_abstract_ent, 1))
                     a_entity_ngrams = set(ngrams(a_abstact_ent, 1))

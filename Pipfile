@@ -9,6 +9,8 @@ llama-cpp-python = "*"
 langchain = "*"
 scikit-learn = "*"
 nltk = "*"
+spacy = "*"
+sparqlwrapper = "*"
 
 [dev-packages]
 black = "*"

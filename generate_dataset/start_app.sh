@@ -3,7 +3,7 @@
 # Set default values
 local_output_path=$(pwd)
 container_output_path="/app/output"
-image_name="answer_extractor"
+image_name="delphi"
 
 # Build the Docker image
 docker build -t "$image_name" .

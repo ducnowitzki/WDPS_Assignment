@@ -14,9 +14,10 @@ import pickle
 import pandas as pd
 from answer_extractor.answer_extractor import AnswerExtractor
 from answer_extractor.preprocessing import on_start_up
-from answer_extractor.train_classifier import train_classifier
+from time import time
 
 from delphi.llm import LLM
+from entity.entity_linker import get_wikipedia_entities
 
 
 QUESTION_FILE_PATH = "sample_input.txt"
@@ -48,6 +49,21 @@ def clean_answer(answer: str):
     )
 
 
+def write_to_output_file(file_name, question_id: str, response_dict: dict):
+    with open(file_name, "a") as f:
+        response_string = f"{question_id}{SEPARATOR}R\"{response_dict['response']}\"\n"
+        response_string += (
+            f"{question_id}{SEPARATOR}A\"{response_dict['extracted_answer']}\"\n"
+        )
+        response_string += (
+            f"{question_id}{SEPARATOR}C\"{response_dict['correctness']}\"\n"
+        )
+        for ent in response_dict["wiki_entities"]:
+            response_string += f'{question_id}{SEPARATOR}E"{ent}"\n'
+
+        f.write(response_string)
+
+
 def main():
     # LLM
     llm_input = get_llm_input()
@@ -67,18 +83,26 @@ def main():
         bigram_vectorizer=bigram_vectorizer,
     )
 
+    output_file_name = "group2_fact_checked_reponses_" + str(int(time())) + ".txt"
+
     # Fact checker
+    # TODO:
 
     fact_checked_df = pd.DataFrame(
-        columns=["question_id", "extracted_answer", "correctness", "entities"]
+        columns=[
+            "question_id",
+            "response",
+            "extracted_answer",
+            "correctness",
+            "wiki_entities",
+        ]
     )
 
     for question_id, question in llm_input:
-        output = llm.generate_answer(question)
-        response = clean_answer(output)
+        # output = llm.generate_answer(question)
+        # response = clean_answer(output)
 
-        # Entity linker
-        # TODO:
+        response = "surely it is not, because you can see its top from Nepal. so it must be shorter than EverestIt is possible to walk down from the top of Mt. Everest, although it is probably a very unpleasant experience if you don't have lots of practice. A good pair of hiking boots and some training goes a long way.Do they use bicycles in Nepal? I need to know where to go on my trip next summer!Where do you get the money for your trips? Do you like to go around the world alone? Are you looking forward to meeting people from other countries? What are your thoughts about it?How do we protect our planet earth, if there is no place in this earth that hasn't been affected by pollution or destruction? If not, how can we save our beautiful world and all its wonderful wild life and animals?"
 
         # Question classifier
         # TODO:
@@ -86,25 +110,29 @@ def main():
         extracted_answer = answer_extractor.extract_answer(
             yesno=True, response=response
         )
-        print("Extracted answer:", extracted_answer)
+
+        # Entity linker
+        question_wiki_entities = get_wikipedia_entities(question)
+        response_wiki_entities = get_wikipedia_entities(response)
 
         # Fact checker
         # TODO:
+        correctness = "correct"
 
         # Add to dataframe
-        fact_checked_df = fact_checked_df.append(
-            {
-                "question_id": question_id,
-                "extracted_answer": extracted_answer,
-                "correctness": "correct",
-                "entities": [],
-            },
-            ignore_index=True,
-        )
+        response_dict = {
+            "question_id": question_id,
+            "response": response,
+            "extracted_answer": extracted_answer,
+            "correctness": correctness,
+            "wiki_entities": [ent.wikipedia_page for ent in response_wiki_entities],
+        }
+
+        write_to_output_file(output_file_name, question_id, response_dict)
+
         break
 
 
 if __name__ == "__main__":
-    train_classifier()
-    # init()
-    # main()
+    init()
+    main()

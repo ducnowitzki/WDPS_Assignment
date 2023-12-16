@@ -69,9 +69,9 @@ SELECTED_BIGRAM_FEATURES = [
 
 
 def on_start_up():
-    nltk.download("popular")
-    nltk.download("punkt")
-    nltk.download("averaged_perceptron_tagger")
+    nltk.download("popular", quiet=True)
+    nltk.download("punkt", quiet=True)
+    nltk.download("averaged_perceptron_tagger", quiet=True)
 
 
 def lower_case(texts: pd.Series):

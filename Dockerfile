@@ -23,6 +23,9 @@ COPY . /app/
 # Expose any necessary ports (if your app uses a specific port)
 # EXPOSE <port_number>
 
+# python -m spacy download en_core_web_sm
 
 # Define the command to run the application
+
+# IF not debug: add 2>/dev/null
 CMD ["python", "generate_dataset.py"]

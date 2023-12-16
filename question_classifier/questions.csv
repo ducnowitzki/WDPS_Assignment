@@ -1,0 +1,183 @@
+Index,Input,Type
+1,"Did she complete the assignment on time?",Yes/No
+2,"Does he speak multiple languages fluently?",Yes/No
+3,"Were they at the concert last night?",Yes/No
+4,"Has she finished reading the book?",Yes/No
+5,"Have they visited Europe before?",Yes/No
+6,"Can he play the piano proficiently?",Yes/No
+7,"Could she swim when she was five?",Yes/No
+8,"Should they attend the meeting tomorrow?",Yes/No
+9,"Must he submit the report by noon?",Yes/No
+10,"Do they enjoy hiking in the mountains?",Yes/No
+11,"Will she be present at the event?",Yes/No
+12,"Did they receive the package today?",Yes/No
+13,"Does he need help with the project?",Yes/No
+14,"Were they siblings growing up?",Yes/No
+15,"Has she ever traveled alone?",Yes/No
+16,"Have they learned coding recently?",Yes/No
+17,"Can he solve complex math problems?",Yes/No
+18,"Could she bake a cake when she was ten?",Yes/No
+19,"Should they buy new furniture?",Yes/No
+20,"Must he attend the training session?",Yes/No
+21,"Do they prefer tea or coffee?",Yes/No
+22,"Will she arrive early for the meeting?",Yes/No
+23,"Did they watch the latest movie release?",Yes/No
+24,"Does he understand the new software?",Yes/No
+25,"Were they friends in high school?",Yes/No
+26,"Has she completed the online course?",Yes/No
+27,"Have they ever skydived?",Yes/No
+28,"Can he run a marathon?",Yes/No
+29,"Could she draw well as a child?",Yes/No
+30,"Should they take a break from work?",Yes/No
+31,"Must he finish the report tonight?",Yes/No
+32,"Do they play musical instruments?",Yes/No
+33,"Will she participate in the competition?",Yes/No
+34,"Did they pass the exam last week?",Yes/No
+35,"Does he own a pet?",Yes/No
+36,"Were they classmates in college?",Yes/No
+37,"Has she cooked dinner yet?",Yes/No
+38,"Have they visited the museum downtown?",Yes/No
+39,"Can he fix a leaking faucet?",Yes/No
+40,"Could she speak French fluently before?",Yes/No
+41,"Should they attend the conference?",Yes/No
+42,"Must he complete the presentation?",Yes/No
+43,"Do they follow a strict diet?",Yes/No
+44,"Will she be available next weekend?",Yes/No
+45,"Did they attend the party yesterday?",Yes/No
+46,"Does he enjoy outdoor activities?",Yes/No
+47,"Were they present at the meeting earlier?",Yes/No
+48,"Has she finished writing the report?",Yes/No
+49,"Have they tried sushi before?",Yes/No
+50,"Can he play the guitar?",Yes/No
+51,"Could she dance salsa when she was young?",Yes/No
+52,"Should they book tickets in advance?",Yes/No
+53,"Must he submit the form today?",Yes/No
+54,"Do they prefer fiction or non-fiction books?",Yes/No
+55,"Will she visit her parents this month?",Yes/No
+56,"Did they solve the puzzle?",Yes/No
+57,"Does he own a car?",Yes/No
+58,"Were they at the theater last night?",Yes/No
+59,"Has she completed the artwork?",Yes/No
+60,"Have they been to Asia?",Yes/No
+61,"Can he speak Mandarin fluently?",Yes/No
+62,"Could she cook a five-course meal before?",Yes/No
+63,"Should they start a new project?",Yes/No
+64,"Must he attend the meeting tomorrow?",Yes/No
+65,"Do they exercise regularly?",Yes/No
+66,"Will she complete the assignment on time?",Yes/No
+67,"Did they enjoy the concert?",Yes/No
+68,"Does he have siblings?",Yes/No
+69,"Were they at the café this morning?",Yes/No
+70,"Has she completed the online course?",Yes/No
+71,"Have they climbed a mountain?",Yes/No
+72,"Can he swim underwater?",Yes/No
+73,"Could she play the piano as a child?",Yes/No
+74,"Should they go on vacation?",Yes/No
+75,"Must he sign the agreement?",Yes/No
+76,"Do they speak multiple languages?",Yes/No
+77,"Will she attend the workshop?",Yes/No
+1,"Who is the author of 'To Kill a Mockingbird'?",Entity
+2,"What is the capital of France?",Entity
+3,"When was the Declaration of Independence signed?",Entity
+4,"Why did the Industrial Revolution start?",Entity
+5,"Where is the Great Wall of China located?",Entity
+6,"Who painted the Mona Lisa?",Entity
+7,"What is the chemical symbol for gold?",Entity
+8,"When did World War II end?",Entity
+9,"Why is the sky blue?",Entity
+10,"Where was Shakespeare born?",Entity
+11,"Who composed the 'Symphony No. 9'?",Entity
+12,"What is the largest planet in our solar system?",Entity
+13,"When did the Roman Empire fall?",Entity
+14,"Why do leaves change color in the fall?",Entity
+15,"Where was the first Olympics held?",Entity
+16,"Who invented the telephone?",Entity
+17,"What is the speed of light?",Entity
+18,"When was the Eiffel Tower built?",Entity
+19,"Why is the ocean salty?",Entity
+20,"Where is the Taj Mahal located?",Entity
+37,"What is the formula for water?",Entity
+38,"When was the first airplane flight?",Entity
+1,"Which is the largest continent in the world?",Entity
+2,"Which planet is known as the Red Planet?",Entity
+3,"Which is the longest river in Africa?",Entity
+4,"Which element is essential for human survival?",Entity
+5,"Which language is the most widely spoken worldwide?",Entity
+6,"Which mammal can fly?",Entity
+7,"Which is the largest ocean on Earth?",Entity
+8,"Which country has the most Nobel laureates?",Entity
+9,"Which is the tallest mammal on land?",Entity
+10,"Which chemical element has the symbol 'Fe'?",Entity
+11,"Which city is known as the 'Eternal City'?",Entity
+12,"Which is the largest desert in the world?",Entity
+13,"Which bird is the symbol of peace?",Entity
+14,"Which is the only metal that is liquid at room temperature?",Entity
+15,"Which country is known as the Land of the Rising Sun?",Entity
+16,"Which gas do plants use for photosynthesis?",Entity
+17,"Which scientist developed the theory of general relativity?",Entity
+18,"Which is the largest moon of Jupiter?",Entity
+19,"Which ocean lies between the continents of Asia and the Americas?",Entity
+20,"Which animal has the longest lifespan?",Entity
+39,"Why do cats purr?",Entity
+40,"Where was the first university established?",Entity
+41,"Who discovered the theory of relativity?",Entity
+42,"What causes thunderstorms?",Entity
+43,"When did the Cold War end?",Entity
+44,"Why are plants green?",Entity
+45,"Where is the Great Barrier Reef located?",Entity
+46,"Who invented the light bulb?",Entity
+47,"What is the age of the universe?",Entity
+48,"When was the internet created?",Entity
+49,"Why do we yawn?",Entity
+50,"Where was the Declaration of Independence signed?",Entity
+51,"How does photosynthesis work?",Entity
+52,"How did the dinosaurs become extinct?",Entity
+80,"How do glaciers form?",Entity
+81,"How are languages developed?",Entity
+82,"How did ancient civilizations construct temples?",Entity
+83,"How do satellites orbit the Earth?",Entity
+84,"How is sound produced?",Entity
+85,"How did the Great Depression affect economies?",Entity
+86,"How do stars die?",Entity
+87,"How does the human respiratory system function?",Entity
+88,"How did the discovery of electricity change society?",Entity
+89,"How do tornadoes form?",Entity
+90,"How is oil formed?",Entity
+91,"How did the invention of the wheel impact transportation?",Entity
+92,"How do rivers shape landscapes?",Entity
+93,"How do cameras capture images?",Entity
+94,"How did the concept of democracy develop?",Entity
+95,"How do insects communicate?",
+1511,"The composer of the 'Moonlight Sonata' is ...",Entity
+1512,"The national animal of Australia is the ...",Entity
+1513,"The Nobel Prize was founded by ...",Entity
+1514,"The famous equation E=mc^2 was proposed by ...",Entity
+1515,"The currency used in India is the ...",Entity
+1516,"The founder of Microsoft is ...",Entity
+1517,"The first man to walk on the moon was ...",Entity
+1518,"The painting 'The Starry Night' was created by ...",Entity
+1519,"The longest river in South America is the ...",Entity
+1520,"The theory of evolution was proposed by ...",Entity
+1521,"The currency used in Brazil is the ...",Entity
+1522,"The author of 'To Kill a Mockingbird' is ...",Entity
+1523,"The largest island in the world is ...",Entity
+1524,"The inventor of the light bulb was ...",Entity
+1525,"The currency used in Russia is the ...",Entity
+1526,"The composer of 'The Four Seasons' is ...",Entity
+1527,"The national animal of Canada is the ...",Entity
+1528,"The discovery of gravity is credited to ...",Entity
+1529,"The currency used in Germany is the ...",Entity
+1530,"The author of '1984' is ...",Entity
+1531,"The largest lake in the world is ...",Entity
+1532,"The theory of relativity was formulated by ...",Entity
+1533,"The currency used in France is the ...",Entity
+1534,"The composer of 'The Marriage of Figaro' is ...",Entity
+1535,"The national animal of China is the ...",Entity
+1536,"The invention of the telephone is attributed to ...",Entity
+1537,"The currency used in Australia is the ...",Entity
+1538,"The author of 'The Catcher in the Rye' is ...",Entity
+1539,"The highest mountain in North America is ...",Entity
+1540,"The discovery of penicillin is credited to ...",Entity
+1541,"The currency used in Canada is the ...",Entity
+1542,"The composer of 'The Nutcracker' is ...",Entity
+1543,"The national animal of India is the ...",Entity

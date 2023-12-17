@@ -29,6 +29,9 @@ SEPARATOR = "    "
 # E.g. take one from her: https://huggingface.co/TheBloke/Llama-2-7B-GGUF#provided-files
 MODEL_PATH = os.path.abspath("delphi/llama-2-7b.Q3_K_M.gguf")
 
+# can be downloaded from here: https://www.kaggle.com/datasets/leadbest/googlenewsvectorsnegative300
+WORD2VEC_MODEL_PATH = os.path.abspath("fact_checker/GoogleNews-vectors-negative300.bin")
+
 
 def init():
     on_start_up()

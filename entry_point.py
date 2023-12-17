@@ -11,13 +11,14 @@
 
 import os
 import pickle
-import pandas as pd
 from answer_extractor.answer_extractor import AnswerExtractor
 from answer_extractor.preprocessing import on_start_up
 from time import time
 
 from delphi.llm import LLM
 from entity.entity_linker import get_wikipedia_entities
+from fact_checker.fact_checker import FactChecker
+from fact_checker.preprocessing import Features
 from question_classifier.question_classifier import QuestionClassifier
 
 
@@ -98,9 +99,10 @@ def main():
     output_file_name = "group2_fact_checked_reponses_" + str(int(time())) + ".txt"
 
     # Fact checker
-    # TODO:
+    fact_checker = FactChecker("fact_checker/GoogleNews-vectors-negative300.bin")
 
     for question_id, question in llm_input:
+        # LLM
         # output = llm.generate_answer(question)
         # response = clean_answer(output)
 
@@ -114,6 +116,7 @@ def main():
         question_wiki_entities = get_wikipedia_entities(question)
         response_wiki_entities = get_wikipedia_entities(response)
 
+        # Answer extractor
         extracted_answer = answer_extractor.extract_answer(
             yesno=True if question_type == "Yes/No" else False,
             response=response,
@@ -122,14 +125,19 @@ def main():
         )
 
         # Fact checker
-        # TODO:
-        correctness = "correct"
+        correctness = fact_checker.check_fact(
+            word2vec_model=fact_checker.word2vec_model,
+            question=question,
+            question_entities=question_wiki_entities,
+            extracted_answer=extracted_answer,
+        )
 
-        # Add to dataframe
         response_dict = {
             "question_id": question_id,
             "response": response,
-            "extracted_answer": extracted_answer,
+            "extracted_answer": extracted_answer
+            if question_type == "Yes/No"
+            else extracted_answer.wikipedia_page,
             "correctness": correctness,
             "wiki_entities": [ent.wikipedia_page for ent in response_wiki_entities],
         }
@@ -140,5 +148,8 @@ def main():
 
 
 if __name__ == "__main__":
-    init()
-    main()
+    # init()
+    # main()
+
+    fact_checker = Features("fact_checker/GoogleNews-vectors-negative300.bin")
+    print(fact_checker.get_synonyms("found"))

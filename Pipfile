@@ -11,6 +11,7 @@ scikit-learn = "*"
 nltk = "*"
 spacy = "*"
 sparqlwrapper = "*"
+gensim = "*"
 
 [dev-packages]
 black = "*"

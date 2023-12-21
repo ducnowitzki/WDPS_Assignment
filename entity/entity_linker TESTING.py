@@ -19,13 +19,13 @@ class WikipediaEntity:
     dbpedia_page: str
     abstract: str
 
-def get_wikipedia_test(entity):
+
+def get_wikipedia_contains(entity):
     """
     Function to get candidates
     """
     endpoint_url = "http://dbpedia.org/sparql"
     sparql = SPARQLWrapper(endpoint_url)
-
     ## Construct the SPARQL query
     query = """
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -39,7 +39,7 @@ def get_wikipedia_test(entity):
             ?entity dbo:abstract ?abstract FILTER(LANG(?abstract) = "en")
             ?entity foaf:isPrimaryTopicOf ?wikipediaPage .
         }
-        LIMIT 100
+        LIMIT 20
         """ % entity
 
     # Set the query and request JSON format
@@ -64,6 +64,49 @@ def get_wikipedia_test(entity):
     else:
         return candidates
 
+def get_wikipedia_exact(entity):
+    """
+    Function to get candidates
+    """
+    endpoint_url = "http://dbpedia.org/sparql"
+    sparql = SPARQLWrapper(endpoint_url)
+    ## Construct the SPARQL query
+    query = """
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX dbo: <http://dbpedia.org/ontology/>
+        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+        SELECT DISTINCT ?entity ?label ?abstract ?dbpediaPage ?wikipediaPage
+        WHERE {
+            ?entity rdfs:label ?label .
+            FILTER (LANG(?label) = "en" && regex(?label, "%s", "i"))
+            ?entity dbo:abstract ?abstract FILTER(LANG(?abstract) = "en")
+            ?entity foaf:isPrimaryTopicOf ?wikipediaPage .
+        }
+        LIMIT 20
+        """ % entity
+
+    # Set the query and request JSON format
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+
+    # Execute the query and process the results
+    data = sparql.query().convert()
+
+    candidates = [
+        WikipediaEntity(
+            object=result["label"]["value"],
+            wikipedia_page=result["wikipediaPage"]["value"],
+            dbpedia_page=result["entity"]["value"],
+            abstract=result["abstract"]["value"],
+        )
+        for result in data["results"]["bindings"]
+    ]
+
+    if not candidates:
+        return []
+    else:
+        return candidates
 
 import difflib
 
@@ -84,8 +127,17 @@ def choose_best_candidate(entity, candidates):
 
         return candidates_strings[max_index]
 
-test_entity = 'Apple Inc.'
-candidates = get_wikipedia_test(test_entity)
-print(choose_best_candidate(test_entity, candidates))
+
+
+test_entity = 'barack obama'
+candidates1 = get_wikipedia_contains(test_entity)
+candidates2 = get_wikipedia_exact(test_entity)
+
+print("candidates contains Function:")
+print([candidates1[i].object for i in range(len(candidates1))])
+print("candidates exact")
+print([candidates2[i].object for i in range(len(candidates2))])
+
+
 
 

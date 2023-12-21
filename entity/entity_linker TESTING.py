@@ -7,6 +7,7 @@ import spacy
 import requests
 import requests
 from SPARQLWrapper import SPARQLWrapper, JSON
+import string
 
 # from sklearn.feature_extraction.text import TfidfVectorizer
 # from sklearn.metrics.pairwise import cosine_similarity
@@ -35,11 +36,11 @@ def get_wikipedia_contains(entity):
         SELECT DISTINCT ?entity ?label ?abstract ?dbpediaPage ?wikipediaPage
         WHERE {
             ?entity rdfs:label ?label .
-            FILTER(LANG(?label) = "en" && CONTAINS(LCASE(?label), LCASE("%s")))
+            FILTER (LANG(?label) = "en" && regex(?label, "%s", "i"))
             ?entity dbo:abstract ?abstract FILTER(LANG(?abstract) = "en")
             ?entity foaf:isPrimaryTopicOf ?wikipediaPage .
         }
-        LIMIT 20
+        LIMIT 10
         """ % entity
 
     # Set the query and request JSON format
@@ -70,6 +71,7 @@ def get_wikipedia_exact(entity):
     """
     endpoint_url = "http://dbpedia.org/sparql"
     sparql = SPARQLWrapper(endpoint_url)
+
     ## Construct the SPARQL query
     query = """
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -79,11 +81,11 @@ def get_wikipedia_exact(entity):
         SELECT DISTINCT ?entity ?label ?abstract ?dbpediaPage ?wikipediaPage
         WHERE {
             ?entity rdfs:label ?label .
-            FILTER (LANG(?label) = "en" && regex(?label, "%s", "i"))
+            FILTER (?label = "%s"@en)
             ?entity dbo:abstract ?abstract FILTER(LANG(?abstract) = "en")
             ?entity foaf:isPrimaryTopicOf ?wikipediaPage .
         }
-        LIMIT 20
+        LIMIT 10
         """ % entity
 
     # Set the query and request JSON format
@@ -108,6 +110,31 @@ def get_wikipedia_exact(entity):
     else:
         return candidates
 
+def get_named_entities(text):
+    """
+    Fucnction to get all named enities
+    """
+    nlp = spacy.load("en_core_web_sm")
+    doc = nlp(text)
+
+    # Return only unique entities
+    named_entities = {}
+    # Extract named entities
+    for entity in doc.ents:
+        key = entity.text + entity.label_
+        named_entities[key] = (clean_named_entity(entity.text), entity.label_)
+    return list(named_entities.values())
+
+def clean_named_entity(entity):
+    # print(entity)
+    entity = entity.translate(str.maketrans(" ", " ", string.punctuation))
+
+    # remove "the_", maybe not optimal but sometimes necessary
+    if entity.lower().startswith("the"):
+        entity = entity[3:]
+
+    return entity
+
 import difflib
 
 def choose_best_candidate(entity, candidates):
@@ -126,18 +153,30 @@ def choose_best_candidate(entity, candidates):
         max_index = similarity_scores.index(max(similarity_scores))
 
         return candidates_strings[max_index]
+    
+text = (
+        "surely it is but many do not know this fact that Italy was not always called as Italy."
+        "Before Italy came into being in 1861, it had several names including Italian Kingdom,"
+        "Roman Empire and the Republic of Italy among others. If we start the chronicle back in time,"
+        "then Rome was the first name to which Romans were giving credit.,"
+        "Later this city became known as Caput Mundi” or the capital of the world..."
+    )
 
+named_entities = get_named_entities(text)
+# Testing linking
+for i in range(len(named_entities)):
+    entity = named_entities[i][0]
+    label = named_entities[i][1]
+    print(entity, label)
 
+    candidates1 = get_wikipedia_contains(entity)
+    candidates2 = get_wikipedia_exact(entity)
 
-test_entity = 'barack obama'
-candidates1 = get_wikipedia_contains(test_entity)
-candidates2 = get_wikipedia_exact(test_entity)
-
-print("candidates contains Function:")
-print([candidates1[i].object for i in range(len(candidates1))])
-print("candidates exact")
-print([candidates2[i].object for i in range(len(candidates2))])
-
+    print("candidates contains Function:")
+    print([candidates1[i].object for i in range(len(candidates1))])
+    print("candidates exact")
+    print([candidates2[i].object for i in range(len(candidates2))])
+    print('_______________________')
 
 
 

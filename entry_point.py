@@ -9,6 +9,7 @@
 #       Yes/No:
 #       Entity:
 
+
 import os
 import pickle
 import sys
@@ -22,6 +23,7 @@ from delphi.llm import LLM
 from entity.entity_linker import get_wikipedia_entities
 from fact_checker.fact_checker import FactChecker
 from question_classifier.question_classifier import QuestionClassifier
+
 from nltk.stem import WordNetLemmatizer
 
 
@@ -107,8 +109,12 @@ def main():
 
     # Fact checker
     lemmatizer = WordNetLemmatizer()
+    lemmatizer = WordNetLemmatizer()
     fact_checker = FactChecker(
-        "fact_checker/GoogleNews-vectors-negative300.bin", WORD2VEC_ENABLED, lemmatizer
+        "fact_checker/GoogleNews-vectors-negative300.bin",
+        WORD2VEC_ENABLED,
+        lemmatizer,
+        lemmatizer,
     )
 
     # TEST
@@ -121,6 +127,8 @@ def main():
         question_id = row["Index"]
         question = row["Input"]
         response = clean_answer(row["Answer"])
+
+        print("Question: ID:", question_id, "Question:", question)
 
         # LLM
         # output = llm.generate_answer(question)

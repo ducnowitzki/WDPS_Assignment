@@ -118,7 +118,8 @@ def get_wikipedia(entity):
 
 
 def choose_best_candidate(candidates: WikipediaEntity, label: str):
-    # TODO
+    # TODO: disambiguation
+    # Do the same as in entity picker
     ...
 
 

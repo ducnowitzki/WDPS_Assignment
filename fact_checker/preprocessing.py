@@ -29,14 +29,13 @@ class Features:
 
         return synonyms
 
-    def _process_sentence(self, question: str) -> tuple([list, list, list, bool]):
+    def _process_sentence(self, question: str) -> set():
         # TODO: confirm order of these
         # pos tagging to get the subject, verb, adjective, object
         # stemmatization / lemmatization to get the root of the words
         # word2vec to get the synonyms
 
         pos_tagging = self._pos_tag(question)
-        print(pos_tagging)
 
         word_pool = set()
 
@@ -60,16 +59,22 @@ class Features:
                 "RBR",
                 "RBS",
             ]:
-                synonyms = self._get_synonyms(k)
-                # add all synonyms to word pool
-                word_pool.update(synonyms)
-            if k in ["not", "n't", "no"]:
+                word_pool.add(k)
+
+                if self.word2vec_enabled:
+                    synonyms = self._get_synonyms(k)
+                    word_pool.update(synonyms)
+            if (
+                k in ["not", "n't", "no"]
+                and isinstance(self.extracted_answer, str)
+                and self.extracted_answer == "yes"
+            ):
                 word_pool.add(k)
 
         return word_pool
 
-    def _get_sentences_from_wikipedia(self, entity: WikipediaEntity) -> list[str]:
-        # only get sentences containing extracted entity (if it is entity)
+    def _get_sentences_from_wikipedia(self, entity: WikipediaEntity) -> list[set]:
+        # TODO: doesnt work with abbreviations
         sentences = entity.abstract.split(".")
 
         word_pools = []
@@ -87,19 +92,19 @@ class Features:
     def __init__(
         self,
         word2vec_model,
+        word2vec_enabled,
         lemmatizer,
         question: str,
         question_entities: list[WikipediaEntity],
         extracted_answer: str | WikipediaEntity,
     ) -> None:
         self.word2vec_model = word2vec_model
+        self.word2vec_enabled = word2vec_enabled
         self.lemmatizer = lemmatizer
         self.extracted_answer = extracted_answer
 
         self.question_word_pool = self._process_sentence(question)
-        print(self.question_word_pool)
 
-        return
         self.question_entity_content: dict[str, list[str]] = {
             ent.object: self._get_sentences_from_wikipedia(ent)
             for ent in question_entities

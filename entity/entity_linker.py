@@ -123,6 +123,8 @@ def get_wikipedia_candidates(entity):
     """
     Function to get candidates
     """
+
+    print("second function for:", entity)
     endpoint_url = "http://dbpedia.org/sparql"
     sparql = SPARQLWrapper(endpoint_url)
 

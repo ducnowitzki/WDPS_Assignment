@@ -183,8 +183,6 @@ class Features:
             columns=vectorizer.get_feature_names_out(),
         )
 
-        print(pos_features_df.head())
-
         # Only take selected pos features
         # pos_features_df = pos_features_df.filter(items=SELECTED_POS_FEATURES)
 

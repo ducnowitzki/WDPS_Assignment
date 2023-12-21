@@ -6,6 +6,8 @@ from dataclasses import dataclass
 import spacy
 import requests
 import requests
+import difflib
+from SPARQLWrapper import SPARQLWrapper, JSON
 
 # from sklearn.feature_extraction.text import TfidfVectorizer
 # from sklearn.metrics.pairwise import cosine_similarity
@@ -54,7 +56,7 @@ def get_named_entities(text):
     return list(named_entities.values())
 
 
-def get_wikipedia(entity):
+def get_wikipedia_candidate(entity):
     """
     Function to get candidates
     """
@@ -112,28 +114,96 @@ def get_wikipedia(entity):
     #     for result in data['results']['bindings']
     # ]
     if not candidates:
+        return None
+    else:
+        return candidates[0]
+
+
+def get_wikipedia_candidates(entity):
+    """
+    Function to get candidates
+    """
+
+    print("second function for:", entity)
+    endpoint_url = "http://dbpedia.org/sparql"
+    sparql = SPARQLWrapper(endpoint_url)
+
+    ## Construct the SPARQL query
+    query = (
+        """
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX dbo: <http://dbpedia.org/ontology/>
+        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+        SELECT DISTINCT ?entity ?label ?abstract ?dbpediaPage ?wikipediaPage
+        WHERE {
+            ?entity rdfs:label ?label .
+            FILTER(LANG(?label) = "en" && CONTAINS(LCASE(?label), LCASE("%s")))
+            ?entity dbo:abstract ?abstract FILTER(LANG(?abstract) = "en")
+            ?entity foaf:isPrimaryTopicOf ?wikipediaPage .
+        }
+        LIMIT 100
+        """
+        % entity
+    )
+
+    # Set the query and request JSON format
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+
+    # Execute the query and process the results
+    data = sparql.query().convert()
+
+    candidates = [
+        WikipediaEntity(
+            object=result["label"]["value"],
+            wikipedia_page=result["wikipediaPage"]["value"],
+            dbpedia_page=result["entity"]["value"],
+            abstract=result["abstract"]["value"],
+        )
+        for result in data["results"]["bindings"]
+    ]
+
+    if not candidates:
         return []
     else:
         return candidates
 
 
-def choose_best_candidate(candidates: WikipediaEntity, label: str):
-    # TODO
-    ...
+def choose_best_candidate(entity, candidates):
+    if not candidates:
+        return None
+
+    else:
+        # Store all candidates in list
+        candidates_strings = [candidates[i].object for i in range(len(candidates))]
+        candidates_strings = ["" if v is None else v for v in candidates_strings]
+
+        # Use difflib to find the most similar string in the list
+        similarity_scores = [
+            difflib.SequenceMatcher(None, entity, s).ratio() for s in candidates_strings
+        ]
+        # Find the index of the string with the highest similarity score
+        max_index = similarity_scores.index(max(similarity_scores))
+
+        return candidates_strings[max_index]
 
 
 def get_wikipedia_entities(text):
     named_entities = get_named_entities(text)
 
     wiki_entities = []
-    for ent, label in named_entities:
-        candidates = get_wikipedia(ent)
-        if len(candidates) > 0:
-            wiki_entities.append(
-                candidates[0]
-                if len(candidates) == 1
-                else choose_best_candidate(candidates, label)
-            )
+    for ent, _ in named_entities:
+        candidate = get_wikipedia_candidate(ent)
+        if candidate is None:
+            candidates = get_wikipedia_candidates(ent)
+            candidate = choose_best_candidate(ent, candidates)
+
+            if candidate is None:
+                print("No entity linked to:", ent)
+                continue
+
+        wiki_entities.append(candidate)
 
     return wiki_entities
 
@@ -155,7 +225,7 @@ if __name__ == "__main__":
 
         print(entity)
 
-        candidates = get_wikipedia(entity)
+        candidates = get_wikipedia_candidate(entity)
         pprint(candidates)
         print(candidates[0]["abstract"])
         # dbpedia_links = [candidates[j]["entity"] for j in range(len(candidates))]

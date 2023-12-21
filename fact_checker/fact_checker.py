@@ -7,45 +7,38 @@ from fact_checker.preprocessing import Features
 
 
 class FactChecker:
-    def __init__(self, word2vec_model_path: str) -> None:
-        self.word2vec_model = KeyedVectors.load_word2vec_format(
-            word2vec_model_path, binary=True
-        )
+    def __init__(self, word2vec_model_path: str, word2vec_enabled, lemmatizer) -> None:
+        if word2vec_model_path:
+            self.word2vec_model = KeyedVectors.load_word2vec_format(
+                word2vec_model_path, binary=True
+            )
+
+        self.word2vec_enabled = word2vec_enabled
+
+        self.lemmatizer = lemmatizer
 
     def check_fact(
         self,
-        word2vec_model,
         # yesno: bool, maybe important?
         question: str,
         question_entities: list[WikipediaEntity],
         extracted_answer: str | WikipediaEntity,
     ) -> str:
         features = Features(
-            word2vec_model,
+            self.word2vec_model,
+            self.word2vec_enabled,
+            self.lemmatizer,
             question,
             question_entities,
             extracted_answer,
         )
-        combinations = [
-            (subject, verb, object, adjective, entity)
-            for subject in features.subject
-            for verb in features.verb
-            for object in features.object
-            for adjective in features.adjective
-        ]
 
-        for entity, sentence in features.question_entity_content.values():
-            # all combinations of subject, verb, object, adjective, (entity)
-            # TODO: add none to certain list of not necessary
-
-            # check if a sentence contains combination of subject, verb, object, adjective
-            for subject, verb, object, adjective, entity in combinations:
-                if (  # TODO: check if this should be correct
-                    subject in sentence
-                    and verb in sentence
-                    and object in sentence
-                    and adjective in sentence
-                ):
+        for entity, word_pool_list in features.question_entity_content.items():
+            for word_pool in word_pool_list:
+                if features.question_word_pool.issubset(word_pool):
+                    print(
+                        "Correct entity: ", entity, "Entity sentence pool: ", word_pool
+                    )
                     return "correct"
 
         return "incorrect"

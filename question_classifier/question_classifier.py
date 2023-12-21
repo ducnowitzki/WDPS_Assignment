@@ -72,8 +72,6 @@ class QuestionClassifier:
         feature_model.calculate_features()
         data = feature_model.data.drop(columns=DROPPED_COLUMNS, errors="ignore")
 
-        print(data.head())
-
         label = self.model.predict(data)
 
         return LABEL_DECODING[label[0]]

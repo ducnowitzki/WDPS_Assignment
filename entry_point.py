@@ -9,8 +9,12 @@
 #       Yes/No:
 #       Entity:
 
+
 import os
 import pickle
+import sys
+
+import pandas as pd
 from answer_extractor.answer_extractor import AnswerExtractor
 from answer_extractor.preprocessing import on_start_up
 from time import time
@@ -18,8 +22,9 @@ from time import time
 from delphi.llm import LLM
 from entity.entity_linker import get_wikipedia_entities
 from fact_checker.fact_checker import FactChecker
-from fact_checker.preprocessing import Features
 from question_classifier.question_classifier import QuestionClassifier
+
+from nltk.stem import WordNetLemmatizer
 
 
 QUESTION_FILE_PATH = "sample_input.txt"
@@ -31,6 +36,7 @@ MODEL_PATH = os.path.abspath("delphi/llama-2-7b.Q3_K_M.gguf")
 
 # can be downloaded from here: https://www.kaggle.com/datasets/leadbest/googlenewsvectorsnegative300
 WORD2VEC_MODEL_PATH = os.path.abspath("fact_checker/GoogleNews-vectors-negative300.bin")
+WORD2VEC_ENABLED = False
 
 
 def init():
@@ -102,18 +108,37 @@ def main():
     output_file_name = "group2_fact_checked_reponses_" + str(int(time())) + ".txt"
 
     # Fact checker
-    fact_checker = FactChecker("fact_checker/GoogleNews-vectors-negative300.bin")
+    lemmatizer = WordNetLemmatizer()
+    lemmatizer = WordNetLemmatizer()
+    fact_checker = FactChecker(
+        "fact_checker/GoogleNews-vectors-negative300.bin",
+        WORD2VEC_ENABLED,
+        lemmatizer,
+        lemmatizer,
+    )
 
-    for question_id, question in llm_input:
+    # TEST
+    question_and_response = pd.read_csv("generate_dataset/questions_and_answers.csv")
+
+    # for question_id, question in llm_input:
+    i = 0
+
+    for _, row in question_and_response.iterrows():
+        question_id = row["Index"]
+        question = row["Input"]
+        response = clean_answer(row["Answer"])
+
+        print("Question: ID:", question_id, "Question:", question)
+
         # LLM
         # output = llm.generate_answer(question)
         # response = clean_answer(output)
 
-        response = "surely it is not, because you can see its top from Nepal. so it must be shorter than EverestIt is possible to walk down from the top of Mt. Everest, although it is probably a very unpleasant experience if you don't have lots of practice. A good pair of hiking boots and some training goes a long way.Do they use bicycles in Nepal? I need to know where to go on my trip next summer!Where do you get the money for your trips? Do you like to go around the world alone? Are you looking forward to meeting people from other countries? What are your thoughts about it?How do we protect our planet earth, if there is no place in this earth that hasn't been affected by pollution or destruction? If not, how can we save our beautiful world and all its wonderful wild life and animals? The mountain is not in China."
+        # response = "surely it is not, because you can see its top from Nepal. so it must be shorter than EverestIt is possible to walk down from the top of Mt. Everest, although it is probably a very unpleasant experience if you don't have lots of practice. A good pair of hiking boots and some training goes a long way.Do they use bicycles in Nepal? I need to know where to go on my trip next summer!Where do you get the money for your trips? Do you like to go around the world alone? Are you looking forward to meeting people from other countries? What are your thoughts about it?How do we protect our planet earth, if there is no place in this earth that hasn't been affected by pollution or destruction? If not, how can we save our beautiful world and all its wonderful wild life and animals? The mountain is not in China."
 
         # Question classifier
         question_type = question_classifier.classify_question(question)
-        print(question, question_type)
+        print(question_id, question, question_type)
 
         # Entity linker
         question_wiki_entities = get_wikipedia_entities(question)
@@ -126,10 +151,10 @@ def main():
             question_entities=question_wiki_entities,
             response_entities=response_wiki_entities,
         )
+        print("Extracted answer:", extracted_answer)
 
         # Fact checker
         correctness = fact_checker.check_fact(
-            word2vec_model=fact_checker.word2vec_model,
             question=question,
             question_entities=question_wiki_entities,
             extracted_answer=extracted_answer,
@@ -147,12 +172,11 @@ def main():
 
         write_to_output_file(output_file_name, question_id, response_dict)
 
-        break
+        if i > 10:
+            break
+        i += 1
 
 
 if __name__ == "__main__":
     # init()
-    # main()
-
-    fact_checker = Features("fact_checker/GoogleNews-vectors-negative300.bin")
-    print(fact_checker.get_synonyms("found"))
+    main()

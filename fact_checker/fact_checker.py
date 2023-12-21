@@ -7,25 +7,27 @@ from fact_checker.preprocessing import Features
 
 
 class FactChecker:
-    def __init__(self, word2vec_model_path: str) -> None:
+    def __init__(self, word2vec_model_path: str, lemmatizer) -> None:
         self.word2vec_model = KeyedVectors.load_word2vec_format(
             word2vec_model_path, binary=True
         )
+        self.lemmatizer = lemmatizer
 
     def check_fact(
         self,
-        word2vec_model,
         # yesno: bool, maybe important?
         question: str,
         question_entities: list[WikipediaEntity],
         extracted_answer: str | WikipediaEntity,
     ) -> str:
         features = Features(
-            word2vec_model,
+            self.word2vec_model,
+            self.lemmatizer,
             question,
             question_entities,
             extracted_answer,
         )
+        return
         combinations = [
             (subject, verb, object, adjective, entity)
             for subject in features.subject

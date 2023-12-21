@@ -1,6 +1,6 @@
 from SPARQLWrapper import SPARQLWrapper, JSON
 from nltk import ngrams
-from entity.entity_linker import WikipediaEntity, get_wikipedia, get_named_entities
+from entity.entity_linker import WikipediaEntity, get_named_entities
 import string
 
 

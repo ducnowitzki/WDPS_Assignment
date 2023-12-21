@@ -148,11 +148,11 @@ def choose_best_candidate(entity, candidates):
 
         # Use difflib to find the most similar string in the list
         similarity_scores = [difflib.SequenceMatcher(None, entity, s).ratio() for s in candidates_strings]
-        print(similarity_scores)
+        
         # Find the index of the string with the highest similarity score
         max_index = similarity_scores.index(max(similarity_scores))
 
-        return candidates_strings[max_index]
+        return candidates[max_index]
     
 text = (
         "surely it is but many do not know this fact that Italy was not always called as Italy."
@@ -174,6 +174,7 @@ for i in range(len(named_entities)):
 
     print("candidates contains Function:")
     print([candidates1[i].object for i in range(len(candidates1))])
+    print(choose_best_candidate(entity, candidates1))
     print("candidates exact")
     print([candidates2[i].object for i in range(len(candidates2))])
     print('_______________________')

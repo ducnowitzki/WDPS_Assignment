@@ -74,7 +74,6 @@ class Features:
         return word_pool
 
     def _get_sentences_from_wikipedia(self, entity: WikipediaEntity) -> list[set]:
-        # TODO: doesnt work with abbreviations
         sentences = entity.abstract.split(".")
 
         word_pools = []

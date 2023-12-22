@@ -8,7 +8,7 @@ from answer_extractor.preprocessing import (
 )
 
 from answer_extractor.train_classifier import DROPPED_COLUMNS
-from entity.enity_picker import most_related_entity
+from entity.entity_picker import most_related_entity
 from entity.entity_linker import WikipediaEntity
 
 LABEL_DECODING = {0: "yes", 1: "no"}
@@ -40,9 +40,8 @@ class AnswerExtractor:
         question_entities: list = None,
         response_entities: list = None,
     ) -> str | WikipediaEntity:
+        #  YESNO: Use model to predict yes/no
         if yesno:
-            # create dataframe with one row from answer, column called "Answer" filled with answer, and selected features columns filled with 0
-
             answer_df = self._init_answer_df(response)
 
             feature_model = Features(
@@ -56,6 +55,8 @@ class AnswerExtractor:
             label = self.model.predict(data)
 
             return LABEL_DECODING[label[0]]
+
+        #  ENTITY: Use entity linker to find most related entity
         else:
             return most_related_entity(question_entities, response_entities)
 

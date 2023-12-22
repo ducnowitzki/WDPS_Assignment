@@ -12,6 +12,7 @@ nltk = "*"
 spacy = "*"
 sparqlwrapper = "*"
 gensim = "*"
+beautifulsoup4 = "*"
 
 [dev-packages]
 black = "*"

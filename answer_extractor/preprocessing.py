@@ -69,6 +69,7 @@ SELECTED_BIGRAM_FEATURES = [
 
 
 def on_start_up():
+    nltk.download("stopwords", quiet=True)
     nltk.download("popular", quiet=True)
     nltk.download("punkt", quiet=True)
     nltk.download("averaged_perceptron_tagger", quiet=True)
@@ -80,8 +81,6 @@ def lower_case(texts: pd.Series):
 
 def get_all_words(texts: pd.Series):
     all_words = " ".join(texts).split()
-    # remove special characters
-    # all_words = [word for word in all_words if word.isalnum()]
     return all_words
 
 
@@ -97,7 +96,6 @@ def stop_word_removal(texts: pd.Series):
 
 def remove_special_character_words(words):
     new_words = []
-    # only remove words that only contains special characters
     for word in words:
         if any(c.isalpha() for c in word):
             new_words.append(word)
@@ -126,11 +124,7 @@ class Features:
         )
         self.data = data
 
-        # TODO: lemma, stemma
-
     def _calculate_word_counts(self):
-        # new column named "count_" + feature_word for each row in self.data
-        # that contains the count of feature_word in the answer
         for feature_word in SELECTED_FEATURE_WORDS:
             self.data["count_" + feature_word] = self.data["Answer"].str.count(
                 feature_word
@@ -151,7 +145,6 @@ class Features:
             vectorizer = DictVectorizer()
             pos_features_vectorized = vectorizer.fit_transform(pos_features)
 
-            # pickle vectorizer
             pickle.dump(vectorizer, open("yesno_pos_vectorizer.pkl", "wb"))
 
         else:
@@ -175,7 +168,6 @@ class Features:
                 self.data["Answer_without_stop_words"].values.astype("U")
             )
 
-            # pickle vectorizer
             pickle.dump(vectorizer, open("yesno_bigram_vectorizer.pkl", "wb"))
 
         else:

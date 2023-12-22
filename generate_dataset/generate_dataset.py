@@ -24,7 +24,6 @@ llm = LlamaCpp(
     verbose=True,  # Verbose is required to pass to the callback manager
 )
 
-# open questions.csv with pandas
 questions = pd.read_csv("questions.csv")
 
 print(questions.head())
@@ -33,7 +32,6 @@ for index, row in questions.iterrows():
     output = llm._call(row["Input"])
 
     # Clean up the output
-    # TODO: more profificent way
     output = (
         output.strip()
         .replace("\n", "")
@@ -45,7 +43,6 @@ for index, row in questions.iterrows():
     outputs.append(output)
 
 if len(outputs) != questions.shape[0]:
-    # save outputs as csv with one column named answer
     df = pd.DataFrame(outputs)
     df.columns = ["Answer"]
     df.to_csv("output/answers.csv")

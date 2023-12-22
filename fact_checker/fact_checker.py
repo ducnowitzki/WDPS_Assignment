@@ -19,7 +19,6 @@ class FactChecker:
 
     def check_fact(
         self,
-        # yesno: bool, maybe important?
         question: str,
         question_entities: list[WikipediaEntity],
         extracted_answer: str | WikipediaEntity,
@@ -33,12 +32,12 @@ class FactChecker:
             extracted_answer,
         )
 
+        # For every sentence in the abstract of each entity in the question, check if the question word pool is a subset of the sentence word pool
+
         for entity, word_pool_list in features.question_entity_content.items():
             for word_pool in word_pool_list:
                 if features.question_word_pool.issubset(word_pool):
-                    print(
-                        "Correct entity: ", entity, "Entity sentence pool: ", word_pool
-                    )
+                    print("Correct entity: ", entity)
                     return "correct"
 
         return "incorrect"

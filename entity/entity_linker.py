@@ -3,14 +3,11 @@
 
 # Imports
 from dataclasses import dataclass
+import string
 import spacy
-import requests
 import requests
 import difflib
 from SPARQLWrapper import SPARQLWrapper, JSON
-
-# from sklearn.feature_extraction.text import TfidfVectorizer
-# from sklearn.metrics.pairwise import cosine_similarity
 from pprint import pprint
 
 
@@ -24,18 +21,11 @@ class WikipediaEntity:
 
 def clean_named_entity(entity):
     # print(entity)
-    entity = entity.replace(" ", "_")
-    entity = entity.replace(",", "")
-    entity = entity.replace(".", "")
+    entity = entity.translate(str.maketrans(" ", " ", string.punctuation))
 
-    # Mt. Everest -> Mt_Everest which does not return an entity
-
-    # TODO:
     # remove "the_", maybe not optimal but sometimes necessary
-    if entity.lower().startswith("the_"):
-        entity = entity[4:]
-
-    # print(entity)
+    if entity.lower().startswith("the"):
+        entity = entity[3:]
 
     return entity
 
@@ -56,75 +46,10 @@ def get_named_entities(text):
     return list(named_entities.values())
 
 
-def get_wikipedia_candidate(entity):
+def get_wikipedia_exact(entity):
     """
     Function to get candidates
     """
-
-    # DBpedia SPARQL endpoint
-    sparql_endpoint = "http://dbpedia.org/sparql"
-
-    # SPARQL query to retrieve candidate selections for the named entity
-    # ?entity = <http://dbpedia.org/resource/{named_entity}>
-    # CONTAINS(STR(?entity), "{entity}")
-    sparql_query = f"""
-        PREFIX dbo: <http://dbpedia.org/ontology/>
-        PREFIX dbpedia: <http://dbpedia.org/resource/>
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-        
-        SELECT ?object ?label ?page ?type ?abstract
-        WHERE {{ 
-            dbr:{entity} rdfs:label ?object.
-            dbr:{entity} foaf:isPrimaryTopicOf ?page.
-            dbr:{entity} dbo:abstract ?abstract.
-            FILTER(lang(?object) ='en')
-            FILTER(lang(?abstract) ='en') 
-            }}
-        LIMIT 10
-        """
-
-    # Send SPARQL query to DBpedia
-    response = requests.get(
-        sparql_endpoint, params={"query": sparql_query, "format": "json"}
-    )
-    try:
-        # Try to load JSON data if available
-        data = response.json()
-    except requests.exceptions.JSONDecodeError:
-        # Handle the case where the response is not valid JSON
-        raise Exception(f"Error: Unable to decode JSON response for {entity}")
-
-    candidates = [
-        WikipediaEntity(
-            object=result["object"]["value"],
-            wikipedia_page=result["page"]["value"],
-            dbpedia_page=f"http://dbpedia.org/resource/{entity}",
-            abstract=result["abstract"]["value"],
-        )
-        for result in data["results"]["bindings"]
-    ]
-
-    # print(len(candidates))
-    # print(candidates[0].object)
-
-    # Extract candidate selections and their Wikipedia pages from the results
-    # candidates = [
-    #     {'object': result['object']['value']}
-    #     for result in data['results']['bindings']
-    # ]
-    if not candidates:
-        return None
-    else:
-        return candidates[0]
-
-
-def get_wikipedia_candidates(entity):
-    """
-    Function to get candidates
-    """
-
-    print("second function for:", entity)
     endpoint_url = "http://dbpedia.org/sparql"
     sparql = SPARQLWrapper(endpoint_url)
 
@@ -138,11 +63,59 @@ def get_wikipedia_candidates(entity):
         SELECT DISTINCT ?entity ?label ?abstract ?dbpediaPage ?wikipediaPage
         WHERE {
             ?entity rdfs:label ?label .
-            FILTER(LANG(?label) = "en" && CONTAINS(LCASE(?label), LCASE("%s")))
+            FILTER (?label = "%s"@en)
             ?entity dbo:abstract ?abstract FILTER(LANG(?abstract) = "en")
             ?entity foaf:isPrimaryTopicOf ?wikipediaPage .
         }
-        LIMIT 100
+        LIMIT 10
+        """
+        % entity
+    )
+
+    # Set the query and request JSON format
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+
+    # Execute the query and process the results
+    data = sparql.query().convert()
+
+    candidates = [
+        WikipediaEntity(
+            object=result["label"]["value"],
+            wikipedia_page=result["wikipediaPage"]["value"],
+            dbpedia_page=result["entity"]["value"],
+            abstract=result["abstract"]["value"],
+        )
+        for result in data["results"]["bindings"]
+    ]
+
+    if not candidates:
+        return None
+    else:
+        return candidates[0]
+
+
+def get_wikipedia_contains(entity):
+    """
+    Function to get candidates
+    """
+    endpoint_url = "http://dbpedia.org/sparql"
+    sparql = SPARQLWrapper(endpoint_url)
+    ## Construct the SPARQL query
+    query = (
+        """
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX dbo: <http://dbpedia.org/ontology/>
+        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+        SELECT DISTINCT ?entity ?label ?abstract ?dbpediaPage ?wikipediaPage
+        WHERE {
+            ?entity rdfs:label ?label .
+            FILTER (LANG(?label) = "en" && regex(?label, "%s", "i"))
+            ?entity dbo:abstract ?abstract FILTER(LANG(?abstract) = "en")
+            ?entity foaf:isPrimaryTopicOf ?wikipediaPage .
+        }
+        LIMIT 5
         """
         % entity
     )
@@ -171,7 +144,7 @@ def get_wikipedia_candidates(entity):
 
 
 def choose_best_candidate(entity, candidates):
-    if not candidates:
+    if not candidates or len(candidates) == 0:
         return None
 
     else:
@@ -183,10 +156,11 @@ def choose_best_candidate(entity, candidates):
         similarity_scores = [
             difflib.SequenceMatcher(None, entity, s).ratio() for s in candidates_strings
         ]
+
         # Find the index of the string with the highest similarity score
         max_index = similarity_scores.index(max(similarity_scores))
 
-        return candidates_strings[max_index]
+        return candidates[max_index]
 
 
 def get_wikipedia_entities(text):
@@ -194,15 +168,17 @@ def get_wikipedia_entities(text):
 
     wiki_entities = []
     for ent, _ in named_entities:
-        candidate = get_wikipedia_candidate(ent)
+        candidate = get_wikipedia_exact(ent)
         if candidate is None:
-            candidates = get_wikipedia_candidates(ent)
+            candidates = get_wikipedia_contains(ent)
             candidate = choose_best_candidate(ent, candidates)
 
             if candidate is None:
                 print("No entity linked to:", ent)
                 continue
 
+        # print("Entity linked to:", ent)
+        # print("ent: ", candidate)
         wiki_entities.append(candidate)
 
     return wiki_entities
@@ -225,7 +201,7 @@ if __name__ == "__main__":
 
         print(entity)
 
-        candidates = get_wikipedia_candidate(entity)
+        candidates = get_wikipedia_entities(entity)
         pprint(candidates)
         print(candidates[0]["abstract"])
         # dbpedia_links = [candidates[j]["entity"] for j in range(len(candidates))]

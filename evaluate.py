@@ -1,9 +1,9 @@
-import os
 import pickle
 from time import time
+
+import pandas as pd
 from answer_extractor.answer_extractor import AnswerExtractor
 from answer_extractor.preprocessing import on_start_up as answer_extractor_on_start_up
-from delphi.llm import LLM
 from entity.entity_linker import WikipediaEntity, get_wikipedia_entities
 from fact_checker.fact_checker import FactChecker
 from fact_checker.preprocessing import on_start_up as fact_checker_on_start_up
@@ -15,9 +15,6 @@ QUESTION_FILE_PATH = "sample_input.txt"
 SEPARATOR = "\t"
 # SEPARATOR = "    "
 
-# Download the model and add to the directory
-# E.g. take one from her: https://huggingface.co/TheBloke/Llama-2-7B-GGUF#provided-files
-MODEL_PATH = os.path.abspath("delphi/llama-2-7b.Q3_K_M.gguf")
 
 # can be downloaded from here: https://www.kaggle.com/datasets/leadbest/googlenewsvectorsnegative300
 WORD2VEC_MODEL_PATH = None
@@ -66,11 +63,6 @@ def write_to_output_file(file_name, question_id: str, response_dict: dict):
 def main():
     print("INFO: Starting...")
 
-    # LLM
-    print("INFO: LLM: Loading model...")
-    llm_input = get_llm_input()
-    llm = LLM(MODEL_PATH)
-
     # Question classifier
     print("INFO: Question classifier: Loading models...")
     question_model = pickle.load(
@@ -107,6 +99,7 @@ def main():
     lemmatizer = WordNetLemmatizer()
     fact_checker = FactChecker(WORD2VEC_MODEL_PATH, WORD2VEC_ENABLED, lemmatizer)
 
+    questions_and_answers = pd.read_csv("questions_and_answers.csv")
     for input in llm_input:
         # skip empty lines
         if len(input) != 2:

@@ -1,47 +1,20 @@
 # WDPS_Assignment
+This application has been created as part of an assignment for the Web Data Processing Systems course at VU Amsterdam in 2023.
 
-## Implementation
-Four modules
-(Can be implemented in one but LLM is separate)
+## How to run
+### Prerequisites
+- Download a LLM and place in the /delphi directory, you can find one here: https://huggingface.co/TheBloke/Llama-2-7B-GGUF#provided-files
+- Adjust the MODEL_PATH variable in entry_point.py#L20 to this LLM
+- Provide a questions .txt file
+- Adjust QUESTION_FILE_PATH in entry_point.py#L14 to the path of this file
+- Adjust SERVER_PORT in entry_point.py#L15 to the separator used in the text file
 
-### Customer Service
-- Entry point
-- Receives: input (.txt file)
-- Sends: sends to Delphi
-- Reads Delphi output
-- Starts Delphi again (How?)
-- Accumulates responses from Delphi, Answer Extractor, Entity Linker and sends to Fact Checker
-- Gets final response from Fact Checker and creates a .txt file with the response
+### Recommended: Run in container of provided virtual environment from docker image karmaresearch/wdps2
+- Copy the contents of this repository to the container
+- Run `source venv/bin/activate` to activate the virtual environment
+- Run `pip install -r group2_requirements.txt` to install the required packages
+- Run `python entry_point.py 2>/dev/null` to start the application (the 2>/dev/null is to suppress unnecessary output)
 
-### Delphi
-- LLM provided by the course
-- Receives: user input from Customer Service
-- Output: LLM response
-- **Problem**: LLM exits after first query
-
-### Answer Extractor
-- Receives: LLM response
-- Sends: Extracted answer to Customer Service
-
-### Entity Linker
-- Receives: Input and LLM response
-- Sends: Entity Links to WIkipedia to Customer Service
-
-### Fact Checker
-- Receives: Input, Response, Entity Links, Extracted answer
-- Sends: Fact checked response to Customer Service
-
-
-## Running the services
-Run start_all_apps.sh to start all services
-Goal: each service has docker-compose.yaml and Dockerfile
-
-But for now...
-### Delphi
-Start the LLM by running
-```shell
-docker build --platform=linux/arm64/v8 -t wdps:latest .
-docker run -it wdps:latest
-```
-
-
+### Alternatively: Run with Docker Desktop
+- Start Docker Desktop (It should be Docker Desktop, we had trouble with other ways of using Docker)
+- Run the script start_app.sh, e.g. by `sh start_app.sh` (maybe you need to make it executable first)

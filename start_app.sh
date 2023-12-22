@@ -2,7 +2,7 @@
 
 # Set default values
 local_output_path=$(pwd)
-container_output_path="/app/output"
+container_output_path="/app"
 image_name="wdps_group2"
 
 echo "Building Docker image '$image_name'..."
@@ -17,4 +17,3 @@ else
     echo "Running..."
     docker run --rm -v "$local_output_path":"$container_output_path" -e DEBUG=0 "$image_name" 
 fi
-

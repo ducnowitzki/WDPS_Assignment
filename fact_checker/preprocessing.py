@@ -20,9 +20,10 @@ class Features:
         synonyms = []
         try:
             # Finding similar words (synonyms)
-            similar_words = self.word2vec_model.most_similar(word, topn=2)
-            for similar_word, _ in similar_words:
-                synonyms.append(similar_word)
+            if self.word2vec_model:
+                similar_words = self.word2vec_model.most_similar(word, topn=2)
+                for similar_word, _ in similar_words:
+                    synonyms.append(similar_word)
 
         except KeyError:
             print(f"Synonym: '{word}' not found in the vocabulary.")

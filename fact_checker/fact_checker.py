@@ -12,6 +12,8 @@ class FactChecker:
             self.word2vec_model = KeyedVectors.load_word2vec_format(
                 word2vec_model_path, binary=True
             )
+        else:
+            self.word2vec_model = None
 
         self.word2vec_enabled = word2vec_enabled
 

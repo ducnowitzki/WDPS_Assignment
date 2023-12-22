@@ -1,1 +1,2 @@
 question-001	Is Managua the capital of Nicaragua?
+question-002	What is the currency if Vietnam?

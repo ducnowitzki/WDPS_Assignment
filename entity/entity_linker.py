@@ -174,11 +174,9 @@ def get_wikipedia_entities(text):
             candidate = choose_best_candidate(ent, candidates)
 
             if candidate is None:
-                print("No entity linked to:", ent)
+                # print("No entity linked to:", ent)
                 continue
 
-        # print("Entity linked to:", ent)
-        # print("ent: ", candidate)
         wiki_entities.append(candidate)
 
     return wiki_entities

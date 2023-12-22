@@ -10,6 +10,8 @@ from fact_checker.preprocessing import on_start_up as fact_checker_on_start_up
 from question_classifier.question_classifier import QuestionClassifier
 from nltk.stem import WordNetLemmatizer
 
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+
 
 QUESTION_FILE_PATH = "sample_input.txt"
 SEPARATOR = "\t"
@@ -60,6 +62,34 @@ def write_to_output_file(file_name, question_id: str, response_dict: dict):
         f.write(response_string)
 
 
+def evaluate(evaluation_df, application_output):
+    # calculate accuracy, precision, recall, f1
+    label_decoding_data = {"Correct": 1, "Incorrect": 0}
+    label_decoding = {"correct": 1, "incorrect": 0}
+
+    evaluation_df["Correctness"] = evaluation_df["Correctness"].map(label_decoding_data)
+    evaluation_df["Application Output"] = application_output
+    evaluation_df["Application Output"] = evaluation_df["Application Output"].map(
+        label_decoding
+    )
+
+    accuracy = accuracy_score(
+        evaluation_df["Correctness"], evaluation_df["Application Output"]
+    )
+    precision = precision_score(
+        evaluation_df["Correctness"], evaluation_df["Application Output"]
+    )
+    recall = recall_score(
+        evaluation_df["Correctness"], evaluation_df["Application Output"]
+    )
+    f1 = f1_score(evaluation_df["Correctness"], evaluation_df["Application Output"])
+
+    print("Accuracy:", accuracy)
+    print("Precision:", precision)
+    print("Recall:", recall)
+    print("F1:", f1)
+
+
 def main():
     print("INFO: Starting...")
 
@@ -99,18 +129,18 @@ def main():
     lemmatizer = WordNetLemmatizer()
     fact_checker = FactChecker(WORD2VEC_MODEL_PATH, WORD2VEC_ENABLED, lemmatizer)
 
-    questions_and_answers = pd.read_csv("questions_and_answers.csv")
-    for input in llm_input:
-        # skip empty lines
-        if len(input) != 2:
-            continue
-        question_id, question = input
+    evaluation_df = pd.read_csv("evaluation_data.csv")
+    application_output = []
+
+    for _, row in evaluation_df.iterrows():
+        question_id = row["Index"]
+        question = row["Input"]
 
         print(question_id, question)
 
         # LLM
         print(question_id, "LLM: Generating answer...")
-        output = llm.generate_answer(question)
+        output = row["Answer"]
         response = clean_answer(output)
 
         # Question classifier
@@ -162,19 +192,23 @@ def main():
         )
         print(question_id, "Correctness:", correctness)
 
-        response_dict = {
-            "question_id": question_id,
-            "response": output,
-            "extracted_answer": extracted_answer
-            if question_type == "Yes/No"
-            else extracted_answer.wikipedia_page,
-            "correctness": correctness,
-            "wiki_entities": [ent.wikipedia_page for ent in response_wiki_entities],
-        }
+        application_output.append(correctness)
 
-        write_to_output_file(output_file_name, question_id, response_dict)
+    print("Metrics for whole evaluation data:")
+    evaluate(evaluation_df, application_output)
+
+    print("Metrics for Yes/No questions:")
+    evaluate(
+        evaluation_df[evaluation_df["Type"] == "Yes/No"],
+        application_output[:20],
+    )
+
+    print("Metrics for entity questions:")
+    evaluate(
+        evaluation_df[evaluation_df["Type"] == "Entity"],
+        application_output[20:],
+    )
 
 
 if __name__ == "__main__":
-    init()
     main()

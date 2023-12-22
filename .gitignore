@@ -1,6 +1,6 @@
 .DS_Store
 __pycache__/
 *.gguf
-group2*.txt
+group2_fact*.txt
 *.bin
 wdps_group2/

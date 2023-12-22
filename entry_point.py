@@ -34,6 +34,7 @@ def init():
 def get_llm_input():
     lines = open(QUESTION_FILE_PATH, "r").readlines()
     lines = [line[:-1] for line in lines]
+    lines = [line for line in lines if line]
     return [tuple(line.split(SEPARATOR)) for line in lines]
 
 
@@ -97,7 +98,9 @@ def main():
         bigram_vectorizer=yesno_bigram_vectorizer,
     )
 
-    output_file_name = "group2_fact_checked_reponses_" + str(int(time())) + ".txt"
+    output_file_name = (
+        "output/group2_fact_checked_reponses_" + str(int(time())) + ".txt"
+    )
 
     # Fact checker
     print("INFO: Fact checker: Loading models...")
@@ -108,8 +111,9 @@ def main():
         print(question_id, question)
 
         # LLM
-        print(question_id, "LLM: Generating answer...")
-        output = llm.generate_answer(question)
+        # print(question_id, "LLM: Generating answer...")
+        # output = llm.generate_answer(question)
+        output = "yes"
         response = clean_answer(output)
 
         # Question classifier

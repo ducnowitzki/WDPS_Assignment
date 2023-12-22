@@ -1,4 +1,1 @@
 question-001	Is Managua the capital of Nicaragua?
-question-002	Question: Is it true that that China is the country with most people in the world? Answer:
-
-

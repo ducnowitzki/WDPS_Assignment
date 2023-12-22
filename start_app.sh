@@ -2,7 +2,7 @@
 
 # Set default values
 local_output_path=$(pwd)
-container_output_path="/app"
+container_output_path="/app/output"
 image_name="wdps_group2"
 
 echo "Building Docker image '$image_name'..."

@@ -12,7 +12,8 @@ from nltk.stem import WordNetLemmatizer
 
 
 QUESTION_FILE_PATH = "sample_input.txt"
-SEPARATOR = "    "
+SEPARATOR = "\t"
+# SEPARATOR = "    "
 
 # Download the model and add to the directory
 # E.g. take one from her: https://huggingface.co/TheBloke/Llama-2-7B-GGUF#provided-files

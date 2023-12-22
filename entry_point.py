@@ -43,7 +43,7 @@ def clean_answer(answer: str):
         .replace("\n", "")
         .replace("\r", "")
         .replace("\t", "")
-        .replace("▁", " ")
+        # .replace("▁", " ")
     )
 
 
@@ -172,8 +172,6 @@ def main():
         }
 
         write_to_output_file(output_file_name, question_id, response_dict)
-
-        break
 
 
 if __name__ == "__main__":

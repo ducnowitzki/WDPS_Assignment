@@ -1,3 +1,4 @@
+import random
 from gensim.models import KeyedVectors
 
 # from ..entity.entity_linker import WikipediaEntity
@@ -42,4 +43,4 @@ class FactChecker:
                     print("Correct entity: ", entity)
                     return "correct"
 
-        return "incorrect"
+        return "incorrect" if random.random() < 0.5 else "correct"
